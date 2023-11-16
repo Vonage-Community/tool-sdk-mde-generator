@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="ASCII"?>
+<vonage_api:Api xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vonage_api="vonage_api" xmi:id="_3DUT4AN_Ee6N0fa_k7RA2Q" name="subaccounts" package="com.vonage.client.subaccounts" baseEndpointPath="https://api.nexmo.com/accounts">
+  <endpoints xmi:id="_kZC_kAOfEe6N0fa_k7RA2Q" name="CreateSubaccount" baseUriName="Api" requestType="_Wlp3QAOWEe6N0fa_k7RA2Q" responseType="_Ml2BMAOAEe6N0fa_k7RA2Q" path="/accounts/%s/subaccounts" requestMethod="POST">
+    <authMethods>Token</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_eZr2cAOlEe6N0fa_k7RA2Q" name="UpdateSubaccount" baseUriName="Api" requestType="_YPlNAAOXEe6N0fa_k7RA2Q" responseType="_Ml2BMAOAEe6N0fa_k7RA2Q" path="/accounts/%s/subaccounts/%s" requestMethod="PATCH">
+    <authMethods>Token</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_ipesIAOvEe6N0fa_k7RA2Q" name="ListSubaccounts" baseUriName="Api" requestType="_VCYI0AOlEe6N0fa_k7RA2Q" responseType="_hKp8gAOVEe6N0fa_k7RA2Q" path="/accounts/%s/subaccounts" requestMethod="GET">
+    <authMethods>Token</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_o8W_cAOvEe6N0fa_k7RA2Q" name="GetSubaccount" baseUriName="Api" requestType="_ZM-HgAOFEe6N0fa_k7RA2Q" responseType="_Ml2BMAOAEe6N0fa_k7RA2Q" path="/accounts/%s/subaccounts/%s" requestMethod="GET">
+    <authMethods>Token</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_jQH_8AOwEe6N0fa_k7RA2Q" name="ListCreditTransfers" baseUriName="Api" requestType="_YTJ9YASzEe6N0fa_k7RA2Q" responseType="_uv8gwAOFEe6N0fa_k7RA2Q" path="/accounts/%s/credit-transfers" requestMethod="GET">
+    <authMethods>Token</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_yKV8gAOwEe6N0fa_k7RA2Q" name="ListBalanceTransfers" baseUriName="Api" requestType="_YTJ9YASzEe6N0fa_k7RA2Q" responseType="_4UOhUAOvEe6N0fa_k7RA2Q" path="/accounts/%s/balance-transfers" requestMethod="GET">
+    <authMethods>Token</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_5ZpJ4AOyEe6N0fa_k7RA2Q" name="TransferCredit" baseUriName="Api" requestType="_wPCU8AOFEe6N0fa_k7RA2Q" responseType="_wPCU8AOFEe6N0fa_k7RA2Q" path="/accounts/%s/credit-transfers" requestMethod="POST">
+    <authMethods>Token</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_85iYMAOyEe6N0fa_k7RA2Q" name="TransferBalance" baseUriName="Api" requestType="_6j3osAOvEe6N0fa_k7RA2Q" responseType="_6j3osAOvEe6N0fa_k7RA2Q" path="/accounts/%s/balance-transfers" requestMethod="POST">
+    <authMethods>Token</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_C5oSYAOzEe6N0fa_k7RA2Q" name="TransferNumber" baseUriName="Api" requestType="_fWWZYAOtEe6N0fa_k7RA2Q" responseType="_fWWZYAOtEe6N0fa_k7RA2Q" path="/accounts/%s/transfer-number" requestMethod="POST">
+    <authMethods>Token</authMethods>
+  </endpoints>
+  <types xsi:type="vonage_api:Class" xmi:id="_Ml2BMAOAEe6N0fa_k7RA2Q" name="Account" isResponse="true">
+    <fields xmi:id="_QXaOUAOAEe6N0fa_k7RA2Q" name="apiKey" json="api_key" testValue="&quot;bbe6222f&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" stringValue="bbe6222f" excludeRequest="true">
+      <doc xmi:id="_C03LIAOHEe6N0fa_k7RA2Q" returnDesc="The subaccount API key." description="Unique subaccount ID."/>
+    </fields>
+    <fields xmi:id="_XdkXsAOLEe6N0fa_k7RA2Q" name="primaryAccountApiKey" json="primary_account_api_key" testValue="&quot;acc6111f&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" stringValue="acc6111f" excludeRequest="true">
+      <doc xmi:id="_Xdk-wAOLEe6N0fa_k7RA2Q" returnDesc="The primary account API key." description="Unique primary account ID."/>
+    </fields>
+    <fields xmi:id="_oeVKAAOLEe6N0fa_k7RA2Q" name="name" json="name" testValue="&quot;Subaccount department A&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" stringValue="Subaccount department A">
+      <doc xmi:id="_oeVKAQOLEe6N0fa_k7RA2Q" returnDesc="The subaccount name." description="Name of the subaccount."/>
+    </fields>
+    <fields xmi:id="_yJC70AOLEe6N0fa_k7RA2Q" name="usePrimaryAccountBalance" json="use_primary_account_balance" testValue="true" type="_YBa6YAOFEe6N0fa_k7RA2Q" stringValue="true">
+      <doc xmi:id="_yJC70QOLEe6N0fa_k7RA2Q" returnDesc="Whether the balance is shared with the primary account." description="Flag showing if balance is shared with primary account."/>
+    </fields>
+    <fields xmi:id="_Ecxx4AOMEe6N0fa_k7RA2Q" name="suspended" json="suspended" testValue="false" type="_YBa6YAOFEe6N0fa_k7RA2Q" stringValue="false" excludeRequest="true">
+      <doc xmi:id="_Ecxx4QOMEe6N0fa_k7RA2Q" returnDesc="Whether this subaccount has been suspended." description="Subaccount suspension status."/>
+    </fields>
+    <fields xmi:id="_UG7WkAOMEe6N0fa_k7RA2Q" name="createdAt" json="created_at" testValue="Instant.parse(&quot;2018-03-02T16:34:49Z&quot;)" type="_bG750AOFEe6N0fa_k7RA2Q" stringValue="2018-03-02T16:34:49Z" excludeRequest="true">
+      <doc xmi:id="_UG7WkQOMEe6N0fa_k7RA2Q" returnDesc="The subaccount creation timestamp in ISO 8601 format." description="Subaccount creation date and time."/>
+    </fields>
+    <fields xmi:id="_q0y1oAOMEe6N0fa_k7RA2Q" name="balance" json="balance" testValue="BigDecimal.valueOf(99.25)" type="_Z5RM0AOFEe6N0fa_k7RA2Q" stringValue="99.25" excludeRequest="true">
+      <doc xmi:id="_q0y1oQOMEe6N0fa_k7RA2Q" returnDesc="The subaccount balance, or {@code null} if it is shared with primary account." description="Balance of the subaccount."/>
+    </fields>
+    <fields xmi:id="_JGeO8AOOEe6N0fa_k7RA2Q" name="creditLimit" json="credit_limit" testValue="BigDecimal.valueOf(-100.68)" type="_Z5RM0AOFEe6N0fa_k7RA2Q" stringValue="-100.68" excludeRequest="true">
+      <doc xmi:id="_JGeO8QOOEe6N0fa_k7RA2Q" returnDesc="The subaccount credit limit, or {@code null} if it is shared with primary account." description="Credit limit of the subaccount."/>
+    </fields>
+    <doc xmi:id="_PRLkEAOWEe6N0fa_k7RA2Q" description="Represents a Vonage subaccount."/>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_wPCU8AOFEe6N0fa_k7RA2Q" name="CreditTransfer" isRequest="true" isResponse="true">
+    <fields xmi:id="_-HGqcAOlEe6N0fa_k7RA2Q" name="creditTransferId" json="credit_transfer_id" testValue="UUID.fromString(&quot;07b5-46e1-a527-85530e625800&quot;)" type="_kftnEAOFEe6N0fa_k7RA2Q" stringValue="07b5-46e1-a527-85530e625800" excludeRequest="true">
+      <doc xmi:id="_GVb90AOmEe6N0fa_k7RA2Q" returnDesc="The UUID of the credit transfer." description="Unique credit transfer ID."/>
+    </fields>
+    <fields xmi:id="_VgOF8AOmEe6N0fa_k7RA2Q" name="createdAt" json="created_at" testValue="Instant.parse(&quot;2019-03-02T16:34:49Z&quot;)" type="_bG750AOFEe6N0fa_k7RA2Q" stringValue="2019-03-02T16:34:49Z" excludeRequest="true">
+      <doc xmi:id="_VgOF8QOmEe6N0fa_k7RA2Q" returnDesc="The transfer timestamp in ISO 8601 format." description="The date and time when the transfer was executed."/>
+    </fields>
+    <fields xmi:id="_j1IrIAOoEe6N0fa_k7RA2Q" name="amount" json="amount" testValue="BigDecimal.valueOf(123.45)" type="_Z5RM0AOFEe6N0fa_k7RA2Q" nullable="false" stringValue="123.45">
+      <doc xmi:id="_j1IrIQOoEe6N0fa_k7RA2Q" returnDesc="The monetary amount to transfer between accounts." description="(REQUIRED) Transfer amount."/>
+    </fields>
+    <fields xmi:id="_mFDigAOsEe6N0fa_k7RA2Q" name="from" json="from" testValue="&quot;7c9738e6&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" nullable="false" stringValue="7c9738e6">
+      <doc xmi:id="_mFDigQOsEe6N0fa_k7RA2Q" returnDesc="The transferer account ID." description="Account to transfer from."/>
+    </fields>
+    <fields xmi:id="_x22VkAOsEe6N0fa_k7RA2Q" name="to" json="to" testValue="&quot;ad6dc56f&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" nullable="false" stringValue="ad6dc56f">
+      <doc xmi:id="_x22VkQOsEe6N0fa_k7RA2Q" returnDesc="The transferee account ID." description="(REQUIRED) Account to transfer to."/>
+    </fields>
+    <fields xmi:id="_3QcQcAOsEe6N0fa_k7RA2Q" name="reference" json="reference" testValue="&quot;This gets added to the audit log&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" stringValue="This gets added to the audit log">
+      <doc xmi:id="_3QcQcQOsEe6N0fa_k7RA2Q" returnDesc="The transfer reference message, or {@code null} if not set (the default)." description="(OPTIONAL) Reference for the transfer."/>
+    </fields>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_6j3osAOvEe6N0fa_k7RA2Q" name="BalanceTransfer" isRequest="true" isResponse="true">
+    <fields xmi:id="_6j3osQOvEe6N0fa_k7RA2Q" name="balanceTransferId" json="balance_transfer_id" testValue="UUID.fromString(&quot;07b5-46e1-a527-85530e625800&quot;)" type="_kftnEAOFEe6N0fa_k7RA2Q" stringValue="07b5-46e1-a527-85530e625800" excludeRequest="true">
+      <doc xmi:id="_6j3osgOvEe6N0fa_k7RA2Q" returnDesc="The UUID of the balance transfer." description="Unique balance transfer ID."/>
+    </fields>
+    <fields xmi:id="_6j3oswOvEe6N0fa_k7RA2Q" name="createdAt" json="created_at" testValue="Instant.parse(&quot;2019-03-02T16:34:49Z&quot;)" type="_bG750AOFEe6N0fa_k7RA2Q" stringValue="2019-03-02T16:34:49Z" excludeRequest="true">
+      <doc xmi:id="_6j3otAOvEe6N0fa_k7RA2Q" returnDesc="The transfer timestamp in ISO 8601 format." description="The date and time when the transfer was executed."/>
+    </fields>
+    <fields xmi:id="_6j3otQOvEe6N0fa_k7RA2Q" name="amount" json="amount" testValue="BigDecimal.valueOf(123.45)" type="_Z5RM0AOFEe6N0fa_k7RA2Q" nullable="false" stringValue="123.45">
+      <doc xmi:id="_6j3otgOvEe6N0fa_k7RA2Q" returnDesc="The monetary amount to transfer between accounts." description="(REQUIRED) Transfer amount."/>
+    </fields>
+    <fields xmi:id="_6j3otwOvEe6N0fa_k7RA2Q" name="from" json="from" testValue="&quot;7c9738e6&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" nullable="false" stringValue="7c9738e6">
+      <doc xmi:id="_6j3ouAOvEe6N0fa_k7RA2Q" returnDesc="The transferer account ID." description="Account to transfer from."/>
+    </fields>
+    <fields xmi:id="_6j3ouQOvEe6N0fa_k7RA2Q" name="to" json="to" testValue="&quot;ad6dc56f&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" nullable="false" stringValue="ad6dc56f">
+      <doc xmi:id="_6j3ougOvEe6N0fa_k7RA2Q" returnDesc="The transferee account ID." description="(REQUIRED) Account to transfer to."/>
+    </fields>
+    <fields xmi:id="_6j3ouwOvEe6N0fa_k7RA2Q" name="reference" json="reference" testValue="&quot;This gets added to the audit log&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" stringValue="This gets added to the audit log">
+      <doc xmi:id="_6j3ovAOvEe6N0fa_k7RA2Q" returnDesc="The transfer reference message, or {@code null} if not set (the default)." description="(OPTIONAL) Reference for the transfer."/>
+    </fields>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_fWWZYAOtEe6N0fa_k7RA2Q" name="NumberTransfer" isRequest="true" isResponse="true">
+    <fields xmi:id="_fWWZZwOtEe6N0fa_k7RA2Q" name="from" json="from" testValue="&quot;7c9738e6&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" nullable="false" stringValue="7c9738e6">
+      <doc xmi:id="_fWWZaAOtEe6N0fa_k7RA2Q" returnDesc="The transferer account ID." description="Account to transfer from."/>
+    </fields>
+    <fields xmi:id="_fWWZaQOtEe6N0fa_k7RA2Q" name="to" json="to" testValue="&quot;ad6dc56f&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" nullable="false" stringValue="ad6dc56f">
+      <doc xmi:id="_fWWZagOtEe6N0fa_k7RA2Q" returnDesc="The transferee account ID." description="(REQUIRED) Account to transfer to."/>
+    </fields>
+    <fields xmi:id="_fWWZawOtEe6N0fa_k7RA2Q" name="country" json="country" testValue="&quot;GB&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" stringValue="GB">
+      <doc xmi:id="_fWWZbAOtEe6N0fa_k7RA2Q" returnDesc="The two letter country code for the number." description="(REQUIRED) Country the number is registered in."/>
+    </fields>
+    <fields xmi:id="_SYNSgAOuEe6N0fa_k7RA2Q" name="number" json="number" testValue="&quot;23507703696&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" stringValue="23507703696">
+      <doc xmi:id="_SYNSgQOuEe6N0fa_k7RA2Q" returnDesc="The transfer phone number in E164 format." description="(REQUIRED) The number being transferred between accounts."/>
+    </fields>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_YTJ9YASzEe6N0fa_k7RA2Q" name="ListTransfersRequest" isRequest="true" isQueryParams="true">
+    <fields xmi:id="_lKCwQASzEe6N0fa_k7RA2Q" name="startDate" json="start_date" type="_bG750AOFEe6N0fa_k7RA2Q">
+      <doc xmi:id="_TMON4AS1Ee6N0fa_k7RA2Q" description="Start of the retrieval period."/>
+    </fields>
+    <fields xmi:id="_HzBhAAS1Ee6N0fa_k7RA2Q" name="endDate" json="end_date" type="_bG750AOFEe6N0fa_k7RA2Q">
+      <doc xmi:id="_v263wAS1Ee6N0fa_k7RA2Q" description="End of the retrieval period. If absent then all transfers until now is returned."/>
+    </fields>
+    <fields xmi:id="_Jqk4gAS1Ee6N0fa_k7RA2Q" name="subaccounts" json="subaccount" type="_2OmykAS1Ee6N0fa_k7RA2Q">
+      <doc xmi:id="_6dNhAAS1Ee6N0fa_k7RA2Q" description="Subaccount API keys to filter by."/>
+    </fields>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_hKp8gAOVEe6N0fa_k7RA2Q" name="ListSubaccountsResponse" isResponse="true">
+    <fields xmi:id="_mzvE4AOVEe6N0fa_k7RA2Q" name="primaryAccount" json="primary_account" type="_Ml2BMAOAEe6N0fa_k7RA2Q">
+      <doc xmi:id="_q0oHcAOVEe6N0fa_k7RA2Q" returnDesc="The primary account details." description="Parent account."/>
+    </fields>
+    <fields xmi:id="_wXghMAOVEe6N0fa_k7RA2Q" name="subaccounts" json="subaccounts" type="_lgcEQAOFEe6N0fa_k7RA2Q">
+      <doc xmi:id="_2WN7UAOVEe6N0fa_k7RA2Q" returnDesc="List of subaccount details." description="The subaccounts associated with the primary account."/>
+    </fields>
+    <doc xmi:id="__PBvEAOVEe6N0fa_k7RA2Q" description="Represents the subaccounts returned from {@link SubaccountsClient#listSubaccounts()}."/>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_Wlp3QAOWEe6N0fa_k7RA2Q" name="CreateSubaccountRequest" isRequest="true">
+    <fields xmi:id="_xCVxcAOWEe6N0fa_k7RA2Q" name="primaryAccountApiKey" json="primary_account_api_key" testValue="&quot;acc6111f&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" stringValue="acc6111f" excludeRequest="true">
+      <doc xmi:id="_xCVxcQOWEe6N0fa_k7RA2Q" returnDesc="The primary account API key." description="(REQUIRED) The primary account's API key."/>
+    </fields>
+    <fields xmi:id="_xCVxcgOWEe6N0fa_k7RA2Q" name="name" json="name" testValue="&quot;Subaccount department A&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" stringValue="Subaccount department A">
+      <doc xmi:id="_xCVxcwOWEe6N0fa_k7RA2Q" returnDesc="The subaccount name." description="Name of the subaccount."/>
+    </fields>
+    <fields xmi:id="_xCVxdAOWEe6N0fa_k7RA2Q" name="usePrimaryAccountBalance" json="" testValue="false" type="_YBa6YAOFEe6N0fa_k7RA2Q" stringValue="false">
+      <doc xmi:id="_xCVxdQOWEe6N0fa_k7RA2Q" returnDesc="{@code true} if the balance is shared with the primary account or {@code null} if unspecified (the default)." description="Whether to use the primary account's balance."/>
+    </fields>
+    <fields xmi:id="_HJUPoAOXEe6N0fa_k7RA2Q" name="secret" json="secret" testValue="&quot;Subaccount department A&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" stringValue="Subaccount department A">
+      <doc xmi:id="_HJU2sAOXEe6N0fa_k7RA2Q" returnDesc="The secret to associate with this API key." description="Subaccount API secret."/>
+    </fields>
+    <doc xmi:id="_Y5YNYAOWEe6N0fa_k7RA2Q" description="Container for parameters used to create a subaccount when calling {@link SubaccountsClient#createSubaccount(CreateSubaccountRequest)}."/>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_YPlNAAOXEe6N0fa_k7RA2Q" name="UpdateSubaccountRequest" isRequest="true">
+    <fields xmi:id="_YPlNAQOXEe6N0fa_k7RA2Q" name="primaryAccountApiKey" json="primary_account_api_key" testValue="&quot;acc6111f&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" stringValue="acc6111f" excludeRequest="true">
+      <doc xmi:id="_YPlNAgOXEe6N0fa_k7RA2Q" returnDesc="The primary account API key." description="(REQUIRED) The primary account's API key."/>
+    </fields>
+    <fields xmi:id="_YPlNAwOXEe6N0fa_k7RA2Q" name="name" json="name" testValue="&quot;Subaccount department A&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" stringValue="Subaccount department A">
+      <doc xmi:id="_YPlNBAOXEe6N0fa_k7RA2Q" returnDesc="The updated subaccount name, or {@code null} if not set (the default)." description="(OPTIONAL) Name of the subaccount."/>
+    </fields>
+    <fields xmi:id="_YPlNBQOXEe6N0fa_k7RA2Q" name="usePrimaryAccountBalance" json="" testValue="false" type="_YBa6YAOFEe6N0fa_k7RA2Q" stringValue="false">
+      <doc xmi:id="_YPlNBgOXEe6N0fa_k7RA2Q" returnDesc="{@code true} if the balance is shared with the primary account or {@code null} if not set (the default)." description="(OPTIONAL) Whether to use the primary account's balance."/>
+    </fields>
+    <fields xmi:id="_ccD0gAOXEe6N0fa_k7RA2Q" name="subaccountApiKey" json="" testValue="&quot;acc6111f&quot;" type="_ZM-HgAOFEe6N0fa_k7RA2Q" stringValue="acc6111f" excludeRequest="true">
+      <doc xmi:id="_ccD0gQOXEe6N0fa_k7RA2Q" returnDesc="The subaccount API key." description="(REQUIRED) The subaccount's API key."/>
+    </fields>
+    <fields xmi:id="_bu9ogAOYEe6N0fa_k7RA2Q" name="suspended" json="suspended" testValue="true" type="_YBa6YAOFEe6N0fa_k7RA2Q" stringValue="true">
+      <doc xmi:id="_bu9ogQOYEe6N0fa_k7RA2Q" returnDesc="Whether this subaccount should be suspended, or {@code null} if not set (the default)." description="(OPTIONAL) Whether to suspend this subaccount."/>
+    </fields>
+    <doc xmi:id="_YPlNCQOXEe6N0fa_k7RA2Q" description="Container for parameters used to update a subaccount when calling {@link SubaccountsClient#updateSubaccount(UpdateSubaccountRequest)}."/>
+  </types>
+  <types xmi:id="_VCYI0AOlEe6N0fa_k7RA2Q" name="Void"/>
+  <types xmi:id="_YBa6YAOFEe6N0fa_k7RA2Q" name="Boolean"/>
+  <types xmi:id="_ZM-HgAOFEe6N0fa_k7RA2Q" name="String"/>
+  <types xmi:id="_Z5RM0AOFEe6N0fa_k7RA2Q" name="BigDecimal"/>
+  <types xmi:id="_bG750AOFEe6N0fa_k7RA2Q" name="Instant"/>
+  <types xmi:id="_kftnEAOFEe6N0fa_k7RA2Q" name="UUID"/>
+  <types xmi:id="_lgcEQAOFEe6N0fa_k7RA2Q" name="List&lt;Account>"/>
+  <types xmi:id="_uv8gwAOFEe6N0fa_k7RA2Q" name="List&lt;CreditTransfer>"/>
+  <types xmi:id="_4UOhUAOvEe6N0fa_k7RA2Q" name="List&lt;BalanceTransfer>"/>
+  <types xmi:id="_2OmykAS1Ee6N0fa_k7RA2Q" name="List&lt;String>"/>
+</vonage_api:Api>

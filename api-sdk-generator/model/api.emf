@@ -1,0 +1,80 @@
+@namespace(uri="https://developer.vonage.com/metamodel", prefix="vonage")
+package vonage_api;
+
+class Api {
+	!ordered val Endpoint[+] endpoints;
+	attr String[1] name;
+	val Type[*] types;
+	attr String ~package;
+	attr String baseEndpointPath;
+}
+
+class Endpoint {
+	attr String[1] name;
+	attr String[1] baseUriName;
+	attr AuthMethod[+] authMethods;
+	ref Type requestType;
+	ref Type responseType;
+	!unique attr String[1] path;
+	attr RequestMethod[1] requestMethod;
+}
+
+class Field {
+	attr String name;
+	attr String json;
+	attr String testValue;
+	ref Type[1] type;
+	val Documentation doc;
+	attr boolean[1] nullable = true;
+	attr String stringValue;
+	attr boolean[1] excludeRequest = false;
+}
+
+enum AuthMethod {
+	JWT = 10;
+	Signature = 20;
+	Token = 30;
+}
+
+class Class extends Type {
+	val Field[*] fields;
+	val Documentation doc;
+	ref Class ~extends;
+	attr String[*] implements;
+	attr boolean[1] public = true;
+	attr boolean[1] isRequest = false;
+	attr boolean[1] isResponse = false;
+	attr boolean[1] isHal = false;
+	attr boolean[1] isQueryParams = false;
+}
+
+class Documentation {
+	attr String returnDesc;
+	val DocumentationValue[*] parameters;
+	val DocumentationValue[*] exceptions;
+	attr String description;
+}
+
+class DocumentationValue {
+	attr String[1] name;
+	attr String description;
+}
+
+enum RequestMethod {
+	HEAD = 0;
+	GET = 1;
+	PUT = 2;
+	POST = 3;
+	DELETE = 4;
+	PATCH = 5;
+}
+
+class Enum extends Type {
+	attr String[+] values;
+	attr String doc;
+}
+
+class Type {
+	attr String name;
+}
+

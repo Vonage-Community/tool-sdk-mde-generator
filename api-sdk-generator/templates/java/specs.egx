@@ -1,0 +1,250 @@
+pre {
+	var requestTypes = Class.all.select(c | c.isRequestOnly() and not c.isQueryParams);
+	var queryParamsRequestTypes = Class.all.select(c | c.isRequestOnly()).excluding(requestTypes);
+	var responseTypes = Class.all.select(c | c.isResponseOnly());
+	var halTypes = Class.all.select(c | c.isHal);
+	var dualTypes = Class.all.select(c | c.isRequestAndResponse());
+	var pojos = Type.all
+		.excludingAll(requestTypes)
+		.excludingAll(responseTypes)
+		.excludingAll(dualTypes)
+		.reject(t | t.fields.isUndefined() or t.fields.isEmpty());
+	
+	var publicPojos = pojos.select(p | p.public);
+	var privatePojos = pojos.reject(p | p.public);
+	var extension = ".java";
+	var testClassSuffix = "Test";
+	var api = Api.all.first;
+	var endpointTestSpecClass = api.name.ftuc() + "EndpointTestSpec";
+	var exceptionClass = api.name.ftuc() + "ResponseException";
+	var clientClass = api.name.ftuc()+"Client";
+	var outDir = baseDir + "/"+(api.package.replace("\\.", "/"))+"/";
+	var testDir = outDir + "test/";
+	var params = Map {
+		"testClassSuffix" = testClassSuffix,
+		"package" = api.package
+	};
+}
+
+operation Type getOutputPath() : String {
+	return outDir + self.name + extension;
+}
+
+operation Type getTestOutputPath() : String {
+	return testDir + self.name + testClassSuffix + extension;
+}
+
+operation Class isRequestOnly() : Boolean {
+	return not self.isResponse and (self.isRequest or (self.public and self.name.endsWith("Request")));
+}
+
+operation Class isResponseOnly() : Boolean {
+	return not self.isHal and not self.isRequest and (self.isResponse or self.name.endsWith("Response"));
+}
+
+operation Class isRequestAndResponse() : Boolean {
+	return self.isRequest and self.isResponse and self.public;
+}
+
+operation Endpoint getClassName() : String {
+	return self.name + "Endpoint";
+}
+
+operation Endpoint isHalResponse() : Boolean {
+	return self.responseType.isDefined() and self.responseType.hasProperty("isHal") and self.responseType.isHal;
+}
+
+operation Endpoint getEndpointParams() : Map {
+	var p = Map {
+		"endpoint" = self,
+		"api" = api.name,
+		"exception" = exceptionClass,
+		"name" = self.getClassName(),
+		"path" = self.path,
+		"fullEndpointPath" = api.baseEndpointPath + self.path,
+		"baseEndpointPath" = api.baseEndpointPath,
+		"relativeEndpointPath" = self.path,
+		"baseUriMethod" = "get"+self.baseUriName+"BaseUri",
+		"authMethods" = self.authMethods,
+		"requestMethod" = self.requestMethod.literal,
+		"requestType" = self.requestType,
+		"responseType" = self.responseType,
+		"requestTypeName" = self.requestType.isDefined() ? self.requestType.name : "Void",
+		"responseTypeName" = self.responseType.isDefined() ? self.responseType.name : "Void",
+		"isHalResponse" = self.isHalResponse(),
+		"halResponseEmbeddedType" = self.isHalResponse() ? self.responseType.fields.first : null,
+		"testSpecName" = endpointTestSpecClass
+	};
+	p.putAll(params);
+	return p;
+}
+
+operation Class getRequestParams() : Map {
+	return self.getPojoParams();
+}
+
+operation Class getResponseParams() : Map {
+	return self.getPojoParams();
+}
+
+operation Class getRequestResponseParams() : Map {
+	var p = Map {
+		"requestFields" = self.fields.reject(f | f.excludeRequest)
+	};
+	p.putAll(self.getPojoParams());
+	return p;
+}
+
+operation Class getHalParams() : Map {
+	var embeddedType = self.fields.first;
+	var p = Map {
+		"embeddedTypeName" = embeddedType.type.name,
+		"embeddedPropertyName" = embeddedType.name
+	};
+	p.putAll(self.getResponseParams());
+	return p;
+}
+
+operation Class getPojoParams() : Map {
+	var p = Map {
+		"name" = self.name,
+		"fields" = self.fields,
+		"javadoc" = self.doc,
+		"extends" = self.`extends`,
+		"implements" = self.implements,
+		"public" = self.public
+	};
+	p.putAll(params);
+	return p;
+}
+
+operation Enum getEnumParams() : Map {
+	var p = Map {
+		"name" = self.name,
+		"values" = self.values,
+		"javadoc" = self.doc
+	};
+	p.putAll(params);
+	return p;
+}
+
+operation getClientParams() : Map {
+	var p = Map {
+		"name" = api.name.ftuc(),
+		"clientClass" = clientClass,
+		"endpoints" = Endpoint.allInstances(),
+		"exception" = exceptionClass
+	};
+	p.putAll(params);
+	return p;
+}
+
+operation getExceptionParams() : Map {
+	var p = Map {
+		"name" = exceptionClass
+	};
+	p.putAll(params);
+	return p;
+}
+
+rule Exception {
+	parameters: getExceptionParams()
+	template: "exception.egl"
+	target: outDir + exceptionClass + extension
+}
+
+rule Client {
+	parameters: getClientParams()
+	template: "client.egl"
+	target: outDir + clientClass + extension
+}
+
+rule ClientTest {
+	parameters: getClientParams()
+	template: "client_test.egl"
+	target: testDir + clientClass + testClassSuffix + extension
+}
+
+rule EndpointTestSpec {
+	parameters: Endpoint.all.first.getEndpointParams()
+	template: "endpoint_test_spec.egl"
+	target: testDir + endpointTestSpecClass + extension
+}
+
+rule PublicPojo transform pojo in: publicPojos {
+	parameters: pojo.getPojoParams()
+	template: "pojo.egl"
+	target: pojo.getOutputPath()
+}
+
+rule PrivatePojo transform pojo in: privatePojos {
+	parameters: pojo.getPojoParams()
+	template: "pojo_wrapper.egl"
+	target: pojo.getOutputPath()
+}
+
+rule Enum transform enum : Enum {
+	parameters: enum.getEnumParams()
+	template: "enum.egl"
+	target: enum.getOutputPath()
+}
+
+rule QueryParamRequest transform request in: queryParamsRequestTypes {
+	parameters: request.getRequestParams()
+	template: "request_query.egl"
+	target: request.getOutputPath()
+}
+
+rule Request transform request in: requestTypes {
+	parameters: request.getRequestParams()
+	template: "request.egl"
+	target: request.getOutputPath()
+}
+
+rule RequestTest transform request in: requestTypes {
+	parameters: request.getRequestParams()
+	template: "request_test.egl"
+	target: request.getTestOutputPath()
+}
+
+rule Response transform response in: responseTypes {
+	parameters: response.getResponseParams()
+	template: "response.egl"
+	target: response.getOutputPath()
+}
+
+rule Hal transform hal in: halTypes {
+	parameters: hal.getHalParams()
+	template: "hal_response.egl"
+	target: hal.getOutputPath()
+}
+
+rule ResponseTest transform response in: responseTypes {
+	parameters: response.getResponseParams()
+	template: "response_test.egl"
+	target: response.getTestOutputPath()
+}
+
+rule RequestResponse transform reqres in: dualTypes {
+	parameters: reqres.getRequestResponseParams()
+	template: "request_response.egl"
+	target: reqres.getOutputPath()
+}
+
+rule RequestResponseTest transform reqres in: dualTypes {
+	parameters: reqres.getRequestResponseParams()
+	template: "request_response_test.egl"
+	target: reqres.getTestOutputPath()
+}
+
+rule Endpoint transform endpoint : Endpoint {
+	parameters: endpoint.getEndpointParams()
+	template: "endpoint.egl"
+	target: outDir + endpoint.getClassName() + extension
+}
+
+rule EndpointTest transform endpoint : Endpoint {
+	parameters: endpoint.getEndpointParams()
+	template: "endpoint_test.egl"
+	target: testDir + endpoint.getClassName() + testClassSuffix + extension
+}

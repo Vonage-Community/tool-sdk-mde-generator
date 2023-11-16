@@ -1,0 +1,72 @@
+[%
+import "./helper_functions.egl";
+%]
+[%=packageAndCopyright()%]
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class [%=name + testClassSuffix%] {
+	
+	@Test
+	public void testSerializeAndParseAllParameters() {
+	[% for (field in requestFields) {%]
+		[%=field.type.name%] [%=field.name%] = [%=field.testValue%];
+	[%}%]
+		[%=name%] request = [%=name%].builder()
+[%		for (field in requestFields) {%]
+			.[%=field.name%]([%=field.name%])
+		[%}%]
+			.build();
+		
+		String json = request.toJson();
+	[% for (field in requestFields) {
+			if (field.json.isDefined()) {%]
+		assertTrue(json.contains("\"[%=field.json%]\":\""+[%=field.name%]+"\""));
+	[%}}%]
+	
+		[%=name%] response = [%=name%].fromJson(json);
+		[% for (field in requestFields) {%]
+		assertEquals(request.get[%=field.name.ftuc()%](), response.get[%=field.name.ftuc()%]());
+	[%}%]
+	}
+	
+	@Test
+	public void testFromJsonAllFields() {
+	[% for (field in fields) {%]
+		[%=field.type.name%] [%=field.name%] = [%=field.testValue%];
+	[%}%]
+	
+		[%=name%] response = [%=name%].fromJson("{\n" +
+		[% var fieldsIter = fields.iterator();
+		while (fieldsIter.hasNext()) {
+			var field = fieldsIter.next(); %]
+				"\"[%=field.name%]\":\""+[%=field.name%]+"\"[%=fieldsIter.hasNext() ? "," : ""%]\n" +
+		[%}%]		"}");
+		
+	[% for (field in fields) {%]
+		assertEquals([%=field.name%], response.get[%=field.name.ftuc()%]());
+	[%}%]
+	}
+	
+	@Test
+	public void testFromJsonInvalid() {
+		assertThrows(VonageResponseParseException.class, () -> [%=name%].fromJson("{malformed]"));
+	}
+
+	@Test
+	public void testFromJsonEmpty() {
+		[%=name%] response = [%=name%].fromJson("{}");
+	[% for (field in fields) {%]
+		assertNull(response.get[%=field.name.ftuc()%]());
+	[%}%]
+	}
+	
+	@Test
+	public void triggerJsonProcessingException() {
+		class SelfRefrencing extends [%=name%] {
+			@JsonProperty("self") SelfRefrencing self = this;
+		}
+		assertThrows(VonageUnexpectedException.class, () -> new SelfRefrencing([%=name%].builder()).toJson());
+	}
+}

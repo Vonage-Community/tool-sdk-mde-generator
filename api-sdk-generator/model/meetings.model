@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Api xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="vonage_api" xmi:id="_y_IQEJV-Ee2qi6YXzFhSdw" name="Meetings" package="com.vonage.client.meetings" baseEndpointPath="https://api-eu.vonage.com/v1/meetings">
+  <endpoints xmi:id="_bkCHgJWSEe2qi6YXzFhSdw" name="GetRoom" baseUriName="ApiEu" requestType="_qDwo0JWEEe2qi6YXzFhSdw" responseType="_0JP8AJWNEe2qi6YXzFhSdw" path="/beta/meetings/rooms/%s" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_0tDz4JWyEe2qi6YXzFhSdw" name="UpdateRoom" baseUriName="ApiEu" requestType="_KLPzwJWzEe2qi6YXzFhSdw" responseType="_0JP8AJWNEe2qi6YXzFhSdw" path="/beta/meetings/rooms/%s" requestMethod="PATCH">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_EaCNoJW0Ee2qi6YXzFhSdw" name="CreateRoom" baseUriName="ApiEu" requestType="_0JP8AJWNEe2qi6YXzFhSdw" responseType="_0JP8AJWNEe2qi6YXzFhSdw" path="/beta/meetings/rooms" requestMethod="POST">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_MhdgYJW3Ee2qi6YXzFhSdw" name="GetRecording" baseUriName="ApiEu" requestType="_t_5uQJWEEe2qi6YXzFhSdw" responseType="_a4KyIJW1Ee2qi6YXzFhSdw" path="/beta/meetings/recordings/%s" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_XdiMYJW3Ee2qi6YXzFhSdw" name="DeleteRecording" baseUriName="ApiEu" requestType="_t_5uQJWEEe2qi6YXzFhSdw" responseType="_rHhqkJWSEe2qi6YXzFhSdw" path="/beta/meetings/recordings/%s" requestMethod="DELETE">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_nR7YwJXkEe2qi6YXzFhSdw" name="ListRecordings" baseUriName="ApiEu" requestType="_qDwo0JWEEe2qi6YXzFhSdw" responseType="_5lIHAJcbEe2qi6YXzFhSdw" path="/beta/meetings/sessions/%s/recordings" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_iw6kUJXnEe2qi6YXzFhSdw" name="ListDialNumbers" baseUriName="ApiEu" requestType="_rHhqkJWSEe2qi6YXzFhSdw" responseType="_j9KVAJXnEe2qi6YXzFhSdw" path="/beta/meetings/dial-in-numbers" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_naPqcJXoEe2qi6YXzFhSdw" name="UpdateApplication" baseUriName="ApiEu" requestType="_sbVlwJXoEe2qi6YXzFhSdw" responseType="_FKKscJXoEe2qi6YXzFhSdw" path="/beta/meetings/applications" requestMethod="PATCH">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_HJxXQJXpEe2qi6YXzFhSdw" name="FinalizeLogos" baseUriName="ApiEu" requestType="_ByP48JXpEe2qi6YXzFhSdw" responseType="_rHhqkJWSEe2qi6YXzFhSdw" path="/beta/meetings/themes/%s/finalizeLogos" requestMethod="PUT">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_l-jTEJXpEe2qi6YXzFhSdw" name="DeleteTheme" baseUriName="ApiEu" requestType="_t_5uQJWEEe2qi6YXzFhSdw" responseType="_rHhqkJWSEe2qi6YXzFhSdw" path="/beta/meetings/themes/%s" requestMethod="DELETE">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_D-K8UJZJEe2qi6YXzFhSdw" name="GetTheme" baseUriName="ApiEu" requestType="_t_5uQJWEEe2qi6YXzFhSdw" responseType="_C1G0wJZEEe2qi6YXzFhSdw" path="/beta/meetings/themes/%s" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_v8e6MJZJEe2qi6YXzFhSdw" name="CreateTheme" baseUriName="ApiEu" requestType="_C1G0wJZEEe2qi6YXzFhSdw" responseType="_C1G0wJZEEe2qi6YXzFhSdw" path="/beta/meetings/themes" requestMethod="POST">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_6ZcBQJZJEe2qi6YXzFhSdw" name="UpdateTheme" baseUriName="ApiEu" requestType="_C1G0wJZEEe2qi6YXzFhSdw" responseType="_C1G0wJZEEe2qi6YXzFhSdw" path="/beta/meetings/themes/%s" requestMethod="PATCH">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_46ZhUJZSEe2qi6YXzFhSdw" name="GetLogoUploadUrls" baseUriName="ApiEu" requestType="_rHhqkJWSEe2qi6YXzFhSdw" responseType="_GJyTwJZTEe2qi6YXzFhSdw" path="/beta/meetings/themes/logos-upload-urls" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_VdypUJZTEe2qi6YXzFhSdw" name="SearchThemeRooms" baseUriName="ApiEu" requestType="_HRu-wJcNEe2qi6YXzFhSdw" responseType="_yQSH0JZUEe2qi6YXzFhSdw" path="/beta/meetings/themes/%s/rooms" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_rjF3EJZUEe2qi6YXzFhSdw" name="ListRooms" baseUriName="ApiEu" requestType="_HRu-wJcNEe2qi6YXzFhSdw" responseType="_yQSH0JZUEe2qi6YXzFhSdw" path="/beta/meetings/rooms" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_x-Cr0JZVEe2qi6YXzFhSdw" name="ListThemes" baseUriName="ApiEu" requestType="_rHhqkJWSEe2qi6YXzFhSdw" responseType="_2MXtcJZVEe2qi6YXzFhSdw" path="/beta/meetings/themes" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_-FCH8GweEe6kfo4AUNta2A" name="ListSessions" baseUriName="ApiEu" requestType="_1nQwwGwmEe6kfo4AUNta2A" responseType="_Ny4ZgGwiEe6kfo4AUNta2A" path="/v1/meetings/sessions" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <types xmi:id="_2MXtcJZVEe2qi6YXzFhSdw" name="List&lt;Theme>"/>
+  <types xmi:id="_YVmHcJZUEe2qi6YXzFhSdw" name="List&lt;MeetingRoom>"/>
+  <types xmi:id="_GJyTwJZTEe2qi6YXzFhSdw" name="List&lt;LogoUploadsUrlResponse>"/>
+  <types xsi:type="Class" xmi:id="_PYWyoJWDEe2qi6YXzFhSdw" name="CallbackUrls" isRequest="true" isResponse="true">
+    <fields xmi:id="_H7jGAJWHEe2qi6YXzFhSdw" name="roomsCallbackUrl" json="rooms_callback_url" type="_QHaJoJWGEe2qi6YXzFhSdw">
+      <doc xmi:id="_3pM8EJWKEe2qi6YXzFhSdw" returnDesc="The rooms callback URL." description="Callback url for rooms events, overrides application level rooms callback url."/>
+    </fields>
+    <fields xmi:id="_9JQEQJWKEe2qi6YXzFhSdw" name="sessionsCallbackUrl" json="sessions_callback_url" type="_QHaJoJWGEe2qi6YXzFhSdw">
+      <doc xmi:id="_9JQEQZWKEe2qi6YXzFhSdw" returnDesc="The sessions callback URL." description="Callback url for sessions events, overrides application level sessions callback url."/>
+    </fields>
+    <fields xmi:id="_E1jooJWLEe2qi6YXzFhSdw" name="recordingsCallbackUrl" json="recordings_callback_url" type="_QHaJoJWGEe2qi6YXzFhSdw">
+      <doc xmi:id="_E1jooZWLEe2qi6YXzFhSdw" returnDesc="The recordings callback URL." description="Callback url for recordings events, overrides application level recordings callback url."/>
+    </fields>
+  </types>
+  <types xsi:type="Enum" xmi:id="_DPUu0JWEEe2qi6YXzFhSdw" name="RoomType" doc="Represents the type of the room.">
+    <values>INSTANT</values>
+    <values>LONG_TERM</values>
+  </types>
+  <types xsi:type="Enum" xmi:id="_NpVPkJWEEe2qi6YXzFhSdw" name="ApprovalLevel" doc="The level of approval needed to join the meeting in the room. When set to &quot;after_owner_only&quot; the participants will join the meeting only after the host joined. When set to &quot;explicit_approval&quot; the participants will join the waiting room and the host will deny/approve them.">
+    <values>NONE</values>
+    <values>AFTER_OWNER_ONLY</values>
+    <values>EXPLICIT_APPROVAL</values>
+  </types>
+  <types xsi:type="Enum" xmi:id="_d3L-QJWEEe2qi6YXzFhSdw" name="MicrophoneState" doc="Set the default microphone option for users in the pre-join screen of this room.">
+    <values>ON</values>
+    <values>OFF</values>
+    <values>DEFAULT</values>
+  </types>
+  <types xmi:id="_oo_7AJWEEe2qi6YXzFhSdw" name="boolean"/>
+  <types xmi:id="_qDwo0JWEEe2qi6YXzFhSdw" name="String"/>
+  <types xmi:id="_t_5uQJWEEe2qi6YXzFhSdw" name="UUID"/>
+  <types xmi:id="_v_bWAJWEEe2qi6YXzFhSdw" name="Boolean"/>
+  <types xmi:id="_QHaJoJWGEe2qi6YXzFhSdw" name="URI"/>
+  <types xsi:type="Class" xmi:id="_DLXUgJWHEe2qi6YXzFhSdw" name="AvailableFeatures" isRequest="true">
+    <fields xmi:id="_op7q8JWLEe2qi6YXzFhSdw" name="isRecordingAvailable" json="is_recording_available" testValue="true" type="_v_bWAJWEEe2qi6YXzFhSdw" stringValue="">
+      <doc xmi:id="_0RlDgJWLEe2qi6YXzFhSdw" returnDesc="{@code true} if the feature is available." description="Determine if recording feature is available in the UI."/>
+    </fields>
+    <fields xmi:id="_Mk75sJWMEe2qi6YXzFhSdw" name="isChatAvailable" json="is_chat_available" testValue="true" type="_v_bWAJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_Mk75sZWMEe2qi6YXzFhSdw" returnDesc="{@code true} if the feature is available." description="Determine if chat feature is available in the UI."/>
+    </fields>
+    <fields xmi:id="_SQB0QJWMEe2qi6YXzFhSdw" name="isWhiteboardAvailable" json="is_whiteboard_available" testValue="true" type="_v_bWAJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_SQB0QZWMEe2qi6YXzFhSdw" returnDesc="{@code true} if the feature is available." description="Determine if whiteboard feature is available in the UI."/>
+    </fields>
+    <fields xmi:id="_wjVp4Jd9Ee2qi6YXzFhSdw" name="isLocaleSwitcherAvailable" json="is_locale_switcher_available" testValue="true" type="_v_bWAJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_wjVp4Zd9Ee2qi6YXzFhSdw" returnDesc="{@code true} if the feature is available." description="Determine if locale switcher feature is available in the UI."/>
+    </fields>
+  </types>
+  <types xsi:type="Class" xmi:id="_z1CcAJWMEe2qi6YXzFhSdw" name="InitialJoinOptions" isRequest="true">
+    <fields xmi:id="_1ogkwJWMEe2qi6YXzFhSdw" name="microphoneState" json="microphone_state" type="_d3L-QJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_8iG50JWMEe2qi6YXzFhSdw" description="Set the default microphone option for users in the pre-join screen of this room."/>
+    </fields>
+  </types>
+  <types xsi:type="Class" xmi:id="_GIC5UJWNEe2qi6YXzFhSdw" name="RecordingOptions" isRequest="true">
+    <fields xmi:id="_L2S1kJWNEe2qi6YXzFhSdw" name="autoRecord" json="auto_record" testValue="true" type="_v_bWAJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_TH-TcJWNEe2qi6YXzFhSdw" returnDesc="Whether all sessions are automatically recorded, or {@code null} if unknown." description="Automatically record all sessions in this room. Recording cannot be stopped when this is set to true."/>
+    </fields>
+    <fields xmi:id="_a9yZIJWNEe2qi6YXzFhSdw" name="recordOnlyOwner" json="record_only_owner" testValue="true" type="_v_bWAJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_a9yZIZWNEe2qi6YXzFhSdw" returnDesc="Whether only the owner screen is recorded, or {@code null} if unknown." description="Record only the owner screen or any share screen of the video."/>
+    </fields>
+  </types>
+  <types xsi:type="Class" xmi:id="_0JP8AJWNEe2qi6YXzFhSdw" name="MeetingRoom" isRequest="true" isResponse="true">
+    <fields xmi:id="_KIXesJWOEe2qi6YXzFhSdw" name="displayName" json="display_name" testValue="&quot;abc123&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_ReA2kJWOEe2qi6YXzFhSdw" returnDesc="The display name." description="Name of the meeting room."/>
+    </fields>
+    <fields xmi:id="_h6t5kJWOEe2qi6YXzFhSdw" name="metadata" json="metadata" testValue="&quot;abc123&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_h6t5kZWOEe2qi6YXzFhSdw" returnDesc="The room description / metadata." description="Free text that can be attached to a room. This will be passed in the form of a header in events related to this room."/>
+    </fields>
+    <fields xmi:id="_rl6zkJWOEe2qi6YXzFhSdw" name="type" json="type" testValue="RoomType.LONG_TERM" type="_DPUu0JWEEe2qi6YXzFhSdw" stringValue="&quot;long_term&quot;">
+      <doc xmi:id="_0ojRsJWOEe2qi6YXzFhSdw" returnDesc="The room type, as an enum." description="Type of room."/>
+    </fields>
+    <fields xmi:id="_aQduMJWPEe2qi6YXzFhSdw" name="isAvailable" json="is_available" testValue="false" type="_v_bWAJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_dk2QEJWPEe2qi6YXzFhSdw" returnDesc="Whether the room is available, or {@code null} if unknown." description="Once a room becomes unavailable, no new sessions can be created under it"/>
+    </fields>
+    <fields xmi:id="_mOEvsJWPEe2qi6YXzFhSdw" name="expireAfterUse" json="expire_after_use" testValue="false" type="_v_bWAJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_mOFWwJWPEe2qi6YXzFhSdw" returnDesc="{@code true} if the room will close after end of session, or {@code null} if unknown / not applicable." description="Close the room after a session ends. Only relevant for long_term rooms."/>
+    </fields>
+    <fields xmi:id="_oIL2gJWQEe2qi6YXzFhSdw" name="recordingOptions" json="recording_options" type="_GIC5UJWNEe2qi6YXzFhSdw">
+      <doc xmi:id="_rr7qEJWQEe2qi6YXzFhSdw" returnDesc="The recording options." description="Options for recording."/>
+    </fields>
+    <fields xmi:id="_zXjR8JWQEe2qi6YXzFhSdw" name="initialJoinOptions" json="initial_join_options" type="_z1CcAJWMEe2qi6YXzFhSdw">
+      <doc xmi:id="_zXjR8ZWQEe2qi6YXzFhSdw" returnDesc="The initial joining options." description="Options for when a participant joins a meeting."/>
+    </fields>
+    <fields xmi:id="_G-wiEJWREe2qi6YXzFhSdw" name="callbackUrls" json="callback_urls" type="_PYWyoJWDEe2qi6YXzFhSdw">
+      <doc xmi:id="_J9MpIJWREe2qi6YXzFhSdw" returnDesc="The CallbackUrls object." description="The callback URLs for this meeting."/>
+    </fields>
+    <fields xmi:id="_VqxqkJWREe2qi6YXzFhSdw" name="availableFeatures" json="available_features" type="_DLXUgJWHEe2qi6YXzFhSdw">
+      <doc xmi:id="_VqxqkZWREe2qi6YXzFhSdw" returnDesc="The AvailableFeatures object." description="The available features for this meeting."/>
+    </fields>
+    <fields xmi:id="_hyuT0JWREe2qi6YXzFhSdw" name="themeId" json="theme_id" type="_t_5uQJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_lKWW8JWREe2qi6YXzFhSdw" returnDesc="The theme ID." description="ID of the theme for this room."/>
+    </fields>
+    <fields xmi:id="_z8QsEJWREe2qi6YXzFhSdw" name="joinApprovalLevel" json="join_approval_level" type="_NpVPkJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_E_wpUJWSEe2qi6YXzFhSdw" returnDesc="The approval level, as an enum." description="The level of approval needed to join the meeting in the room."/>
+    </fields>
+    <fields xmi:id="_FvKKUJWwEe2qi6YXzFhSdw" name="createdAt" json="created_at" type="_w2g7kJfgEe2qi6YXzFhSdw" excludeRequest="true">
+      <doc xmi:id="_KFhtoJWwEe2qi6YXzFhSdw" returnDesc="The room creation time." description="The time for when the room was created, expressed in ISO 8601 format."/>
+    </fields>
+    <fields xmi:id="_QgoI0JWwEe2qi6YXzFhSdw" name="expiresAt" json="expires_at" type="_w2g7kJfgEe2qi6YXzFhSdw">
+      <doc xmi:id="_QgoI0ZWwEe2qi6YXzFhSdw" returnDesc="The room expiration time." description="The time for when the room will be expired, expressed in ISO 8601 format."/>
+    </fields>
+    <fields xmi:id="_7NeM4JWyEe2qi6YXzFhSdw" name="id" json="id" testValue="&quot;b84cc862-0764-4887-9265-37e8a863164d&quot;" type="_t_5uQJWEEe2qi6YXzFhSdw" excludeRequest="true">
+      <doc xmi:id="_7NeM4ZWyEe2qi6YXzFhSdw" returnDesc="The room ID." description="Identifier of the meeting room."/>
+    </fields>
+    <fields xmi:id="_mmhD8JdHEe2qi6YXzFhSdw" name="links" json="_links" type="_6_u1QJdGEe2qi6YXzFhSdw" excludeRequest="true">
+      <doc xmi:id="_rUsqUJdHEe2qi6YXzFhSdw" returnDesc="The nested links object." description="Useful links."/>
+    </fields>
+    <fields xmi:id="_TDjAgJd8Ee2qi6YXzFhSdw" name="meetingCode" json="meeting_code" testValue="&quot;123456789&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_TDjAgZd8Ee2qi6YXzFhSdw" returnDesc="The share code for this meeting." description="The meeting code, which is used in the URL to join the meeting."/>
+    </fields>
+    <fields xmi:id="_ZICyMJd_Ee2qi6YXzFhSdw" name="uiSettings" json="ui_settings" type="_BZrU4Jd-Ee2qi6YXzFhSdw">
+      <doc xmi:id="_kn1PQJd_Ee2qi6YXzFhSdw" returnDesc="The UI settings object." description="Settings for the user interface of this meeting."/>
+    </fields>
+  </types>
+  <types xmi:id="_rHhqkJWSEe2qi6YXzFhSdw" name="Void"/>
+  <types xsi:type="Class" xmi:id="_KLPzwJWzEe2qi6YXzFhSdw" name="UpdateRoomRequest" isRequest="true">
+    <fields xmi:id="_KLPzyZWzEe2qi6YXzFhSdw" name="expireAfterUse" json="expire_after_use" testValue="false" type="_v_bWAJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_KLPzypWzEe2qi6YXzFhSdw" returnDesc="{@code true} if the room will close after end of session, or {@code null} if unknown / not applicable." description="Close the room after a session ends. Only relevant for long_term rooms."/>
+    </fields>
+    <fields xmi:id="_KLPzzZWzEe2qi6YXzFhSdw" name="initialJoinOptions" json="initial_join_options" type="_z1CcAJWMEe2qi6YXzFhSdw">
+      <doc xmi:id="_KLPzzpWzEe2qi6YXzFhSdw" returnDesc="The initial joining options." description="Options for when a participant joins a meeting."/>
+    </fields>
+    <fields xmi:id="_KLPzz5WzEe2qi6YXzFhSdw" name="callbackUrls" json="callback_urls" type="_PYWyoJWDEe2qi6YXzFhSdw">
+      <doc xmi:id="_KLPz0JWzEe2qi6YXzFhSdw" returnDesc="The CallbackUrls object." description="The callback URLs for this meeting."/>
+    </fields>
+    <fields xmi:id="_KLPz0ZWzEe2qi6YXzFhSdw" name="availableFeatures" json="available_features" type="_DLXUgJWHEe2qi6YXzFhSdw">
+      <doc xmi:id="_KLPz0pWzEe2qi6YXzFhSdw" returnDesc="The AvailableFeatures object." description="The available features for this meeting."/>
+    </fields>
+    <fields xmi:id="_KLPz05WzEe2qi6YXzFhSdw" name="themeId" json="theme_id" type="_t_5uQJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_KLPz1JWzEe2qi6YXzFhSdw" returnDesc="The theme ID." description="ID of the theme for this room."/>
+    </fields>
+    <fields xmi:id="_KLPz1ZWzEe2qi6YXzFhSdw" name="joinApprovalLevel" json="join_approval_level" type="_NpVPkJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_KLPz1pWzEe2qi6YXzFhSdw" returnDesc="The approval level, as an enum." description="The level of approval needed to join the meeting in the room."/>
+    </fields>
+    <fields xmi:id="_KLPz2ZWzEe2qi6YXzFhSdw" name="expiresAt" json="expires_at" type="_w2g7kJfgEe2qi6YXzFhSdw">
+      <doc xmi:id="_KLPz2pWzEe2qi6YXzFhSdw" returnDesc="The room expiration time." description="The time for when the room will be expired, expressed in ISO 8601 format."/>
+    </fields>
+    <fields xmi:id="_KLPz25WzEe2qi6YXzFhSdw" name="id" json="id" testValue="&quot;abc123&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_KLPz3JWzEe2qi6YXzFhSdw" returnDesc="The room ID." description="Identifier of the meeting room."/>
+    </fields>
+  </types>
+  <types xsi:type="Class" xmi:id="_a4KyIJW1Ee2qi6YXzFhSdw" name="Recording" isResponse="true">
+    <fields xmi:id="_fKKy0JW1Ee2qi6YXzFhSdw" name="id" json="id" testValue="UUID.fromString(&quot;497f6eca-6276-4993-bfeb-53cbbbba6f08&quot;)" type="_t_5uQJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_fKKy0ZW1Ee2qi6YXzFhSdw" returnDesc="The recording ID." description="Identifier of the recording."/>
+    </fields>
+    <fields xmi:id="_jKMSsJW1Ee2qi6YXzFhSdw" name="sessionId" json="session_id" testValue="&quot;abc123&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_jKMSsZW1Ee2qi6YXzFhSdw" returnDesc="The video session ID." description="Corresponds to the underlying Video API session ID."/>
+    </fields>
+    <fields xmi:id="_qDq2gJW2Ee2qi6YXzFhSdw" name="startedAt" json="started_at" testValue="" type="_w2g7kJfgEe2qi6YXzFhSdw">
+      <doc xmi:id="_qDq2gZW2Ee2qi6YXzFhSdw" returnDesc="The recording start time." description="Recording start time, in ISO 8601 format."/>
+    </fields>
+    <fields xmi:id="_zewQ4JW2Ee2qi6YXzFhSdw" name="endedAt" json="ended_at" testValue="" type="_w2g7kJfgEe2qi6YXzFhSdw">
+      <doc xmi:id="_zewQ4ZW2Ee2qi6YXzFhSdw" returnDesc="The recording end time." description="Recording end time, in ISO 8601 format."/>
+    </fields>
+    <fields xmi:id="__39CMJW2Ee2qi6YXzFhSdw" name="status" json="status" testValue="RecordingStatus.PAUSED" type="_61WrAJW2Ee2qi6YXzFhSdw" stringValue="paused">
+      <doc xmi:id="_F3VxwJW3Ee2qi6YXzFhSdw" returnDesc="The recording status, as an enum." description="Status of the recording."/>
+    </fields>
+    <fields xmi:id="_GAT0gJdMEe2qi6YXzFhSdw" name="links" json="_links" type="_7d9QEJdLEe2qi6YXzFhSdw">
+      <doc xmi:id="_KVByAJdMEe2qi6YXzFhSdw" returnDesc="The links URL container object." description="Useful links."/>
+    </fields>
+  </types>
+  <types xsi:type="Enum" xmi:id="_61WrAJW2Ee2qi6YXzFhSdw" name="RecordingStatus">
+    <values>STARTED</values>
+    <values>STOPPED</values>
+    <values>PAUSED</values>
+    <values>UPLOADED</values>
+  </types>
+  <types xmi:id="_iakoQJXkEe2qi6YXzFhSdw" name="List&lt;Recording>"/>
+  <types xsi:type="Class" xmi:id="_3OpUIJXkEe2qi6YXzFhSdw" name="DialInNumber">
+    <fields xmi:id="_JEzdYJXlEe2qi6YXzFhSdw" name="number" json="number" testValue="&quot;17323338801&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_Nm_PIJXlEe2qi6YXzFhSdw" returnDesc="The number in E164 format." description="The dial-in number."/>
+    </fields>
+    <fields xmi:id="_Zz0_cJXlEe2qi6YXzFhSdw" name="locale" json="locale" testValue="" type="__y3X8JXkEe2qi6YXzFhSdw">
+      <doc xmi:id="_Zz0_cZXlEe2qi6YXzFhSdw" returnDesc="The Locale." description="The number locale."/>
+    </fields>
+    <fields xmi:id="_IG08wJXmEe2qi6YXzFhSdw" name="displayName" json="display_name" testValue="&quot;United States&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_IG08wZXmEe2qi6YXzFhSdw" returnDesc="The country's name." description="The country name of the locale."/>
+    </fields>
+  </types>
+  <types xmi:id="__y3X8JXkEe2qi6YXzFhSdw" name="Locale"/>
+  <types xmi:id="_j9KVAJXnEe2qi6YXzFhSdw" name="List&lt;DialNumbers>"/>
+  <types xsi:type="Class" xmi:id="_FKKscJXoEe2qi6YXzFhSdw" name="MeetingApplication" isResponse="true">
+    <fields xmi:id="_O1SG4JXoEe2qi6YXzFhSdw" name="applicationId" json="application_id" testValue="" type="_t_5uQJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_UT2BUJXoEe2qi6YXzFhSdw" returnDesc="The application ID." description="ID of the application."/>
+    </fields>
+    <fields xmi:id="_XUxbsJXoEe2qi6YXzFhSdw" name="accountId" json="account_id" testValue="&quot;abc123&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_XUxbsZXoEe2qi6YXzFhSdw" returnDesc="The application account ID." description="ID of the account application."/>
+    </fields>
+    <fields xmi:id="_fE6-QJXoEe2qi6YXzFhSdw" name="defaultThemeId" json="default_theme_id" testValue="" type="_t_5uQJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_fE6-QZXoEe2qi6YXzFhSdw" returnDesc="The application default theme ID." description="ID of the default theme."/>
+    </fields>
+  </types>
+  <types xsi:type="Class" xmi:id="_sbVlwJXoEe2qi6YXzFhSdw" name="UpdateApplicationRequest" isRequest="true">
+    <fields xmi:id="_y_pnUJXoEe2qi6YXzFhSdw" name="defaultThemeId" json="default_theme_id" testValue="" type="_t_5uQJWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_y_pnUZXoEe2qi6YXzFhSdw" returnDesc="" description="The theme ID to set as application default theme."/>
+    </fields>
+  </types>
+  <types xmi:id="_ByP48JXpEe2qi6YXzFhSdw" name="List&lt;String>"/>
+  <types xsi:type="Class" xmi:id="_C1G0wJZEEe2qi6YXzFhSdw" name="Theme" isRequest="true" isResponse="true">
+    <fields xmi:id="_RGt5MJZEEe2qi6YXzFhSdw" name="themeId" json="theme_id" type="_t_5uQJWEEe2qi6YXzFhSdw" excludeRequest="true">
+      <doc xmi:id="_eggk0JZEEe2qi6YXzFhSdw" returnDesc="The theme ID." description=""/>
+    </fields>
+    <fields xmi:id="_k4rn0JZEEe2qi6YXzFhSdw" name="themeName" json="theme_name" type="_qDwo0JWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_k4rn0ZZEEe2qi6YXzFhSdw" returnDesc="Name of the theme." description=""/>
+    </fields>
+    <fields xmi:id="_4ws7IJZEEe2qi6YXzFhSdw" name="domain" json="domain" type="_sniJ4JZEEe2qi6YXzFhSdw" excludeRequest="true">
+      <doc xmi:id="_4ws7IZZEEe2qi6YXzFhSdw" returnDesc="The domain." description=""/>
+    </fields>
+    <fields xmi:id="_ne04wJZGEe2qi6YXzFhSdw" name="accountId" json="account_id" type="_qDwo0JWEEe2qi6YXzFhSdw" excludeRequest="true">
+      <doc xmi:id="_ne04wZZGEe2qi6YXzFhSdw" returnDesc="The account ID." description=""/>
+    </fields>
+    <fields xmi:id="_qYYf0JZGEe2qi6YXzFhSdw" name="applicationId" json="application_id" type="_qDwo0JWEEe2qi6YXzFhSdw" excludeRequest="true">
+      <doc xmi:id="_qYYf0ZZGEe2qi6YXzFhSdw" returnDesc="The application ID." description=""/>
+    </fields>
+    <fields xmi:id="_PSTN4JZHEe2qi6YXzFhSdw" name="mainColor" json="main_color" type="_qDwo0JWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_PSTN4ZZHEe2qi6YXzFhSdw" returnDesc="The main theme colour." description=""/>
+    </fields>
+    <fields xmi:id="_VWgzEJZHEe2qi6YXzFhSdw" name="shortCompanyUrl" json="short_company_url" type="_QHaJoJWGEe2qi6YXzFhSdw">
+      <doc xmi:id="_VWgzEZZHEe2qi6YXzFhSdw" returnDesc="The company's short URL." description=""/>
+    </fields>
+    <fields xmi:id="_zxERAJZHEe2qi6YXzFhSdw" name="brandText" json="brand_text" type="_qDwo0JWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_zxERAZZHEe2qi6YXzFhSdw" returnDesc="The branding text." description=""/>
+    </fields>
+    <fields xmi:id="_7ZCH8JZHEe2qi6YXzFhSdw" name="brandImageColored" json="brand_image_colored" type="_qDwo0JWEEe2qi6YXzFhSdw" excludeRequest="true">
+      <doc xmi:id="_7ZCH8ZZHEe2qi6YXzFhSdw" returnDesc="The brand image in colour." description="Coloured logo's key in storage system."/>
+    </fields>
+    <fields xmi:id="_G1ingJZIEe2qi6YXzFhSdw" name="brandImageWhite" json="brand_image_white" type="_qDwo0JWEEe2qi6YXzFhSdw" excludeRequest="true">
+      <doc xmi:id="_G1ingZZIEe2qi6YXzFhSdw" returnDesc="The brand image in white." description="White logo's key in storage system."/>
+    </fields>
+    <fields xmi:id="_Q0pU8JZIEe2qi6YXzFhSdw" name="brandedFavicon" json="branded_favicon" type="_qDwo0JWEEe2qi6YXzFhSdw" excludeRequest="true">
+      <doc xmi:id="_Q0pU8ZZIEe2qi6YXzFhSdw" returnDesc="The brand favicon key." description="Favicon's key in storage system."/>
+    </fields>
+    <fields xmi:id="_dMCvcJZIEe2qi6YXzFhSdw" name="brandImageColoredUrl" json="brand_image_colored_url" type="_QHaJoJWGEe2qi6YXzFhSdw" excludeRequest="true">
+      <doc xmi:id="_dMCvcZZIEe2qi6YXzFhSdw" returnDesc="The coloured brand image URL." description="Coloured logo's link."/>
+    </fields>
+    <fields xmi:id="_oWOI4JZIEe2qi6YXzFhSdw" name="brandImageWhiteUrl" json="brand_image_white_url" type="_QHaJoJWGEe2qi6YXzFhSdw" excludeRequest="true">
+      <doc xmi:id="_oWOI4ZZIEe2qi6YXzFhSdw" returnDesc="The white brand image URL." description="White logo's link."/>
+    </fields>
+    <fields xmi:id="_ofJbYJZIEe2qi6YXzFhSdw" name="brandedFaviconUrl" json="branded_favicon_url" type="_QHaJoJWGEe2qi6YXzFhSdw" excludeRequest="true">
+      <doc xmi:id="_ofJbYZZIEe2qi6YXzFhSdw" returnDesc="The favicon URL." description="Favicon's link."/>
+    </fields>
+  </types>
+  <types xsi:type="Enum" xmi:id="_sniJ4JZEEe2qi6YXzFhSdw" name="ThemeDomain" doc="Represents the spplivsyion domain for a theme.">
+    <values>VCP</values>
+    <values>VBC</values>
+  </types>
+  <types xsi:type="Class" xmi:id="_V7E74JZLEe2qi6YXzFhSdw" name="LogoUploadsUrlResponse" isResponse="true">
+    <fields xmi:id="_jvVggJZMEe2qi6YXzFhSdw" name="url" json="url" type="_QHaJoJWGEe2qi6YXzFhSdw">
+      <doc xmi:id="_roaVkJZMEe2qi6YXzFhSdw" returnDesc="The URL." description="Storage system URL."/>
+    </fields>
+    <fields xmi:id="_wyAsoJZMEe2qi6YXzFhSdw" name="fields" json="fields" type="_ypLpoJZMEe2qi6YXzFhSdw">
+      <doc xmi:id="_c58HQJZSEe2qi6YXzFhSdw" returnDesc="The field properties." description="Fields property has to be part of the POST request's body."/>
+    </fields>
+  </types>
+  <types xsi:type="Class" xmi:id="_ypLpoJZMEe2qi6YXzFhSdw" name="Fields">
+    <fields xmi:id="_0-lawJZMEe2qi6YXzFhSdw" name="contentType" json="Content-Type" testValue="&quot;image/png&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_8R_-AJZMEe2qi6YXzFhSdw" returnDesc="The logo type." description="MIME type of the content."/>
+    </fields>
+    <fields xmi:id="_86StEJZMEe2qi6YXzFhSdw" name="key" json="key" testValue="&quot;abc123&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_86StEZZMEe2qi6YXzFhSdw" returnDesc="The logo key." description="Logo's key in storage system."/>
+    </fields>
+    <fields xmi:id="_isJy8JZREe2qi6YXzFhSdw" name="bucket" json="bucket" testValue="&quot;abc123&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_isJy8ZZREe2qi6YXzFhSdw" returnDesc="The bucket name." description="Bucket name to upload to."/>
+    </fields>
+    <fields xmi:id="_rPpeAJZREe2qi6YXzFhSdw" name="amzAlgorithm" json="X-Amz-Algorithm" testValue="&quot;abc123&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw"/>
+    <fields xmi:id="_xrYyYJZREe2qi6YXzFhSdw" name="amzCredential" json="X-Amz-Credential" testValue="&quot;abc123&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw"/>
+    <fields xmi:id="__8e5cJZREe2qi6YXzFhSdw" name="amzDate" json="X-Amz-Date" testValue="&quot;abc123&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw"/>
+    <fields xmi:id="_C41V0JZSEe2qi6YXzFhSdw" name="amzSecurityToken" json="X-Amz-Security-Token" testValue="&quot;abc123&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw"/>
+    <fields xmi:id="_GSq_cJZSEe2qi6YXzFhSdw" name="policy" json="Policy" testValue="&quot;abc123&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw"/>
+    <fields xmi:id="_MsqAUJZSEe2qi6YXzFhSdw" name="amzSignature" json="X-Amz-Signature" testValue="&quot;abc123&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw"/>
+    <fields xmi:id="_ts-poJiiEe230dsw695x5g" name="logoType" json="logoType" testValue="LogoType.WHITE" type="_ZtBUwJZREe2qi6YXzFhSdw" stringValue="&quot;white&quot;">
+      <doc xmi:id="_ts-poZiiEe230dsw695x5g" returnDesc="The logo type, as an enum." description="Logo's type."/>
+    </fields>
+  </types>
+  <types xsi:type="Enum" xmi:id="_ZtBUwJZREe2qi6YXzFhSdw" name="LogoType" doc="Represents the type of logo returned in {@linkplain LogoUploadsUrlResponse.Fields}.">
+    <values>WHITE</values>
+    <values>COLORED</values>
+    <values>FAVICON</values>
+  </types>
+  <types xsi:type="Class" xmi:id="_yQSH0JZUEe2qi6YXzFhSdw" name="ListRoomsResponse" isResponse="true">
+    <fields xmi:id="_0nZwMJZUEe2qi6YXzFhSdw" name="pageSize" json="page_size" testValue="10" type="_4fRZoJZUEe2qi6YXzFhSdw">
+      <doc xmi:id="_9tIloJZUEe2qi6YXzFhSdw" returnDesc="The number of results returned on this page." description=""/>
+    </fields>
+    <fields xmi:id="_AE6VUJZVEe2qi6YXzFhSdw" name="total" json="total_items" testValue="10" type="_4fRZoJZUEe2qi6YXzFhSdw">
+      <doc xmi:id="_AE6VUZZVEe2qi6YXzFhSdw" returnDesc="The overall number of available rooms." description=""/>
+    </fields>
+    <fields xmi:id="_HudOoJcbEe2qi6YXzFhSdw" name="embedded" json="_embedded" type="_7_BMAJcaEe2qi6YXzFhSdw"/>
+    <fields xmi:id="_t1eoMJdLEe2qi6YXzFhSdw" name="links" json="_links" type="_PkIwoJdLEe2qi6YXzFhSdw">
+      <doc xmi:id="_xA-T0JdLEe2qi6YXzFhSdw" returnDesc="The navigation links object." description="Links to other pages."/>
+    </fields>
+  </types>
+  <types xmi:id="_4fRZoJZUEe2qi6YXzFhSdw" name="Integer"/>
+  <types xsi:type="Class" xmi:id="_HRu-wJcNEe2qi6YXzFhSdw" name="ListRoomsRequest" public="false">
+    <fields xmi:id="_MSI9kJcNEe2qi6YXzFhSdw" name="startId" type="_qDwo0JWEEe2qi6YXzFhSdw"/>
+    <fields xmi:id="_OfzH8JcNEe2qi6YXzFhSdw" name="endId" type="_qDwo0JWEEe2qi6YXzFhSdw"/>
+    <fields xmi:id="_R9evwJcNEe2qi6YXzFhSdw" name="themeId" type="_qDwo0JWEEe2qi6YXzFhSdw"/>
+    <fields xmi:id="_YpPO8JeCEe2qi6YXzFhSdw" name="pageSize" type="_4fRZoJZUEe2qi6YXzFhSdw"/>
+  </types>
+  <types xsi:type="Class" xmi:id="_7_BMAJcaEe2qi6YXzFhSdw" name="EmbeddedRooms" public="false">
+    <fields xmi:id="_-rkR0JcaEe2qi6YXzFhSdw" name="rooms" json="rooms" type="_YVmHcJZUEe2qi6YXzFhSdw"/>
+  </types>
+  <types xsi:type="Class" xmi:id="_r7awEJcbEe2qi6YXzFhSdw" name="EmbeddedRecordings" public="false">
+    <fields xmi:id="_r7awEZcbEe2qi6YXzFhSdw" name="recordings" json="recordings" type="_iakoQJXkEe2qi6YXzFhSdw"/>
+  </types>
+  <types xsi:type="Class" xmi:id="_5lIHAJcbEe2qi6YXzFhSdw" name="ListRecordingsResponse" public="false" isResponse="true">
+    <fields xmi:id="_5lIHBZcbEe2qi6YXzFhSdw" name="embedded" json="_embedded" type="_r7awEJcbEe2qi6YXzFhSdw"/>
+  </types>
+  <types xsi:type="Class" xmi:id="_6_u1QJdGEe2qi6YXzFhSdw" name="RoomLinks">
+    <fields xmi:id="_QLvgAJdHEe2qi6YXzFhSdw" name="hostUrl" json="host_url" type="_MwW-QJdHEe2qi6YXzFhSdw">
+      <doc xmi:id="_0PTN0JdHEe2qi6YXzFhSdw" returnDesc="The host URL."/>
+    </fields>
+    <fields xmi:id="_ZiXRIJdHEe2qi6YXzFhSdw" name="guestUrl" json="guest_url" type="_MwW-QJdHEe2qi6YXzFhSdw">
+      <doc xmi:id="_1zAcQJdHEe2qi6YXzFhSdw" returnDesc="The guest URL."/>
+    </fields>
+  </types>
+  <types xsi:type="Class" xmi:id="_MwW-QJdHEe2qi6YXzFhSdw" name="UrlContainer">
+    <fields xmi:id="_gja5EJdHEe2qi6YXzFhSdw" name="href" json="href" type="_QHaJoJWGEe2qi6YXzFhSdw"/>
+  </types>
+  <types xsi:type="Class" xmi:id="_PkIwoJdLEe2qi6YXzFhSdw" name="NavigationLinks">
+    <fields xmi:id="_PkIwo5dLEe2qi6YXzFhSdw" name="first" json="first" type="_MwW-QJdHEe2qi6YXzFhSdw">
+      <doc xmi:id="_PkIwpJdLEe2qi6YXzFhSdw" returnDesc="URL of the first page."/>
+    </fields>
+    <fields xmi:id="_XQ95cJdLEe2qi6YXzFhSdw" name="self" json="self" type="_MwW-QJdHEe2qi6YXzFhSdw">
+      <doc xmi:id="_XQ95cZdLEe2qi6YXzFhSdw" returnDesc="URL of the current page."/>
+    </fields>
+    <fields xmi:id="_ZdnXMJdLEe2qi6YXzFhSdw" name="next" json="next" type="_MwW-QJdHEe2qi6YXzFhSdw">
+      <doc xmi:id="_ZdnXMZdLEe2qi6YXzFhSdw" returnDesc="URL of the next page."/>
+    </fields>
+    <fields xmi:id="_e7f8MJdLEe2qi6YXzFhSdw" name="prev" json="prev" type="_MwW-QJdHEe2qi6YXzFhSdw">
+      <doc xmi:id="_e7f8MZdLEe2qi6YXzFhSdw" returnDesc="URL of the previous page."/>
+    </fields>
+  </types>
+  <types xsi:type="Class" xmi:id="_7d9QEJdLEe2qi6YXzFhSdw" name="RecordingLinks">
+    <fields xmi:id="_7d9QE5dLEe2qi6YXzFhSdw" name="url" json="url" type="_MwW-QJdHEe2qi6YXzFhSdw">
+      <doc xmi:id="_7d9QFJdLEe2qi6YXzFhSdw" returnDesc="The recording URL."/>
+    </fields>
+  </types>
+  <types xsi:type="Class" xmi:id="_BZrU4Jd-Ee2qi6YXzFhSdw" name="UISettings">
+    <fields xmi:id="_Dw31wJd-Ee2qi6YXzFhSdw" name="language" json="language" testValue="&quot;default&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw">
+      <doc xmi:id="_IixegJd-Ee2qi6YXzFhSdw" returnDesc="The language, as a string." description="Language setting."/>
+    </fields>
+  </types>
+  <types xmi:id="_w2g7kJfgEe2qi6YXzFhSdw" name="ZonedDateTime"/>
+  <types xsi:type="Class" xmi:id="_Ny4ZgGwiEe6kfo4AUNta2A" name="ListSessionsResponse" isResponse="true" isHal="true">
+    <fields xmi:id="_1vuFAGwtEe6kfo4AUNta2A" name="sessions" type="_6c_scGwtEe6kfo4AUNta2A"/>
+  </types>
+  <types xmi:id="_ItrS4GwlEe6kfo4AUNta2A" name="Instant"/>
+  <types xsi:type="Class" xmi:id="_1nQwwGwmEe6kfo4AUNta2A" name="ListSessionsRequest" isRequest="true" isQueryParams="true">
+    <fields xmi:id="_c-jY0GwqEe6kfo4AUNta2A" name="from" json="from" testValue="Instant.parse(&quot;2023-06-06T07:15:13.974Z&quot;)" type="_ItrS4GwlEe6kfo4AUNta2A" stringValue="2023-06-06T07:15:13.974Z">
+      <doc xmi:id="_c-jY0WwqEe6kfo4AUNta2A" returnDesc="Start timestamp for the results, or {@code null} if absent." description="Earliest date to return results from, in ISO-8601 format."/>
+    </fields>
+    <fields xmi:id="_pVXkgGwqEe6kfo4AUNta2A" name="to" json="to" testValue="Instant.parse(&quot;2023-06-07T07:15:13.974Z&quot;)" type="_ItrS4GwlEe6kfo4AUNta2A" stringValue="2023-06-07T07:15:13.974Z">
+      <doc xmi:id="_pVXkgWwqEe6kfo4AUNta2A" returnDesc="End timestamp for the results, or {@code null} if absent." description="Latest date to return results from, in ISO-8601 format. Default is today's date."/>
+    </fields>
+    <fields xmi:id="_K14t0GwrEe6kfo4AUNta2A" name="recorded" json="recorded" testValue="false" type="_v_bWAJWEEe2qi6YXzFhSdw" stringValue="false">
+      <doc xmi:id="_RebIEGwrEe6kfo4AUNta2A" returnDesc="Whether to include only recorded or non-recorded sessions, or {@code null} to include all sessions." description="If the value is set to true, only recorded sessions will be returned. If set to false, non-recorded sessions will be returned. If the value is not set, all sessions will be returned."/>
+    </fields>
+    <fields xmi:id="_ZPLuoGwrEe6kfo4AUNta2A" name="offset" json="offset" testValue="3" type="_4fRZoJZUEe2qi6YXzFhSdw" stringValue="3">
+      <doc xmi:id="_ZPLuoWwrEe6kfo4AUNta2A" returnDesc="The results offset, or {@code null} if unspecified." description="Specify how many records to skip before fetching."/>
+    </fields>
+    <fields xmi:id="_kT9DoGwrEe6kfo4AUNta2A" name="pageSize" json="page_size" testValue="25" type="_4fRZoJZUEe2qi6YXzFhSdw" stringValue="25">
+      <doc xmi:id="_kT9DoWwrEe6kfo4AUNta2A" returnDesc="The results page size, or {@code null} if unspecified." description="Maximum number of items to fetch."/>
+    </fields>
+  </types>
+  <types xsi:type="Class" xmi:id="_uNzLsGwtEe6kfo4AUNta2A" name="Session">
+    <fields xmi:id="_afhEMGwiEe6kfo4AUNta2A" name="id" json="id" testValue="&quot;2_MX40NjMwODczMn5-MTU3NTgyODEwNzQ2MH5OZDJrVmdBRUNDbG5MUzNqNX20yQ1Z-fg&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw" stringValue="2_MX40NjMwODczMn5-MTU3NTgyODEwNzQ2MH5OZDJrVmdBRUNDbG5MUzNqNX20yQ1Z-fg">
+      <doc xmi:id="_WdF7IGwjEe6kfo4AUNta2A" returnDesc="The session ID, or {@code null} if absent." description="ID of the session."/>
+    </fields>
+    <fields xmi:id="_gKbjIGwjEe6kfo4AUNta2A" name="roomId" json="room_id" testValue="UUID.fromString(&quot;9f6fe8ae-3458-4a72-b532-8276d5533e97&quot;)" type="_t_5uQJWEEe2qi6YXzFhSdw" stringValue="&quot;9f6fe8ae-3458-4a72-b532-8276d5533e97&quot;">
+      <doc xmi:id="_gKbjIWwjEe6kfo4AUNta2A" returnDesc="The room ID, or {@code null} if absent." description="Room ID for the session."/>
+    </fields>
+    <fields xmi:id="_C8yu0GwkEe6kfo4AUNta2A" name="roomDisplayName" json="room_display_name" testValue="&quot;My custom room&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw" stringValue="My custom room">
+      <doc xmi:id="_C8yu0WwkEe6kfo4AUNta2A" returnDesc="The room name, or {@code null} if absent." description="Name of the meeting room."/>
+    </fields>
+    <fields xmi:id="_Dz9K4GwlEe6kfo4AUNta2A" name="startTime" json="start_time" testValue="Instant.parse(&quot;2023-06-06T07:15:13.974Z&quot;)" type="_ItrS4GwlEe6kfo4AUNta2A" stringValue="2023-06-06T07:15:13.974Z">
+      <doc xmi:id="_Dz9K4WwlEe6kfo4AUNta2A" returnDesc="Timestamp of the recording's start, or {@code null} if absent." description="Recording start date in ISO-8601 format."/>
+    </fields>
+    <fields xmi:id="_ePX5wGwlEe6kfo4AUNta2A" name="endTime" json="end_time" testValue="Instant.parse(&quot;2023-06-06T07:15:13.974Z&quot;)" type="_ItrS4GwlEe6kfo4AUNta2A" stringValue="2023-06-06T08:15:13.974Z">
+      <doc xmi:id="_ePX5wWwlEe6kfo4AUNta2A" returnDesc="Timestamp of the recording's end, or {@code null} if absent." description="Recording end date in ISO-8601 format."/>
+    </fields>
+    <fields xmi:id="_qZGrsGwlEe6kfo4AUNta2A" name="isRecorded" json="is_recorded" testValue="true" type="_v_bWAJWEEe2qi6YXzFhSdw" stringValue="true">
+      <doc xmi:id="_qZGrsWwlEe6kfo4AUNta2A" returnDesc="{@code true} if the session is recorded, {@code false} if not and {@code null} if unknown." description="Whether the session is recorded."/>
+    </fields>
+    <fields xmi:id="_-vfWAGwlEe6kfo4AUNta2A" name="participantsNumber" json="participants_number" testValue="2" type="_4fRZoJZUEe2qi6YXzFhSdw" stringValue="2">
+      <doc xmi:id="_-vfWAWwlEe6kfo4AUNta2A" returnDesc="The total number of participants, or {@code null} if unknown." description="Number of participants in the meeting."/>
+    </fields>
+    <fields xmi:id="_NW0LwGwmEe6kfo4AUNta2A" name="billedTime" json="billed_time" testValue="60" type="_4fRZoJZUEe2qi6YXzFhSdw" stringValue="60">
+      <doc xmi:id="_NW0LwWwmEe6kfo4AUNta2A" returnDesc="The number of minutes billed for this meeting, or {@code null} if unknown / not applicable." description="Duration of the recording that was billed, in minutes."/>
+    </fields>
+    <fields xmi:id="_cJUWwGwmEe6kfo4AUNta2A" name="recordingsTime" json="recordings_time" testValue="3600" type="_4fRZoJZUEe2qi6YXzFhSdw" stringValue="3600">
+      <doc xmi:id="_cJUWwWwmEe6kfo4AUNta2A" returnDesc="The total number of minutes this meeting was recorded for, or {@code null} if not applicable." description="Aggregated recording time of the session in minutes."/>
+    </fields>
+  </types>
+  <types xmi:id="_6c_scGwtEe6kfo4AUNta2A" name="List&lt;Session>"/>
+</Api>

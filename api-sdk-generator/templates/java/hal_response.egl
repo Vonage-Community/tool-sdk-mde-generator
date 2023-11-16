@@ -1,0 +1,47 @@
+[%
+import "./helper_functions.egl";
+%]
+[%=packageAndCopyright()%]
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.vonage.client.VonageUnexpectedException;
+import com.vonage.client.common.HalPageResponse;
+import java.io.IOException;
+import java.util.List;
+
+/**
+ * [%=javadoc%]
+ */
+@JsonIgnoreProperties(ignoreUnknown = true)
+public final class [%=name%] extends HalPageResponse {
+	@JsonProperty("_embedded") private Embedded _embedded;
+
+	[%=name%]() {
+	}
+
+	@JsonIgnoreProperties(ignoreUnknown = true)
+	static final class Embedded {
+		private [%=embeddedTypeName%] [%=embeddedPropertyName%];
+
+		@JsonProperty("[%=embeddedPropertyName%]")
+		public [%=embeddedTypeName%] get[%=embeddedPropertyName.ftuc()%]() {
+			return [%=embeddedPropertyName%];
+		}
+	}
+
+	/**
+	 * Gets the [%=embeddedPropertyName%] contained in the {@code _embedded} response.
+	 *
+	 * @return The [%=embeddedPropertyName%] for this page.
+	 */
+	@JsonIgnore
+	public [%=embeddedTypeName%] get[%=embeddedPropertyName.ftuc()%]() {
+		return _embedded != null ? _embedded.get[%=embeddedPropertyName.ftuc()%]() : null;
+	}
+	
+[%=fromJson(name)%]
+
+}

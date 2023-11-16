@@ -1,0 +1,107 @@
+[%
+import "./helper_functions.egl";
+%]
+[%=packageAndCopyright()%]
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class [%=clientClass + testClassSuffix%] extends ClientTest<[%=clientClass%]> {
+	
+	public [%=clientClass + testClassSuffix%]() {
+		client = new [%=name%](wrapper);
+	}
+	
+	void assert401ResponseException(ThrowingRunnable invocation) throws Exception {
+		int statusCode = 401;
+		[%=exception%] expectedResponse = [%=exception%].fromJson(
+				"{\n" +
+				"   \"type\": \"https://developer.nexmo.com/api-errors#unauthorized\",\n" +
+				"   \"title\": \"Invalid credentials supplied\",\n" +
+				"   \"detail\": \"You did not provide correct credentials\",\n" +
+				"   \"instance\": \"798b8f199c45014ab7b08bfe9cc1c12c\"\n" +
+				"}"
+		);
+
+		String expectedJson = expectedResponse.toJson();
+		assertEquals(219, expectedJson.length());
+		stubResponse(statusCode, expectedJson);
+		expectedResponse.setStatusCode(statusCode);
+		String failPrefix = "Expected [%=exception%], but got ";
+
+		try {
+			invocation.run();
+			fail(failPrefix + "nothing.");
+		}
+		catch ([%=exception%] ex) {
+			assertEquals(expectedResponse, ex);
+			assertEquals(expectedJson, ex.toJson());
+		}
+		catch (Throwable ex) {
+			fail(failPrefix + ex);
+		}
+	}
+
+[% for (endpoint in endpoints) {%]	
+	@Test
+	public void test[%=endpoint.name.ftuc()%]() throws Exception {
+		[%=endpoint.requestType?.name ?: "Object"%] request = null;
+		String responseJson = "{}";
+		stubResponseAndRun(responseJson, () -> client.[%=endpoint.name.ftlc()%](request));
+		stubResponseAndAssertThrows(200, () -> client.[%=endpoint.name.ftlc()%](null), NullPointerException.class);
+		stubResponseAndAssertThrows(401, () -> client.[%=endpoint.name.ftlc()%](request), [%=exception%].class);
+		assert401ResponseException(() -> client.[%=endpoint.name.ftlc()%](request));
+	}
+	
+	@Test
+	public void test[%=endpoint.name.ftuc()%]Endpoint() throws Exception {
+		new [%=name.ftuc()%]EndpointTestSpec<[%=endpoint.typeParams()%]>() {
+
+			@Override
+			protected RestEndpoint<[%=endpoint.typeParams()%]> endpoint() {
+				return client.[%=endpoint.name.ftlc()%];
+			}
+
+			@Override
+			protected HttpMethod expectedHttpMethod() {
+				return HttpMethod.[%=endpoint.requestMethod%];
+			}
+
+			@Override
+			protected String expectedEndpointUri([%=endpoint.requestTypePretty()%] request) {
+				return "[%=endpoint.path%]";
+			}
+
+			@Override
+			protected [%=endpoint.requestTypePretty()%] sampleRequest() {
+			[% if (endpoint.isVoidRequestType() or not endpoint.requestType.hasFields()) {%]
+				return null;
+			[% } else {%]
+				return [%=endpoint.requestType.name%].builder()
+				[% for (field in endpoint.requestType.fields) {%]
+						.[%=field.name%]([%=field.testValue%])
+				[%}%]
+						.build();
+			[%}%]
+			}
+
+[% if (not endpoint.isVoidRequestType() and endpoint.requestType.isQueryParams()) {%]
+			@Override
+			protected Map<String, String> sampleQueryParams() {
+				Map<String, String> params = new LinkedHashMap<>();
+		[% for (field in endpoint.requestType.fields) {%]
+				params.put("[%=field.json%]", "[%=field.stringValue%]");
+		[%}%]				return params;
+			}
+[%} else if (not endpoint.isVoidRequestType() and endpoint.requestType.isCustomType()) {%]
+			@Override
+			protected String sampleRequestBodyString() {
+				return "{}";
+			}
+[%}%]
+		}
+		.runTests();
+	}
+
+[%}%]
+}

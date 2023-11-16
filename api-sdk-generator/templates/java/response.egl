@@ -1,0 +1,22 @@
+[%
+import "./helper_functions.egl";
+%]
+[%=packageAndCopyright()%]
+
+import com.vonage.client.Jsonable;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+[%=classDeclaration(name, extends, implements.including("Jsonable"), true)%]
+[% for (field in fields) {%]
+	private [%=field.type.name%] [%=field.name%];
+[%}%]
+
+	protected [%=name%]() {
+	}
+
+[%=fieldGetters(fields)%]
+	
+[%=fromJson(name)%]
+}

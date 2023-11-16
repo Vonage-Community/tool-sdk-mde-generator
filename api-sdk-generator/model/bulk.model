@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="ASCII"?>
+<vonage_api:Api xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vonage_api="vonage_api" xmi:id="_k-UkcN3PEe2aPuvbf9c6VQ" name="proactiveconnect" package="com.vonage.client.proactiveconnect" baseEndpointPath="https://api-eu.vonage.com/v0.1">
+  <endpoints xmi:id="_8UshEN3nEe2aPuvbf9c6VQ" name="CreateList" baseUriName="ApiEu" requestType="_bRsKQN3TEe2aPuvbf9c6VQ" responseType="_bRsKQN3TEe2aPuvbf9c6VQ" path="/v0.1/bulk/lists" requestMethod="POST">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_cSLKUN3oEe2aPuvbf9c6VQ" name="GetList" baseUriName="ApiEu" requestType="_Fl76YN3REe2aPuvbf9c6VQ" responseType="_bRsKQN3TEe2aPuvbf9c6VQ" path="/v0.1/bulk/lists/%s" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_3MKEgN3oEe2aPuvbf9c6VQ" name="UpdateList" baseUriName="ApiEu" requestType="_bRsKQN3TEe2aPuvbf9c6VQ" responseType="_bRsKQN3TEe2aPuvbf9c6VQ" path="/v0.1/bulk/lists/%s" requestMethod="PUT">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_94zisN3oEe2aPuvbf9c6VQ" name="DeleteList" baseUriName="ApiEu" requestType="_Fl76YN3REe2aPuvbf9c6VQ" responseType="_jAfccN3oEe2aPuvbf9c6VQ" path="/v0.1/bulk/lists/%s" requestMethod="DELETE">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_M1nDwN3qEe2aPuvbf9c6VQ" name="ClearList" baseUriName="ApiEu" requestType="_Fl76YN3REe2aPuvbf9c6VQ" responseType="_jAfccN3oEe2aPuvbf9c6VQ" path="/v0.1/bulk/lists/%s/clear" requestMethod="POST">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_erFQgN3qEe2aPuvbf9c6VQ" name="FetchList" baseUriName="ApiEu" requestType="_Fl76YN3REe2aPuvbf9c6VQ" responseType="_jAfccN3oEe2aPuvbf9c6VQ" path="/v0.1/bulk/lists/%s/fetch" requestMethod="POST">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_JCNYsN3sEe2aPuvbf9c6VQ" name="ListLists" baseUriName="ApiEu" requestType="_MlQBoN3sEe2aPuvbf9c6VQ" responseType="_FoJiEN3rEe2aPuvbf9c6VQ" path="/v0.1/bulk/lists" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_dElj0N6aEe2aPuvbf9c6VQ" name="CreateListItem" baseUriName="ApiEu" requestType="_rhtKIN6ZEe2aPuvbf9c6VQ" responseType="_uOMUoN6QEe2aPuvbf9c6VQ" path="/v0.1/bulk/lists/%s/items" requestMethod="POST">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_-vbGwN6aEe2aPuvbf9c6VQ" name="GetListItem" baseUriName="ApiEu" requestType="_rhtKIN6ZEe2aPuvbf9c6VQ" responseType="_uOMUoN6QEe2aPuvbf9c6VQ" path="/v0.1/bulk/lists/%s/items/%s" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_R0WJMN6bEe2aPuvbf9c6VQ" name="UpdateListItem" baseUriName="ApiEu" requestType="_rhtKIN6ZEe2aPuvbf9c6VQ" responseType="_uOMUoN6QEe2aPuvbf9c6VQ" path="/v0.1/bulk/lists/%s/items/%s" requestMethod="PUT">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_YnGPYN6bEe2aPuvbf9c6VQ" name="DeleteListItem" baseUriName="ApiEu" requestType="_rhtKIN6ZEe2aPuvbf9c6VQ" responseType="_jAfccN3oEe2aPuvbf9c6VQ" path="/v0.1/bulk/lists/%s/items/%s" requestMethod="DELETE">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_i_m7UN6bEe2aPuvbf9c6VQ" name="DownloadListItems" baseUriName="ApiEu" requestType="_Fl76YN3REe2aPuvbf9c6VQ" responseType="_yLyxoN6bEe2aPuvbf9c6VQ" path="/v0.1/bulk/lists/%s/items/download" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="__1qgoN6bEe2aPuvbf9c6VQ" name="UploadListItems" baseUriName="ApiEu" requestType="_K5Z64N6cEe2aPuvbf9c6VQ" responseType="_WsLlYN6cEe2aPuvbf9c6VQ" path="/v0.1/bulk/lists/%s/items/import" requestMethod="POST">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_3rxwoOKGEe2aPuvbf9c6VQ" name="ListItems" baseUriName="ApiEu" requestType="_MlQBoN3sEe2aPuvbf9c6VQ" responseType="_GnoW0OKFEe2aPuvbf9c6VQ" path="/v0.1/bulk/lists/%s/items" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_EGv6MOKgEe2aPuvbf9c6VQ" name="ListEvents" baseUriName="ApiEu" requestType="_WD9NkBZcEe63_LPm5S02Zw" responseType="_cwepAOKgEe2aPuvbf9c6VQ" path="/v0.1/bulk/events" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <types xsi:type="vonage_api:Class" xmi:id="_WsLlYN6cEe2aPuvbf9c6VQ" name="UploadListItemsResponse" isResponse="true">
+    <fields xmi:id="_Y9zCsN6cEe2aPuvbf9c6VQ" name="inserted" json="inserted" testValue="10000" type="_JJb2UN3REe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_oNb1oN6cEe2aPuvbf9c6VQ" name="updated" json="updated" testValue="0" type="_JJb2UN3REe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_qpV3YN6cEe2aPuvbf9c6VQ" name="deleted" json="deleted" testValue="1" type="_JJb2UN3REe2aPuvbf9c6VQ"/>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_4JMBYN3QEe2aPuvbf9c6VQ" name="ListAttribute">
+    <fields xmi:id="_9UV3oN3QEe2aPuvbf9c6VQ" name="alias" testValue="&quot;phone&quot;" type="_GrsokN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="_90HR8N3SEe2aPuvbf9c6VQ" description="Alternative name to use for this attribute. Use when you wish to correlate between 2 or more list that are using different attribute names for the same semantic data."/>
+    </fields>
+    <fields xmi:id="___e9UN3SEe2aPuvbf9c6VQ" name="name" testValue="&quot;phone_number&quot;" type="_GrsokN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="___e9Ud3SEe2aPuvbf9c6VQ" description="List attribute name."/>
+    </fields>
+    <fields xmi:id="_Fd34oN3TEe2aPuvbf9c6VQ" name="key" testValue="false" type="_QNDqEN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="_Fd34od3TEe2aPuvbf9c6VQ" description="Set to true if this attribute should be used to correlate between 2 or more lists."/>
+    </fields>
+  </types>
+  <types xmi:id="_Fl76YN3REe2aPuvbf9c6VQ" name="UUID"/>
+  <types xmi:id="_GrsokN3REe2aPuvbf9c6VQ" name="String"/>
+  <types xmi:id="_HldiIN3REe2aPuvbf9c6VQ" name="List&lt;String>"/>
+  <types xmi:id="_JJb2UN3REe2aPuvbf9c6VQ" name="Integer"/>
+  <types xmi:id="_LO5G8N3REe2aPuvbf9c6VQ" name="Long"/>
+  <types xmi:id="_NwjLYN3REe2aPuvbf9c6VQ" name="Instant"/>
+  <types xmi:id="_QNDqEN3REe2aPuvbf9c6VQ" name="Boolean"/>
+  <types xsi:type="vonage_api:Class" xmi:id="_bRsKQN3TEe2aPuvbf9c6VQ" name="ContactsList" isRequest="true" isResponse="true">
+    <fields xmi:id="_lleHMN3TEe2aPuvbf9c6VQ" name="name" testValue="&quot;My name&quot;" type="_GrsokN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="_lleHMd3TEe2aPuvbf9c6VQ" description="The name of the resource (max 255 characters)."/>
+    </fields>
+    <fields xmi:id="_rHnhIN3TEe2aPuvbf9c6VQ" name="description" testValue="&quot;My description&quot;" type="_GrsokN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="_rHnhId3TEe2aPuvbf9c6VQ" description="The description of the resource (max 1024 characters)."/>
+    </fields>
+    <fields xmi:id="_07PXUN3TEe2aPuvbf9c6VQ" name="tags" type="_HldiIN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="_3SxPYN3TEe2aPuvbf9c6VQ" description="Up to 10 custom strings assigned with a resource - each must be between 1 and 15 characters."/>
+    </fields>
+    <fields xmi:id="_6nkoAN3TEe2aPuvbf9c6VQ" name="attributes" type="_4JMBYN3QEe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_OVIXwN3UEe2aPuvbf9c6VQ" name="datasource" type="_D7N9oN3UEe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_s6ZUEN3YEe2aPuvbf9c6VQ" name="createdAt" json="created_at" testValue="" type="_NwjLYN3REe2aPuvbf9c6VQ" stringValue="&quot;2022-06-19T17:59:28.085Z&quot;" excludeRequest="true"/>
+    <fields xmi:id="_vX-w0N3YEe2aPuvbf9c6VQ" name="updatedAt" json="updated_at" testValue="&quot;My name&quot;" type="_NwjLYN3REe2aPuvbf9c6VQ" stringValue="&quot;2022-06-19T17:59:28.085Z&quot;" excludeRequest="true"/>
+    <fields xmi:id="_FHtMoN3ZEe2aPuvbf9c6VQ" name="itemsCount" json="items_count" testValue="500" type="_JJb2UN3REe2aPuvbf9c6VQ" excludeRequest="true">
+      <doc xmi:id="_FHtMod3ZEe2aPuvbf9c6VQ" returnDesc="The number of items in the list, or {@code null} if unknown." description=""/>
+    </fields>
+    <fields xmi:id="_VZZ5gN3ZEe2aPuvbf9c6VQ" name="id" json="" testValue="UUID.fromString(&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;)" type="_Fl76YN3REe2aPuvbf9c6VQ" stringValue="&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;" excludeRequest="true">
+      <doc xmi:id="_VZZ5gd3ZEe2aPuvbf9c6VQ" returnDesc="The list ID or {@code null} if unknown." description="Unique identifier for this list."/>
+    </fields>
+    <fields xmi:id="_g0OhkN3aEe2aPuvbf9c6VQ" name="syncStatus" json="sync_status" type="_nX8isN3ZEe2aPuvbf9c6VQ" excludeRequest="true">
+      <doc xmi:id="_jEvLoN3aEe2aPuvbf9c6VQ" returnDesc="The synchronisation status, or {@code null} if unknown." description="Synchronization status between the list content (items) and its datasource."/>
+    </fields>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_D7N9oN3UEe2aPuvbf9c6VQ" name="ListDatasource">
+    <fields xmi:id="_JXpxIN3UEe2aPuvbf9c6VQ" name="type" testValue="&quot;manual&quot;" type="_GrsokN3REe2aPuvbf9c6VQ"/>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_nX8isN3ZEe2aPuvbf9c6VQ" name="SyncStatus" isResponse="true">
+    <fields xmi:id="_tRUw4N3ZEe2aPuvbf9c6VQ" name="value" testValue="SyncStatusValue.COMPLETED" type="_78ngoN3ZEe2aPuvbf9c6VQ" stringValue="&quot;completed&quot;"/>
+    <fields xmi:id="_s3L9IN3aEe2aPuvbf9c6VQ" name="details" testValue="&quot;Not found&quot;" type="_GrsokN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="_s3MkMN3aEe2aPuvbf9c6VQ" returnDesc="Details on the sync status." description=""/>
+    </fields>
+    <fields xmi:id="_9W-wYN3aEe2aPuvbf9c6VQ" name="metadataModified" json="metadata_modified" testValue="false" type="_QNDqEN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="_9W-wYd3aEe2aPuvbf9c6VQ" returnDesc="Whether the list definition has been modified since last sync." description=""/>
+    </fields>
+    <fields xmi:id="_VIihEN3bEe2aPuvbf9c6VQ" name="dataModified" json="data_modified" testValue="true" type="_QNDqEN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="_VIihEd3bEe2aPuvbf9c6VQ" returnDesc="Whether one or more list items were added, removed and/or modified since last sync." description=""/>
+    </fields>
+    <fields xmi:id="_dOzdkN3bEe2aPuvbf9c6VQ" name="dirty" json="dirty" testValue="true" type="_QNDqEN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="_dOzdkd3bEe2aPuvbf9c6VQ" returnDesc="Whether the list content or metadata were modified since last sync." description=""/>
+    </fields>
+  </types>
+  <types xsi:type="vonage_api:Enum" xmi:id="_78ngoN3ZEe2aPuvbf9c6VQ" name="SyncStatusValue" doc="Represents the sync status values for {@link SyncStatus#getValue()).">
+    <values>CONFIGURED</values>
+    <values>CLEARING</values>
+    <values>FETCHING</values>
+    <values>PAUSED</values>
+    <values>CANCELLED</values>
+    <values>COMPLETED</values>
+    <values>FAILED</values>
+  </types>
+  <types xmi:id="_jAfccN3oEe2aPuvbf9c6VQ" name="Void"/>
+  <types xsi:type="vonage_api:Class" xmi:id="_t7vpEN3oEe2aPuvbf9c6VQ" name="UpdateListRequestWrapper" public="false">
+    <fields xmi:id="_wOsjIN3oEe2aPuvbf9c6VQ" name="id" type="_GrsokN3REe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_yq_mcN3oEe2aPuvbf9c6VQ" name="request" type="_bRsKQN3TEe2aPuvbf9c6VQ"/>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_FoJiEN3rEe2aPuvbf9c6VQ" name="ListListsResponse" isResponse="true" isHal="true">
+    <fields xmi:id="_Ht5toN3rEe2aPuvbf9c6VQ" name="page" json="page" testValue="1" type="_JJb2UN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="_TNwcIN3rEe2aPuvbf9c6VQ" returnDesc="The current page number."/>
+    </fields>
+    <fields xmi:id="_NqAfsN3rEe2aPuvbf9c6VQ" name="pageSize" json="page_size" testValue="100" type="_JJb2UN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="_VBJFUN3rEe2aPuvbf9c6VQ" returnDesc="Number of results per page."/>
+    </fields>
+    <fields xmi:id="_XS_zMN3rEe2aPuvbf9c6VQ" name="totalItems" json="total_items" testValue="2" type="_JJb2UN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="_XS_zMd3rEe2aPuvbf9c6VQ" returnDesc="Number of results on this page."/>
+    </fields>
+    <fields xmi:id="_ehpyQN3rEe2aPuvbf9c6VQ" name="totalPages" json="total_pages" testValue="1" type="_JJb2UN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="_ehpyQd3rEe2aPuvbf9c6VQ" returnDesc="Total number of available pages."/>
+    </fields>
+    <fields xmi:id="_4bzAEN3rEe2aPuvbf9c6VQ" name="embedded" json="_embedded" type="_sUG1gN3rEe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_CcBH0N3sEe2aPuvbf9c6VQ" name="links" json="_links" type="_AeQaoN3sEe2aPuvbf9c6VQ"/>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_sUG1gN3rEe2aPuvbf9c6VQ" name="EmbeddedLists" public="false" isResponse="true">
+    <fields xmi:id="_xf_rkN3rEe2aPuvbf9c6VQ" name="lists" json="_lists" type="_z9N78N3rEe2aPuvbf9c6VQ"/>
+  </types>
+  <types xmi:id="_z9N78N3rEe2aPuvbf9c6VQ" name="List&lt;ContactsList>"/>
+  <types xmi:id="_AeQaoN3sEe2aPuvbf9c6VQ" name="HalLinks"/>
+  <types xsi:type="vonage_api:Class" xmi:id="_MlQBoN3sEe2aPuvbf9c6VQ" name="HalRequestWrapper" public="false" isQueryParams="true">
+    <fields xmi:id="_MlQBod3sEe2aPuvbf9c6VQ" name="page" testValue="3" type="_JJb2UN3REe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_Q_KBIN3sEe2aPuvbf9c6VQ" name="pageSize" testValue="25" type="_JJb2UN3REe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_goHyUOKHEe2aPuvbf9c6VQ" name="id" type="_GrsokN3REe2aPuvbf9c6VQ"/>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_uOMUoN6QEe2aPuvbf9c6VQ" name="ListItem" isResponse="true">
+    <fields xmi:id="_wlaqsN6QEe2aPuvbf9c6VQ" name="data" json="data" type="_AjTjYN6UEe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_j1XqMN6REe2aPuvbf9c6VQ" name="createdAt" json="created_at" testValue="" type="_NwjLYN3REe2aPuvbf9c6VQ" stringValue="&quot;2022-06-19T17:59:28.085Z&quot;" excludeRequest="true"/>
+    <fields xmi:id="_j1XqMd6REe2aPuvbf9c6VQ" name="updatedAt" json="updated_at" testValue="&quot;My name&quot;" type="_NwjLYN3REe2aPuvbf9c6VQ" stringValue="&quot;2022-06-19T17:59:28.085Z&quot;" excludeRequest="true"/>
+    <fields xmi:id="_j1XqMt6REe2aPuvbf9c6VQ" name="id" json="id" testValue="UUID.fromString(&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;)" type="_Fl76YN3REe2aPuvbf9c6VQ" stringValue="&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;" excludeRequest="true">
+      <doc xmi:id="_j1XqM96REe2aPuvbf9c6VQ" returnDesc="The item ID or {@code null} if unknown." description="Unique identifier for this item."/>
+    </fields>
+    <fields xmi:id="_muRJ8N6REe2aPuvbf9c6VQ" name="listId" json="list_id" testValue="UUID.fromString(&quot;4cb98f71-a879-49f7-b5cf-2314353eb52c&quot;)" type="_Fl76YN3REe2aPuvbf9c6VQ" stringValue="&quot;4cb98f71-a879-49f7-b5cf-2314353eb52c&quot;" excludeRequest="true">
+      <doc xmi:id="_muRJ8d6REe2aPuvbf9c6VQ" returnDesc="The list ID or {@code null} if unknown." description="Unique identifier for this list."/>
+    </fields>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_AjTjYN6UEe2aPuvbf9c6VQ" name="ListItemData" isRequest="true" isResponse="true">
+    <fields xmi:id="_AjTjY96UEe2aPuvbf9c6VQ" name="firstName" json="firstName" testValue="&quot;Jane&quot;" type="_GrsokN3REe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_NTZDUN6XEe2aPuvbf9c6VQ" name="lastName" json="lastName" testValue="&quot;Doe&quot;" type="_GrsokN3REe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_VdbFgN6XEe2aPuvbf9c6VQ" name="phone" json="phone" testValue="&quot;15550067383&quot;" type="_GrsokN3REe2aPuvbf9c6VQ"/>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_rhtKIN6ZEe2aPuvbf9c6VQ" name="ListItemRequestWrapper" public="false">
+    <fields xmi:id="_rhtKId6ZEe2aPuvbf9c6VQ" name="itemId" type="_Fl76YN3REe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_rhtKIt6ZEe2aPuvbf9c6VQ" name="request" type="_AjTjYN6UEe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_teHMcN6ZEe2aPuvbf9c6VQ" name="listId" type="_Fl76YN3REe2aPuvbf9c6VQ"/>
+  </types>
+  <types xmi:id="_yLyxoN6bEe2aPuvbf9c6VQ" name="byte[]"/>
+  <types xsi:type="vonage_api:Class" xmi:id="_K5Z64N6cEe2aPuvbf9c6VQ" name="UploadListItemsRequestWrapper" public="false">
+    <fields xmi:id="_K5Z64t6cEe2aPuvbf9c6VQ" name="file" type="_QF-GYN6cEe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_K5Z6496cEe2aPuvbf9c6VQ" name="listId" type="_GrsokN3REe2aPuvbf9c6VQ"/>
+  </types>
+  <types xmi:id="_QF-GYN6cEe2aPuvbf9c6VQ" name="Path"/>
+  <types xsi:type="vonage_api:Enum" xmi:id="_q6sA8OBbEe2aPuvbf9c6VQ" name="EventType" doc="Represents values for {@link Event#getType()}.">
+    <values>ACTION_CALL_SUCCEEDED</values>
+    <values>ACTION_CALL_FAILED</values>
+    <values>ACTION_CALL_INFO</values>
+    <values>RECIPIENT_RESPONSE</values>
+    <values>RUN_ITEM_SKIPPED</values>
+    <values>RUN_ITEM_FAILED</values>
+    <values>RUN_ITEM_SUBMITTED</values>
+    <values>RUN_ITEMS_TOTAL</values>
+    <values>RUN_ITEMS_READY</values>
+    <values>RUN_ITEMS_EXCLUDED</values>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_GnoW0OKFEe2aPuvbf9c6VQ" name="ListItemsResponse" isHal="true">
+    <fields xmi:id="_NCYMsOKFEe2aPuvbf9c6VQ" name="items" json="items" type="_Rl8egOKFEe2aPuvbf9c6VQ"/>
+  </types>
+  <types xmi:id="_Rl8egOKFEe2aPuvbf9c6VQ" name="List&lt;ListItem>"/>
+  <types xsi:type="vonage_api:Class" xmi:id="_MfrA4OKIEe2aPuvbf9c6VQ" name="Event" isResponse="true">
+    <fields xmi:id="_PWkTgOKeEe2aPuvbf9c6VQ" name="id" json="id" testValue="UUID.fromString(&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;)" type="_Fl76YN3REe2aPuvbf9c6VQ" stringValue="&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;" excludeRequest="true">
+      <doc xmi:id="_PWkTgeKeEe2aPuvbf9c6VQ" returnDesc="The item ID or {@code null} if unknown." description="Unique identifier for this item."/>
+    </fields>
+    <fields xmi:id="_RDfvYOKeEe2aPuvbf9c6VQ" name="jobId" json="job_id" testValue="UUID.fromString(&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;)" type="_Fl76YN3REe2aPuvbf9c6VQ" stringValue="&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;" excludeRequest="true">
+      <doc xmi:id="_RDfvYeKeEe2aPuvbf9c6VQ" returnDesc="The job ID or {@code null} if unknown." description="Unique identifier for the job."/>
+    </fields>
+    <fields xmi:id="_Vz90wOKeEe2aPuvbf9c6VQ" name="runId" json="run_id" testValue="UUID.fromString(&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;)" type="_Fl76YN3REe2aPuvbf9c6VQ" stringValue="&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;" excludeRequest="true">
+      <doc xmi:id="_Vz90weKeEe2aPuvbf9c6VQ" returnDesc="The run ID or {@code null} if unknown." description="Unique identifier for the run."/>
+    </fields>
+    <fields xmi:id="_bIvhEOKeEe2aPuvbf9c6VQ" name="runItemId" json="run_item_id" testValue="UUID.fromString(&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;)" type="_Fl76YN3REe2aPuvbf9c6VQ" stringValue="&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;" excludeRequest="true">
+      <doc xmi:id="_bIvhEeKeEe2aPuvbf9c6VQ" returnDesc="The run's item ID or {@code null} if unknown." description="Identifier the item ID during a job run - this is the list item ID which is copied while taking the list snapshot."/>
+    </fields>
+    <fields xmi:id="_gFRFcOKeEe2aPuvbf9c6VQ" name="actionId" json="action_id" testValue="UUID.fromString(&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;)" type="_Fl76YN3REe2aPuvbf9c6VQ" stringValue="&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;" excludeRequest="true">
+      <doc xmi:id="_gFRFceKeEe2aPuvbf9c6VQ" returnDesc="The action ID or {@code null} if unknown." description="Unique identifier for the action."/>
+    </fields>
+    <fields xmi:id="_7SvjYOKeEe2aPuvbf9c6VQ" name="invocationId" json="invocation_id" testValue="UUID.fromString(&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;)" type="_Fl76YN3REe2aPuvbf9c6VQ" stringValue="&quot;29192c4a-4058-49da-86c2-3e349d1065b7&quot;" excludeRequest="true">
+      <doc xmi:id="_7SvjYeKeEe2aPuvbf9c6VQ" returnDesc="The action invocation ID or {@code null} if unknown." description="Unique identifier for the action invocation."/>
+    </fields>
+    <fields xmi:id="_HYSY4OKfEe2aPuvbf9c6VQ" name="data" json="data" type="_AjTjYN6UEe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_NXgJUOKfEe2aPuvbf9c6VQ" name="recipientId" json="recipient_id" testValue="&quot;15551584817&quot;" type="_GrsokN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="_STfiMOKfEe2aPuvbf9c6VQ" returnDesc="The recipient ID or {@code null} if unknown." description="String identifier of a recipient, for example their email, phone number etc."/>
+    </fields>
+    <fields xmi:id="_gjGbgOKfEe2aPuvbf9c6VQ" name="sourceContext" json="src_ctx" testValue="&quot;UK recipient&quot;" type="_GrsokN3REe2aPuvbf9c6VQ">
+      <doc xmi:id="_gjGbgeKfEe2aPuvbf9c6VQ" returnDesc="The source context or {@code null} if unknown." description="src_ctx field."/>
+    </fields>
+    <fields xmi:id="_v43EkOKfEe2aPuvbf9c6VQ" name="occurredAt" json="occurred_at" testValue="&quot;2022-06-19T20:41:59.085Z&quot;" type="_NwjLYN3REe2aPuvbf9c6VQ" stringValue="&quot;2022-06-19T20:41:59.085Z&quot;" excludeRequest="true">
+      <doc xmi:id="_6ksVIOKfEe2aPuvbf9c6VQ" returnDesc="The event timestamp or {@code null} if unknown." description="Date &amp; time the event occured in ISO 8601 format."/>
+    </fields>
+    <fields xmi:id="_NiFzQOKgEe2aPuvbf9c6VQ" name="type" json="type" testValue="EventType.ACTION_CALL_SUCCEEDED" type="_q6sA8OBbEe2aPuvbf9c6VQ" stringValue="&quot;action-call-succeeded&quot;">
+      <doc xmi:id="_VfbdQOKgEe2aPuvbf9c6VQ" returnDesc="The event type as an enum." description="Classification of the event."/>
+    </fields>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_cwepAOKgEe2aPuvbf9c6VQ" name="ListEventsResponse" isHal="true">
+    <fields xmi:id="_cwepAeKgEe2aPuvbf9c6VQ" name="events" json="events" type="_fiOX4OKgEe2aPuvbf9c6VQ"/>
+  </types>
+  <types xmi:id="_fiOX4OKgEe2aPuvbf9c6VQ" name="List&lt;Event>"/>
+  <types xsi:type="vonage_api:Class" xmi:id="_WD9NkBZcEe63_LPm5S02Zw" name="ListEventsFilter" public="false" isRequest="true" isQueryParams="true">
+    <fields xmi:id="_ZdyQIBZcEe63_LPm5S02Zw" name="order" json="order" type="_d8UQ8BZcEe63_LPm5S02Zw">
+      <doc xmi:id="_9C0ukBZfEe63_LPm5S02Zw" returnDesc="The sort order as an enum." description="Sort in either ascending or descending order."/>
+    </fields>
+    <fields xmi:id="_y3DlgBZcEe63_LPm5S02Zw" name="runId" json="run_id" testValue="UUID.fromString(&quot;51aca838-2cf6-4100-b0d2-e74ac0e95c88&quot;)" type="_Fl76YN3REe2aPuvbf9c6VQ" stringValue="&quot;51aca838-2cf6-4100-b0d2-e74ac0e95c88&quot;">
+      <doc xmi:id="_CNzlsBZgEe63_LPm5S02Zw" returnDesc="The run ID." description="Run ID to filter by."/>
+    </fields>
+    <fields xmi:id="_IrHAUBZgEe63_LPm5S02Zw" name="runItemId" json="run_item_id" testValue="UUID.fromString(&quot;51aca838-2cf6-4100-b0d2-e74ac0e95c88&quot;)" type="_Fl76YN3REe2aPuvbf9c6VQ" stringValue="&quot;51aca838-2cf6-4100-b0d2-e74ac0e95c88&quot;">
+      <doc xmi:id="_IrHAURZgEe63_LPm5S02Zw" returnDesc="The run item ID." description="Run item ID to filter by."/>
+    </fields>
+    <fields xmi:id="_RSa0YBZgEe63_LPm5S02Zw" name="invocationId" json="invocation_id" testValue="UUID.fromString(&quot;29bab76c-156e-42e4-ab38-f6a465f0048e&quot;)" type="_Fl76YN3REe2aPuvbf9c6VQ" stringValue="&quot;29bab76c-156e-42e4-ab38-f6a465f0048e&quot;">
+      <doc xmi:id="_RSa0YRZgEe63_LPm5S02Zw" returnDesc="The invocation ID." description="Invocation ID to filter by."/>
+    </fields>
+    <fields xmi:id="_a8no0BZgEe63_LPm5S02Zw" name="actionId" json="action_id" testValue="UUID.fromString(&quot;99ea10e0-1f14-4f55-b976-3c88ea8ec4cd&quot;)" type="_Fl76YN3REe2aPuvbf9c6VQ" stringValue="&quot;99ea10e0-1f14-4f55-b976-3c88ea8ec4cd&quot;">
+      <doc xmi:id="_a8no0RZgEe63_LPm5S02Zw" returnDesc="The action ID." description="Action ID to filter by."/>
+    </fields>
+    <fields xmi:id="_iaM0sBZgEe63_LPm5S02Zw" name="traceId" json="trace_id" testValue="UUID.fromString(&quot;29bab76c-156e-42e4-ab38-f6a465f0048e&quot;)" type="_Fl76YN3REe2aPuvbf9c6VQ" stringValue="&quot;29bab76c-156e-42e4-ab38-f6a465f0048e&quot;">
+      <doc xmi:id="_iaM0sRZgEe63_LPm5S02Zw" returnDesc="The trace ID." description="Trace ID to filter by."/>
+    </fields>
+    <fields xmi:id="_4OdyQBZgEe63_LPm5S02Zw" name="recipientId" json="recipient_id" testValue="&quot;15551584817&quot;" type="_GrsokN3REe2aPuvbf9c6VQ" stringValue="&quot;15551584817&quot;">
+      <doc xmi:id="_4OdyQRZgEe63_LPm5S02Zw" returnDesc="The recipient ID." description="Recipient ID to filter by."/>
+    </fields>
+    <fields xmi:id="_C2T6sBZhEe63_LPm5S02Zw" name="sourceContext" json="src_ctx" testValue="&quot;uk-customers&quot;" type="_GrsokN3REe2aPuvbf9c6VQ" stringValue="&quot;uk-customers&quot;">
+      <doc xmi:id="_C2T6sRZhEe63_LPm5S02Zw" returnDesc="The source context string." description="The name of the segment / matcher the item / event to filter by (exact string)."/>
+    </fields>
+    <fields xmi:id="_3rS-UBZhEe63_LPm5S02Zw" name="sourceType" json="src_type" testValue="SourceType.EVENT_HANDLER" type="_txC7sBZhEe63_LPm5S02Zw" stringValue="&quot;event-handler&quot;">
+      <doc xmi:id="_3rS-URZhEe63_LPm5S02Zw" returnDesc="The source type as an enum." description="Source type to filter by."/>
+    </fields>
+    <fields xmi:id="_FWgKEBZiEe63_LPm5S02Zw" name="startDate" json="date_start" testValue="" type="_NwjLYN3REe2aPuvbf9c6VQ" stringValue="">
+      <doc xmi:id="_FWgKERZiEe63_LPm5S02Zw" returnDesc="The start date for events as an Instant." description="ISO-8601 formatted date for when to begin events filter."/>
+    </fields>
+    <fields xmi:id="_PDkFQBZiEe63_LPm5S02Zw" name="endDate" json="date_end" testValue="" type="_NwjLYN3REe2aPuvbf9c6VQ" stringValue="">
+      <doc xmi:id="_PDkFQRZiEe63_LPm5S02Zw" returnDesc="The end date for events as an Instant." description="ISO-8601 formatted date for when to end events filter."/>
+    </fields>
+  </types>
+  <types xsi:type="vonage_api:Enum" xmi:id="_d8UQ8BZcEe63_LPm5S02Zw" name="SortOrder">
+    <values>ASC</values>
+    <values>DESC</values>
+  </types>
+  <types xsi:type="vonage_api:Enum" xmi:id="_txC7sBZhEe63_LPm5S02Zw" name="SourceType" doc="Represents source types for events.">
+    <values>SEGMENTATION</values>
+    <values>EVENT_HANDLER</values>
+  </types>
+  <types xsi:type="vonage_api:Class" xmi:id="_djQ8MG2aEe6lLc0PcP0qPw" name="DownloadListItemsRequestWrapper" public="false">
+    <fields xmi:id="_djQ8MW2aEe6lLc0PcP0qPw" name="listId" type="_GrsokN3REe2aPuvbf9c6VQ"/>
+    <fields xmi:id="_djQ8Mm2aEe6lLc0PcP0qPw" name="file" type="_QF-GYN6cEe2aPuvbf9c6VQ"/>
+  </types>
+</vonage_api:Api>

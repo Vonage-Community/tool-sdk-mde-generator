@@ -1,0 +1,36 @@
+[%
+import "./helper_functions.egl";
+%]
+[%=packageAndCopyright()%]
+
+import com.vonage.client.QueryParamsRequest;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+[%=classDeclaration(name, extends, implements.including("QueryParamsRequest"), true)%]
+[% for (field in fields) {%]
+	private final [%=field.type.name%] [%=field.name%];
+[%}%]
+
+	[%=name%](Builder builder) {
+	[% for (field in fields) {%]
+		[%=assignFieldFromBuilder(field)%]
+	[%}%]
+	}
+	
+	@Override
+	public Map<String, String> makeParams() {
+		Map<String, String> params = new LinkedHashMap<>();
+	[% for (field in fields) {%]
+		if ([%=field.name%] != null) {
+            params.put("[%=field.json%]", [%=field.queryParamValue()%]);
+        }
+    [%}%]
+		return params;
+	}
+
+[%=fieldGettersWithoutJson(fields)%]
+
+[%=builder(fields)%]
+
+}

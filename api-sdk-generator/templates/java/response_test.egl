@@ -1,0 +1,42 @@
+[%
+import "./helper_functions.egl";
+%]
+[%=packageAndCopyright()%]
+
+import com.vonage.client.HttpWrapper;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class [%=name + testClassSuffix%] {
+	
+	@Test
+	public void testFromJsonAllFields() {
+	[% for (field in fields) {%]
+		[%=field.type.name%] [%=field.name%] = [%=field.testValue%];
+	[%}%]
+	
+		[%=name%] response = [%=name%].fromJson("{\n" +
+		[% var fieldsIter = fields.iterator();
+		while (fieldsIter.hasNext()) {
+			var field = fieldsIter.next(); %]
+				"\"[%=field.json.isDefined() ? field.json : field.name%]\":\""+[%=field.name%]+"\"[%=fieldsIter.hasNext() ? "," : ""%]\n" +
+		[%}%]		"}");
+		
+	[% for (field in fields) {%]
+		assertEquals([%=field.name%], response.get[%=field.name.ftuc()%]());
+	[%}%]
+	}
+	
+	@Test(expected = VonageUnexpectedException.class)
+	public void testFromJsonInvalid() {
+		[%=name%].fromJson("{malformed]");
+	}
+
+	@Test
+	public void testFromJsonEmpty() {
+		[%=name%] response = [%=name%].fromJson("{}");
+	[% for (field in fields) {%]
+		assertNull(response.get[%=field.name.ftuc()%]());
+	[%}%]
+	}
+}

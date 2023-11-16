@@ -1,0 +1,26 @@
+[%
+import "./helper_functions.egl";
+%]
+[%=packageAndCopyright()%]
+
+import com.vonage.client.Jsonable;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@JsonInclude(value = JsonInclude.Include.NON_NULL)
+[%=classDeclaration(name, extends, implements.including("Jsonable"), true)%]
+[% for (field in fields) {%]
+	private final [%=field.type.name%] [%=field.name%];
+[%}%]
+
+	[%=name%](Builder builder) {
+	[% for (field in fields) {%]
+		[%=assignFieldFromBuilder(field)%]
+	[%}%]
+	}
+
+[%=fieldGetters(fields)%]
+	
+[%=builder(fields)%]
+
+}

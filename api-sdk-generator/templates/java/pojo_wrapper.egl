@@ -1,0 +1,12 @@
+[%
+import "./helper_functions.egl";
+%]
+[%=packageAndCopyright()%]
+
+[%=classDeclaration(name, extends, implements, false)%]
+[% for (field in fields) {%]
+	final [%=field.type.name%] [%=field.name%];
+[%}%]
+
+[%=simpleConstructor("", name, fields)%]
+}

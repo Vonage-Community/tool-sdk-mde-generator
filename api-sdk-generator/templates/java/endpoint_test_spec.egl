@@ -1,0 +1,27 @@
+[%
+import "./helper_functions.egl";
+%]
+[%=packageAndCopyright()%]
+
+import com.vonage.client.*;
+import com.vonage.client.auth.*;
+import java.util.*;
+
+abstract class [%=testSpecName%]<T, R> extends DynamicEndpointTestSpec<T, R> {
+
+	@Override
+	protected Collection<Class<? extends AuthMethod>> expectedAuthMethods() {
+		return Arrays.asList([%=authMethodClasses(authMethods)%]);
+	}
+
+	@Override
+	protected Class<? extends VonageApiResponseException> expectedResponseExceptionType() {
+		return [%=api%]ResponseException.class;
+	}
+
+	@Override
+	protected String expectedDefaultBaseUri() {
+		return "[%=baseEndpointPath%]";
+	}
+}
+

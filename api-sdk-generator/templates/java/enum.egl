@@ -1,0 +1,34 @@
+[%
+import "./helper_functions.egl";
+%]
+[%=packageAndCopyright()%]
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+
+/**
+ * [%=javadoc%]
+ */
+public enum [%=name%] {
+[%	var valuesIter = values.iterator();
+	while (valuesIter.hasNext()) {
+		out.println("\t" + valuesIter.next() + (valuesIter.hasNext() ? "," : ";"));
+	}
+%]
+
+	@JsonCreator
+	public static [%=name%] fromString(String value) {
+		try {
+			return valueOf(value.toUpperCase());
+		}
+		catch (NullPointerException | IllegalArgumentException ex) {
+			return null;
+		}
+	}
+
+	@JsonValue
+	@Override
+	public String toString() {
+		return name().toLowerCase();
+	}	
+}
