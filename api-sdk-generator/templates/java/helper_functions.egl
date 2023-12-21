@@ -50,7 +50,7 @@ operation Endpoint returnTypePretty() : String {
 }
 
 operation Endpoint requestTypePretty() : String {
-	return self.isVoidReturnType() ? "Void" : self.responseType.name;
+	return self.isVoidRequestType() ? "Void" : self.requestType.name;
 }
 
 operation Endpoint hasRequestType() : Boolean {

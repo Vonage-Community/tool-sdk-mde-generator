@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="ASCII"?>
-<vonage_api:Api xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vonage_api="vonage_api" xmi:id="_YA3A4CLBEe2a5OTt5Iuebw" name="video" package="com.vonage.client.video" baseEndpointPath="https://video.api.vonage.com/v2/project/">
-  <endpoints xmi:id="_bQ84oCLBEe2a5OTt5Iuebw" name="ListStreams" baseUriName="Video" responseType="_onRccChGEe2c9d86gyQW8w" path="/v2/project/%s/session/%s/stream" requestMethod="GET">
+<Api xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="vonage_api" xmi:id="_YA3A4CLBEe2a5OTt5Iuebw" name="video" package="com.vonage.client.video" baseEndpointPath="https://video.api.vonage.com/v2/project/">
+  <endpoints xmi:id="_bQ84oCLBEe2a5OTt5Iuebw" name="ListStreams" baseUriName="Video" requestType="_wXP1UChFEe2c9d86gyQW8w" responseType="_onRccChGEe2c9d86gyQW8w" path="/v2/project/%s/session/%s/stream" requestMethod="GET">
     <authMethods>JWT</authMethods>
     <authMethods>Token</authMethods>
   </endpoints>
-  <endpoints xmi:id="_TzeisCkdEe2c9d86gyQW8w" name="SetStreamLayout" baseUriName="Video" requestType="_me5OECkfEe2c9d86gyQW8w" path="/v2/project/session/%s/stream" requestMethod="PUT">
+  <endpoints xmi:id="_TzeisCkdEe2c9d86gyQW8w" name="SetStreamLayout" baseUriName="Video" requestType="_me5OECkfEe2c9d86gyQW8w" responseType="_qkzgkKuiEe2_TsNyQrEg4w" path="/v2/project/%s/session/%s/stream" requestMethod="PUT">
     <authMethods>JWT</authMethods>
     <authMethods>Token</authMethods>
   </endpoints>
-  <endpoints xmi:id="_KaAZ4DKJEe2Ne5kDQhKV3w" name="GetStream" baseUriName="Video" requestType="_wXP1UChFEe2c9d86gyQW8w" responseType="_0oeE0ChDEe2c9d86gyQW8w" path="/v2/project/%s/session/%s/stream/%s" requestMethod="GET">
+  <endpoints xmi:id="_KaAZ4DKJEe2Ne5kDQhKV3w" name="GetStream" baseUriName="Video" requestType="_Lv-TsDjeEe2Uvf--z9-cyg" responseType="_0oeE0ChDEe2c9d86gyQW8w" path="/v2/project/%s/session/%s/stream/%s" requestMethod="GET">
     <authMethods>JWT</authMethods>
     <authMethods>Token</authMethods>
   </endpoints>
-  <endpoints xmi:id="_1rjEIDQEEe2w3cnyT6ITww" name="SignalAll" baseUriName="Video" requestType="_qWqcQDQUEe2w3cnyT6ITww" path="/v2/project/%s/session/%s/connection/%s/signal" requestMethod="POST">
+  <endpoints xmi:id="_1rjEIDQEEe2w3cnyT6ITww" name="Signal" baseUriName="Video" requestType="_0OUbsDQFEe2w3cnyT6ITww" responseType="_qkzgkKuiEe2_TsNyQrEg4w" path="/v2/project/%s/session/%s/connection/%s/signal" requestMethod="POST">
     <authMethods>JWT</authMethods>
   </endpoints>
-  <endpoints xmi:id="_l97p0DQGEe2w3cnyT6ITww" name="Signal" baseUriName="Video" requestType="_qWqcQDQUEe2w3cnyT6ITww" path="/v2/project/%s/session/%s/signal" requestMethod="POST">
+  <endpoints xmi:id="_l97p0DQGEe2w3cnyT6ITww" name="SignalAll" baseUriName="Video" requestType="_0OUbsDQFEe2w3cnyT6ITww" responseType="_qkzgkKuiEe2_TsNyQrEg4w" path="/v2/project/%s/session/%s/signal" requestMethod="POST">
     <authMethods>JWT</authMethods>
   </endpoints>
   <endpoints xmi:id="_aByAsDjDEe2Uvf--z9-cyg" name="ForceDisconnect" baseUriName="Video" requestType="_Lv-TsDjeEe2Uvf--z9-cyg" path="/v2/project/%s/session/%s/connection/%s" requestMethod="DELETE">
     <authMethods>JWT</authMethods>
   </endpoints>
-  <endpoints xmi:id="__INHcDjIEe2Uvf--z9-cyg" name="MuteStream" baseUriName="Video" requestType="_Bn8lsDjcEe2Uvf--z9-cyg" responseType="_UhfZMDjJEe2Uvf--z9-cyg" path="/v2/project/%s/session/%s/stream/%s/mute" requestMethod="POST">
+  <endpoints xmi:id="__INHcDjIEe2Uvf--z9-cyg" name="MuteStream" baseUriName="Video" requestType="_Lv-TsDjeEe2Uvf--z9-cyg" responseType="_qkzgkKuiEe2_TsNyQrEg4w" path="/v2/project/%s/session/%s/stream/%s/mute" requestMethod="POST">
     <authMethods>JWT</authMethods>
   </endpoints>
-  <endpoints xmi:id="_55zokDjLEe2Uvf--z9-cyg" name="MuteSession" baseUriName="Video" requestType="_Rhl-8DjcEe2Uvf--z9-cyg" responseType="_UhfZMDjJEe2Uvf--z9-cyg" path="/v2/project/%s/session/%s/mute" requestMethod="POST">
+  <endpoints xmi:id="_55zokDjLEe2Uvf--z9-cyg" name="MuteSession" baseUriName="Video" requestType="_BnieYDjOEe2Uvf--z9-cyg" responseType="_UhfZMDjJEe2Uvf--z9-cyg" path="/v2/project/%s/session/%s/mute" requestMethod="POST">
     <authMethods>JWT</authMethods>
   </endpoints>
-  <endpoints xmi:id="_j-5OED15Ee2Uvf--z9-cyg" name="SetArchiveLayout" baseUriName="Video" requestType="_bzj5cD17Ee2Uvf--z9-cyg" path="/v2/project/%s/archive/%s/layout" requestMethod="PUT">
+  <endpoints xmi:id="_j-5OED15Ee2Uvf--z9-cyg" name="UpdateArchiveLayout" baseUriName="Video" requestType="_zVXo0D15Ee2Uvf--z9-cyg" responseType="_qkzgkKuiEe2_TsNyQrEg4w" path="/v2/project/%s/archive/%s/layout" requestMethod="PUT">
     <authMethods>JWT</authMethods>
   </endpoints>
-  <endpoints xmi:id="_2JbZ8D17Ee2Uvf--z9-cyg" name="DeleteArchive" baseUriName="Video" path="/v2/project/%s/archive/%s" requestMethod="DELETE">
+  <endpoints xmi:id="_2JbZ8D17Ee2Uvf--z9-cyg" name="DeleteArchive" baseUriName="Video" requestType="_wXP1UChFEe2c9d86gyQW8w" responseType="_qkzgkKuiEe2_TsNyQrEg4w" path="/v2/project/%s/archive/%s" requestMethod="DELETE">
     <authMethods>JWT</authMethods>
   </endpoints>
-  <endpoints xmi:id="_awKtUD18Ee2Uvf--z9-cyg" name="PatchArchiveStreams" baseUriName="Video" requestType="_y8MMcD18Ee2Uvf--z9-cyg" responseType="_qkzgkKuiEe2_TsNyQrEg4w" path="/v2/project/%s/archive/%s/streams" requestMethod="PATCH">
+  <endpoints xmi:id="_awKtUD18Ee2Uvf--z9-cyg" name="PatchArchiveStream" baseUriName="Video" requestType="__btoMD18Ee2Uvf--z9-cyg" responseType="_qkzgkKuiEe2_TsNyQrEg4w" path="/v2/project/%s/archive/%s/streams" requestMethod="PATCH">
     <authMethods>JWT</authMethods>
   </endpoints>
-  <endpoints xmi:id="_NY_wgD1_Ee2Uvf--z9-cyg" name="StopArchive" baseUriName="Video" responseType="_Lj0-oD1_Ee2Uvf--z9-cyg" path="/v2/project/%s/archive/%s/stop" requestMethod="POST">
+  <endpoints xmi:id="_NY_wgD1_Ee2Uvf--z9-cyg" name="StopArchive" baseUriName="Video" requestType="_wXP1UChFEe2c9d86gyQW8w" responseType="_Lj0-oD1_Ee2Uvf--z9-cyg" path="/v2/project/%s/archive/%s/stop" requestMethod="POST">
     <authMethods>JWT</authMethods>
   </endpoints>
-  <endpoints xmi:id="_-DwPYD1_Ee2Uvf--z9-cyg" name="CreateArchive" baseUriName="Video" requestType="_7sCKED1_Ee2Uvf--z9-cyg" responseType="_Lj0-oD1_Ee2Uvf--z9-cyg" path="/v2/project/%s/archive" requestMethod="POST">
+  <endpoints xmi:id="_-DwPYD1_Ee2Uvf--z9-cyg" name="CreateArchive" baseUriName="Video" requestType="_Lj0-oD1_Ee2Uvf--z9-cyg" responseType="_Lj0-oD1_Ee2Uvf--z9-cyg" path="/v2/project/%s/archive" requestMethod="POST">
     <authMethods>JWT</authMethods>
   </endpoints>
   <endpoints xmi:id="_Now1YD2AEe2Uvf--z9-cyg" name="ListArchives" baseUriName="Video" requestType="_UOnIAD2AEe2Uvf--z9-cyg" responseType="_RqPt0D2AEe2Uvf--z9-cyg" path="/v2/project/%s/archive" requestMethod="GET">
@@ -54,10 +54,10 @@
   <endpoints xmi:id="_RgXOAKe4Ee2QS5yVJbmJNA" name="SendDtmfToSession" baseUriName="Video" requestType="_6EARQKe3Ee2QS5yVJbmJNA" path="/v2/project/%s/session/%s/play-dtmf" requestMethod="POST">
     <authMethods>JWT</authMethods>
   </endpoints>
-  <endpoints xmi:id="_GmG8EKuLEe2_TsNyQrEg4w" name="ListBroadcasts" baseUriName="Video" requestType="_pZmwMKuLEe2_TsNyQrEg4w" responseType="_YwUpwKuLEe2_TsNyQrEg4w" path="/v2/project/%s/broadcast" requestMethod="GET">
+  <endpoints xmi:id="_GmG8EKuLEe2_TsNyQrEg4w" name="ListBroadcasts" baseUriName="Video" requestType="_UOnIAD2AEe2Uvf--z9-cyg" responseType="_YwUpwKuLEe2_TsNyQrEg4w" path="/v2/project/%s/broadcast" requestMethod="GET">
     <authMethods>JWT</authMethods>
   </endpoints>
-  <endpoints xmi:id="_OY8hEKudEe2_TsNyQrEg4w" name="CreateBroadcast" baseUriName="Video" requestType="_zLh7QKuhEe2_TsNyQrEg4w" responseType="_ZyYA0KuEEe2_TsNyQrEg4w" path="/v2/project/%s/broadcast" requestMethod="POST">
+  <endpoints xmi:id="_OY8hEKudEe2_TsNyQrEg4w" name="CreateBroadcast" baseUriName="Video" requestType="_ZyYA0KuEEe2_TsNyQrEg4w" responseType="_ZyYA0KuEEe2_TsNyQrEg4w" path="/v2/project/%s/broadcast" requestMethod="POST">
     <authMethods>JWT</authMethods>
   </endpoints>
   <endpoints xmi:id="_DcQXwKuiEe2_TsNyQrEg4w" name="GetBroadcast" baseUriName="Video" requestType="_wXP1UChFEe2c9d86gyQW8w" responseType="_ZyYA0KuEEe2_TsNyQrEg4w" path="/v2/project/%s/broadcast/%s" requestMethod="GET">
@@ -66,29 +66,33 @@
   <endpoints xmi:id="_Qtj1wKuiEe2_TsNyQrEg4w" name="StopBroadcast" baseUriName="Video" requestType="_wXP1UChFEe2c9d86gyQW8w" responseType="_ZyYA0KuEEe2_TsNyQrEg4w" path="/v2/project/%s/broadcast/%s/stop" requestMethod="POST">
     <authMethods>JWT</authMethods>
   </endpoints>
-  <endpoints xmi:id="_ce3goKuiEe2_TsNyQrEg4w" name="UpdateBroadcastLayout" baseUriName="Video" requestType="_bzj5cD17Ee2Uvf--z9-cyg" responseType="_qkzgkKuiEe2_TsNyQrEg4w" path="/v2/project/%s/broadcast/%s/layout" requestMethod="POST">
+  <endpoints xmi:id="_ce3goKuiEe2_TsNyQrEg4w" name="UpdateBroadcastLayout" baseUriName="Video" requestType="_zVXo0D15Ee2Uvf--z9-cyg" responseType="_qkzgkKuiEe2_TsNyQrEg4w" path="/v2/project/%s/broadcast/%s/layout" requestMethod="PUT">
     <authMethods>JWT</authMethods>
   </endpoints>
-  <endpoints xmi:id="_Gow6kKujEe2_TsNyQrEg4w" name="PatchBroadcastStreams" baseUriName="Video" requestType="_y8MMcD18Ee2Uvf--z9-cyg" responseType="_qkzgkKuiEe2_TsNyQrEg4w" path="/v2/project/%s/broadcast/%s/streams" requestMethod="PATCH">
+  <endpoints xmi:id="_Gow6kKujEe2_TsNyQrEg4w" name="PatchBroadcastStream" baseUriName="Video" requestType="__btoMD18Ee2Uvf--z9-cyg" responseType="_qkzgkKuiEe2_TsNyQrEg4w" path="/v2/project/%s/broadcast/%s/streams" requestMethod="PATCH">
     <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_xapc4J6bEe6OTs49VJDivg" name="CreateSession" baseUriName="Video" requestType="_luFvIJ6bEe6OTs49VJDivg" responseType="_luFvIZ6bEe6OTs49VJDivg" path="/session/create" requestMethod="POST">
+    <authMethods>JWT</authMethods>
+    <authMethods>Token</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_LzO6MJ6cEe6OTs49VJDivg" name="SipDial" baseUriName="Video" requestType="_eLHs8J6bEe6OTs49VJDivg" responseType="_gv8aIJ6bEe6OTs49VJDivg" path="/v2/project/%s/dial" requestMethod="POST">
+    <authMethods>JWT</authMethods>
+    <authMethods>Token</authMethods>
   </endpoints>
   <types xmi:id="_qkzgkKuiEe2_TsNyQrEg4w" name="Void"/>
-  <types xsi:type="vonage_api:Class" xmi:id="_zLh7QKuhEe2_TsNyQrEg4w" name="CreateBroadcastRequest" isRequest="true"/>
-  <types xsi:type="vonage_api:Class" xmi:id="_y8MMcD18Ee2Uvf--z9-cyg" name="PatchArchiveStreamsRequestWrapper" public="false">
-    <fields xmi:id="_45_AkD18Ee2Uvf--z9-cyg" name="archiveId" testValue="UUID.randomUuid().toString()" type="_wXP1UChFEe2c9d86gyQW8w" nullable="false"/>
-    <fields xmi:id="_q4fSYD2VEe2Uvf--z9-cyg" name="request" type="__btoMD18Ee2Uvf--z9-cyg"/>
-  </types>
+  <types xsi:type="Class" xmi:id="_zLh7QKuhEe2_TsNyQrEg4w" name="CreateBroadcastRequest" isRequest="true"/>
   <types xmi:id="_vO5_IChDEe2c9d86gyQW8w" name="int"/>
   <types xmi:id="_wXP1UChFEe2c9d86gyQW8w" name="String"/>
   <types xmi:id="_VqMucChGEe2c9d86gyQW8w" name="List&lt;String>"/>
-  <types xsi:type="vonage_api:Class" xmi:id="_0oeE0ChDEe2c9d86gyQW8w" name="GetStreamResponse">
+  <types xsi:type="Class" xmi:id="_0oeE0ChDEe2c9d86gyQW8w" name="GetStreamResponse">
     <fields xmi:id="_DuTwoChGEe2c9d86gyQW8w" name="videoType" testValue="&quot;camera&quot;" type="_wXP1UChFEe2c9d86gyQW8w"/>
     <fields xmi:id="_MlrZ8ChGEe2c9d86gyQW8w" name="name" testValue="&quot;&quot;" type="_wXP1UChFEe2c9d86gyQW8w"/>
     <fields xmi:id="_gjLvsClCEe2c9d86gyQW8w" name="id" testValue="&quot;8b732909-0a06-46a2-8ea8-074e64d43422&quot;" type="_wXP1UChFEe2c9d86gyQW8w"/>
     <fields xmi:id="_gjLvsSlCEe2c9d86gyQW8w" name="layoutClassList" testValue="Arrays.asList(&quot;full&quot;)" type="_VqMucChGEe2c9d86gyQW8w"/>
   </types>
   <types xmi:id="_ghN7UChGEe2c9d86gyQW8w" name="List&lt;GetStreamResponse>"/>
-  <types xsi:type="vonage_api:Class" xmi:id="_onRccChGEe2c9d86gyQW8w" name="ListStreamsResponse">
+  <types xsi:type="Class" xmi:id="_onRccChGEe2c9d86gyQW8w" name="ListStreamsResponse">
     <fields xmi:id="_rKCUIChGEe2c9d86gyQW8w" name="count" testValue="1" type="_vO5_IChDEe2c9d86gyQW8w">
       <doc xmi:id="_ofZrUChxEe2c9d86gyQW8w" returnDesc="Number of items in the list."/>
     </fields>
@@ -96,24 +100,21 @@
       <doc xmi:id="_tfL_EChxEe2c9d86gyQW8w" returnDesc="The response object for each video stream."/>
     </fields>
   </types>
-  <types xsi:type="vonage_api:Class" xmi:id="_me5OECkfEe2c9d86gyQW8w" name="SetStreamLayoutRequest">
+  <types xsi:type="Class" xmi:id="_me5OECkfEe2c9d86gyQW8w" name="SetStreamLayoutRequest">
     <fields xmi:id="_E2J0YChEEe2c9d86gyQW8w" name="id" testValue="&quot;8b732909-0a06-46a2-8ea8-074e64d43422&quot;" type="_wXP1UChFEe2c9d86gyQW8w"/>
     <fields xmi:id="_Tm9EUChGEe2c9d86gyQW8w" name="layoutClassList" testValue="Arrays.asList(&quot;full&quot;)" type="_VqMucChGEe2c9d86gyQW8w"/>
   </types>
-  <types xsi:type="vonage_api:Class" xmi:id="_6b69MCkfEe2c9d86gyQW8w" name="ChangeLayoutRequest">
+  <types xsi:type="Class" xmi:id="_6b69MCkfEe2c9d86gyQW8w" name="ChangeLayoutRequest">
     <fields xmi:id="_8oZb0CkfEe2c9d86gyQW8w" name="items" type="_-NgYcCkfEe2c9d86gyQW8w"/>
   </types>
   <types xmi:id="_-NgYcCkfEe2c9d86gyQW8w" name="List&lt;SessionStream>"/>
-  <types xsi:type="vonage_api:Class" xmi:id="_0OUbsDQFEe2w3cnyT6ITww" name="SignalRequest">
+  <types xsi:type="Class" xmi:id="_0OUbsDQFEe2w3cnyT6ITww" name="SignalRequest">
     <fields xmi:id="_3cN7EDQFEe2w3cnyT6ITww" name="type" testValue="&quot;chat&quot;" type="_wXP1UChFEe2c9d86gyQW8w"/>
     <fields xmi:id="_AkUvEDQGEe2w3cnyT6ITww" name="data" testValue="&quot;Text of the chat message&quot;" type="_wXP1UChFEe2c9d86gyQW8w"/>
+    <fields xmi:id="_HX26kDQVEe2w3cnyT6ITww" name="sessionId" type="_wXP1UChFEe2c9d86gyQW8w" nullable="false" excludeRequest="true"/>
+    <fields xmi:id="_Nv9sIDQVEe2w3cnyT6ITww" name="connectionId" type="_wXP1UChFEe2c9d86gyQW8w" excludeRequest="true"/>
   </types>
-  <types xsi:type="vonage_api:Class" xmi:id="_qWqcQDQUEe2w3cnyT6ITww" name="SignalRequestWrapper" public="false">
-    <fields xmi:id="_CD8J4DQVEe2w3cnyT6ITww" name="request" type="_0OUbsDQFEe2w3cnyT6ITww" nullable="false"/>
-    <fields xmi:id="_HX26kDQVEe2w3cnyT6ITww" name="sessionId" type="_wXP1UChFEe2c9d86gyQW8w" nullable="false"/>
-    <fields xmi:id="_Nv9sIDQVEe2w3cnyT6ITww" name="connectionId" type="_wXP1UChFEe2c9d86gyQW8w"/>
-  </types>
-  <types xsi:type="vonage_api:Class" xmi:id="_UhfZMDjJEe2Uvf--z9-cyg" name="MuteResponse">
+  <types xsi:type="Class" xmi:id="_UhfZMDjJEe2Uvf--z9-cyg" name="MuteSessionResponse">
     <fields xmi:id="_WYYpYDjJEe2Uvf--z9-cyg" name="applicationId" testValue="78d335fa-323d-0114-9c3d-d6f0d48968cf" type="_wXP1UChFEe2c9d86gyQW8w">
       <doc xmi:id="_iTh60DjLEe2Uvf--z9-cyg" returnDesc="The Vonage application ID."/>
     </fields>
@@ -131,53 +132,43 @@
     </fields>
     <doc xmi:id="_XKe0sDjJEe2Uvf--z9-cyg" description="Response returned when muting a stream or session."/>
   </types>
-  <types xsi:type="vonage_api:Enum" xmi:id="_qA79UDjJEe2Uvf--z9-cyg" name="ProjectStatus" doc="Represents the project status.">
+  <types xsi:type="Enum" xmi:id="_qA79UDjJEe2Uvf--z9-cyg" name="ProjectStatus" doc="Represents the project status.">
     <values>ACTIVE</values>
     <values>SUSPENDED</values>
   </types>
-  <types xsi:type="vonage_api:Enum" xmi:id="_FPR98DjKEe2Uvf--z9-cyg" name="ProjectEnvironment" doc="Represents the project environment type.">
+  <types xsi:type="Enum" xmi:id="_FPR98DjKEe2Uvf--z9-cyg" name="ProjectEnvironment" doc="Represents the project environment type.">
     <values>STANDARD</values>
     <values>ENTERPRISE</values>
   </types>
-  <types xsi:type="vonage_api:Class" xmi:id="_BnieYDjOEe2Uvf--z9-cyg" name="MuteSessionRequest">
+  <types xsi:type="Class" xmi:id="_BnieYDjOEe2Uvf--z9-cyg" name="MuteSessionRequest">
     <fields xmi:id="_HOHsYDjOEe2Uvf--z9-cyg" name="active" testValue="true" type="_MMVS0DjOEe2Uvf--z9-cyg">
       <doc xmi:id="_Pto2YDjOEe2Uvf--z9-cyg" description="Whether to mute streams in the session (true) and enable the mute state of the session, or to disable the mute state of the session (false). With the mute state enabled (true), all current and future streams published to the session (with the exception of streams in the excludedStreamIds array) are muted. When you call this method with the active property set to false, future streams published to the session are not muted (but any existing muted streams remain muted)."/>
     </fields>
     <fields xmi:id="_Ue3JsDjOEe2Uvf--z9-cyg" name="excludedStreamIds" type="_VqMucChGEe2c9d86gyQW8w">
       <doc xmi:id="_XPh6gDjOEe2Uvf--z9-cyg" description="The stream IDs for streams that should not be muted. This is an optional property. If you omit this property, all streams in the session will be muted. This property only applies when the active property is set to true. When the active property is set to false, it is ignored.&#xA;&#xA;The elements in the excludedStreamIds array are stream IDs (strings) for the streams you wish to exclude from being muted."/>
     </fields>
+    <fields xmi:id="_Rhl-8TjcEe2Uvf--z9-cyg" name="sessionId" type="_wXP1UChFEe2c9d86gyQW8w" nullable="false"/>
   </types>
   <types xmi:id="_MMVS0DjOEe2Uvf--z9-cyg" name="Boolean"/>
-  <types xsi:type="vonage_api:Class" xmi:id="_Bn8lsDjcEe2Uvf--z9-cyg" name="MuteStreamRequestWrapper" public="false">
-    <fields xmi:id="_Bn8lsjjcEe2Uvf--z9-cyg" name="sessionId" type="_wXP1UChFEe2c9d86gyQW8w" nullable="false"/>
-    <fields xmi:id="_Bn8lszjcEe2Uvf--z9-cyg" name="streamId" type="_wXP1UChFEe2c9d86gyQW8w"/>
-  </types>
-  <types xsi:type="vonage_api:Class" xmi:id="_Rhl-8DjcEe2Uvf--z9-cyg" name="MuteSessionRequestWrapper" public="false">
-    <fields xmi:id="_Rhl-8TjcEe2Uvf--z9-cyg" name="sessionId" type="_wXP1UChFEe2c9d86gyQW8w" nullable="false"/>
-    <fields xmi:id="_TU7k0DjcEe2Uvf--z9-cyg" name="request" type="_BnieYDjOEe2Uvf--z9-cyg"/>
-  </types>
-  <types xsi:type="vonage_api:Class" xmi:id="_Lv-TsDjeEe2Uvf--z9-cyg" name="ForceDisconnectRequestWrapper" public="false">
-    <fields xmi:id="_Lv-TsTjeEe2Uvf--z9-cyg" name="connectionId" type="_wXP1UChFEe2c9d86gyQW8w" nullable="false"/>
+  <types xsi:type="Class" xmi:id="_Lv-TsDjeEe2Uvf--z9-cyg" name="SessionResourceRequestWrapper" public="false">
+    <fields xmi:id="_Lv-TsTjeEe2Uvf--z9-cyg" name="resourceId" type="_wXP1UChFEe2c9d86gyQW8w" nullable="false"/>
     <fields xmi:id="_Lv-TsjjeEe2Uvf--z9-cyg" name="sessionId" type="_wXP1UChFEe2c9d86gyQW8w"/>
   </types>
   <types xmi:id="_PdJMMDjiEe2Uvf--z9-cyg" name="long"/>
-  <types xsi:type="vonage_api:Class" xmi:id="_zVXo0D15Ee2Uvf--z9-cyg" name="SetArchiveLayoutRequest">
+  <types xsi:type="Class" xmi:id="_zVXo0D15Ee2Uvf--z9-cyg" name="StreamCompositionLayout">
     <fields xmi:id="_Y3_VoD16Ee2Uvf--z9-cyg" name="type" testValue="ArchiveLayout.CUSTOM" type="_8fnK0D15Ee2Uvf--z9-cyg"/>
     <fields xmi:id="_52RUkD16Ee2Uvf--z9-cyg" name="screenshareType" testValue="ArchiveLayout.BEST_FIT" type="_8fnK0D15Ee2Uvf--z9-cyg"/>
     <fields xmi:id="_--d9cD16Ee2Uvf--z9-cyg" name="stylesheet" testValue="&quot;layout.css&quot;" type="_wXP1UChFEe2c9d86gyQW8w" stringValue=""/>
+    <fields xmi:id="_D0vucKABEe6UpPBA7ePbyw" name="id" testValue="UUID.randomUuid().toString()" type="_wXP1UChFEe2c9d86gyQW8w" nullable="false" excludeRequest="true"/>
   </types>
-  <types xsi:type="vonage_api:Enum" xmi:id="_8fnK0D15Ee2Uvf--z9-cyg" name="ArchiveLayout" doc="Represents the available layout types for archives in {@link SetArchiveLayoutRequest}.">
+  <types xsi:type="Enum" xmi:id="_8fnK0D15Ee2Uvf--z9-cyg" name="ArchiveLayout" doc="Represents the available layout types for archives in {@link SetArchiveLayoutRequest}.">
     <values>BEST_FIT</values>
     <values>CUSTOM</values>
     <values>HORIZONTAL</values>
     <values>VERTICAL</values>
     <values>PIP</values>
   </types>
-  <types xsi:type="vonage_api:Class" xmi:id="_bzj5cD17Ee2Uvf--z9-cyg" name="SetArchiveLayoutRequestWrapper" public="false">
-    <fields xmi:id="_ikTNcD17Ee2Uvf--z9-cyg" name="archiveId" testValue="UUID.randomUuid().toString()" type="_wXP1UChFEe2c9d86gyQW8w" nullable="false"/>
-    <fields xmi:id="_ovkc4D17Ee2Uvf--z9-cyg" name="request" type="_zVXo0D15Ee2Uvf--z9-cyg" nullable="false"/>
-  </types>
-  <types xsi:type="vonage_api:Class" xmi:id="__btoMD18Ee2Uvf--z9-cyg" name="PatchArchiveStreamsRequest">
+  <types xsi:type="Class" xmi:id="__btoMD18Ee2Uvf--z9-cyg" name="PatchComposedStreamsRequest">
     <fields xmi:id="_CVPaED19Ee2Uvf--z9-cyg" name="removeStream" testValue="UUID.randomUuid().toString()" type="_wXP1UChFEe2c9d86gyQW8w">
       <doc xmi:id="_g7g_0D19Ee2Uvf--z9-cyg" description="Stream ID to remove from the archive."/>
     </fields>
@@ -190,23 +181,24 @@
     <fields xmi:id="_QqlH8D19Ee2Uvf--z9-cyg" name="hasVideo" testValue="true" type="_MMVS0DjOEe2Uvf--z9-cyg">
       <doc xmi:id="_Uc-bgD19Ee2Uvf--z9-cyg" description="Whether the composed archive should include the stream's video (true by default)."/>
     </fields>
+    <fields xmi:id="_h3vfcJ_qEe6UpPBA7ePbyw" name="id" testValue="UUID.randomUuid().toString()" type="_wXP1UChFEe2c9d86gyQW8w" nullable="false" excludeRequest="true"/>
   </types>
-  <types xsi:type="vonage_api:Class" xmi:id="_Lj0-oD1_Ee2Uvf--z9-cyg" name="Archive"/>
-  <types xsi:type="vonage_api:Class" xmi:id="_7sCKED1_Ee2Uvf--z9-cyg" name="CreateArchiveRequest">
+  <types xsi:type="Class" xmi:id="_Lj0-oD1_Ee2Uvf--z9-cyg" name="Archive" isRequest="true" isResponse="true"/>
+  <types xsi:type="Class" xmi:id="_7sCKED1_Ee2Uvf--z9-cyg" name="CreateArchiveRequest">
     <fields xmi:id="_Tea4ME76Ee2q_4IFG2PWEA" name="dummy" type="_MMVS0DjOEe2Uvf--z9-cyg"/>
   </types>
-  <types xsi:type="vonage_api:Class" xmi:id="_RqPt0D2AEe2Uvf--z9-cyg" name="ListArchivesResponse" public="false">
+  <types xsi:type="Class" xmi:id="_RqPt0D2AEe2Uvf--z9-cyg" name="ListArchivesResponse" public="false">
     <fields xmi:id="_v3fIgD2AEe2Uvf--z9-cyg" name="count" testValue="1" type="_fl9awD2AEe2Uvf--z9-cyg"/>
     <fields xmi:id="_v3fIgj2AEe2Uvf--z9-cyg" name="items" type="_y6NSoD2AEe2Uvf--z9-cyg"/>
   </types>
-  <types xsi:type="vonage_api:Class" xmi:id="_UOnIAD2AEe2Uvf--z9-cyg" name="ListArchivesRequestWrapper" public="false">
-    <fields xmi:id="_baEpID2AEe2Uvf--z9-cyg" name="offset" testValue="1" type="_fl9awD2AEe2Uvf--z9-cyg"/>
-    <fields xmi:id="_jvajcD2AEe2Uvf--z9-cyg" name="count" testValue="50" type="_fl9awD2AEe2Uvf--z9-cyg"/>
-    <fields xmi:id="_nBYDcD2AEe2Uvf--z9-cyg" name="sessionId" testValue="UUID.randomUuid().toString()" type="_wXP1UChFEe2c9d86gyQW8w"/>
+  <types xsi:type="Class" xmi:id="_UOnIAD2AEe2Uvf--z9-cyg" name="ListStreamCompositionsRequest" public="false" isQueryParams="true">
+    <fields xmi:id="_baEpID2AEe2Uvf--z9-cyg" name="offset" json="offset" testValue="1" type="_fl9awD2AEe2Uvf--z9-cyg"/>
+    <fields xmi:id="_jvajcD2AEe2Uvf--z9-cyg" name="count" json="count" testValue="50" type="_fl9awD2AEe2Uvf--z9-cyg"/>
+    <fields xmi:id="_nBYDcD2AEe2Uvf--z9-cyg" name="sessionId" json="sessionId" testValue="UUID.randomUuid().toString()" type="_wXP1UChFEe2c9d86gyQW8w"/>
   </types>
   <types xmi:id="_fl9awD2AEe2Uvf--z9-cyg" name="Integer"/>
   <types xmi:id="_y6NSoD2AEe2Uvf--z9-cyg" name="List&lt;Archive>"/>
-  <types xsi:type="vonage_api:Class" xmi:id="_TFs3MKbTEe27AvCu9tdv7g" name="OutboundSipRequest" isRequest="true">
+  <types xsi:type="Class" xmi:id="_TFs3MKbTEe27AvCu9tdv7g" name="OutboundSipRequest" isRequest="true">
     <fields xmi:id="_X2UtkKbTEe27AvCu9tdv7g" name="sessionId" json="sessionId" testValue="" type="_wXP1UChFEe2c9d86gyQW8w" stringValue="">
       <doc xmi:id="_pEEL8KbTEe27AvCu9tdv7g" description="The video session ID for the SIP call to join."/>
     </fields>
@@ -214,12 +206,12 @@
       <doc xmi:id="_rBmPoKbTEe27AvCu9tdv7g" description="The token to be used for the participant being called. You can add token data to identify that the participant is on a SIP endpoint or for other identifying data, such as phone numbers. The video client libraries include properties for inspecting the connection data for a client connected to a session. See the Token Creation developer guide."/>
     </fields>
   </types>
-  <types xsi:type="vonage_api:Class" xmi:id="_6EARQKe3Ee2QS5yVJbmJNA" name="SendDtmfRequest" public="false">
+  <types xsi:type="Class" xmi:id="_6EARQKe3Ee2QS5yVJbmJNA" name="SendDtmfRequest" public="false">
     <fields xmi:id="_3aSAgKe4Ee2QS5yVJbmJNA" name="sessionId" type="_wXP1UChFEe2c9d86gyQW8w" nullable="false"/>
     <fields xmi:id="_8t-HsKe4Ee2QS5yVJbmJNA" name="connectionId" type="_wXP1UChFEe2c9d86gyQW8w"/>
     <fields xmi:id="_9q_woKe4Ee2QS5yVJbmJNA" name="digits" type="_wXP1UChFEe2c9d86gyQW8w" nullable="false"/>
   </types>
-  <types xsi:type="vonage_api:Class" xmi:id="_ZyYA0KuEEe2_TsNyQrEg4w" name="Broadcast" isResponse="true">
+  <types xsi:type="Class" xmi:id="_ZyYA0KuEEe2_TsNyQrEg4w" name="Broadcast" isRequest="true" isResponse="true">
     <fields xmi:id="_bzj1cKuEEe2_TsNyQrEg4w" name="id" type="_wXP1UChFEe2c9d86gyQW8w">
       <doc xmi:id="_z8rKgKuEEe2_TsNyQrEg4w" returnDesc="The unique ID for the broadcast."/>
     </fields>
@@ -249,20 +241,13 @@
   </types>
   <types xmi:id="_nOIJYKuGEe2_TsNyQrEg4w" name="UUID"/>
   <types xmi:id="_O9mA4KuKEe2_TsNyQrEg4w" name="Long"/>
-  <types xsi:type="vonage_api:Class" xmi:id="_YwUpwKuLEe2_TsNyQrEg4w" name="ListBroadcastsResponse" public="false" isResponse="true">
+  <types xsi:type="Class" xmi:id="_YwUpwKuLEe2_TsNyQrEg4w" name="ListBroadcastsResponse" public="false" isResponse="true">
     <fields xmi:id="_cm2PYKuLEe2_TsNyQrEg4w" name="items" type="_e4lBcKuLEe2_TsNyQrEg4w"/>
     <fields xmi:id="_i-NaEKuLEe2_TsNyQrEg4w" name="count" type="_wXP1UChFEe2c9d86gyQW8w"/>
   </types>
   <types xmi:id="_e4lBcKuLEe2_TsNyQrEg4w" name="List&lt;Broadcast>"/>
-  <types xsi:type="vonage_api:Class" xmi:id="_pZmwMKuLEe2_TsNyQrEg4w" name="ListBroadcastsRequest" isRequest="true">
-    <fields xmi:id="_s-GxsKuLEe2_TsNyQrEg4w" name="offset" type="_fl9awD2AEe2Uvf--z9-cyg">
-      <doc xmi:id="_PdEOUKuOEe2_TsNyQrEg4w" description="The start offset in the list of existing broadcasts."/>
-    </fields>
-    <fields xmi:id="_ZZSm4KuOEe2_TsNyQrEg4w" name="count" type="_fl9awD2AEe2Uvf--z9-cyg">
-      <doc xmi:id="_ZZSm4auOEe2_TsNyQrEg4w" description="The number of broadcasts to retrieve starting at offset. Default of 50, max of 1000."/>
-    </fields>
-    <fields xmi:id="_fNxuAKuOEe2_TsNyQrEg4w" name="sessionId" type="_wXP1UChFEe2c9d86gyQW8w">
-      <doc xmi:id="_hWBz8KuOEe2_TsNyQrEg4w" description="Retrive only broadcasts for a given session ID."/>
-    </fields>
-  </types>
-</vonage_api:Api>
+  <types xsi:type="Class" xmi:id="_eLHs8J6bEe6OTs49VJDivg" name="SipDialRequest" isRequest="true"/>
+  <types xsi:type="Class" xmi:id="_gv8aIJ6bEe6OTs49VJDivg" name="SipDialResponse" isResponse="true"/>
+  <types xsi:type="Class" xmi:id="_luFvIJ6bEe6OTs49VJDivg" name="CreateSessionRequest" isRequest="true" isQueryParams="true"/>
+  <types xsi:type="Class" xmi:id="_luFvIZ6bEe6OTs49VJDivg" name="CreateSessionResponse" isResponse="true"/>
+</Api>
