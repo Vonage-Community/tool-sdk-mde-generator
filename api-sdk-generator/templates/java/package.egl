@@ -1,0 +1,4 @@
+[%
+import "./helper_functions.egl";
+%]
+[%=packageAndCopyright()%]

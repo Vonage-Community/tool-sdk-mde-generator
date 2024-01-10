@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Api xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="vonage_api" xmi:id="_lagMMK7rEe69VMNtufkAdQ" name="NumberInsight2" package="com.vonage.client.numberinsight2" baseEndpointPath="https://api.nexmo.com/v2/ni">
+  <endpoints xmi:id="_j-EtAK9EEe69VMNtufkAdQ" name="FraudCheck" baseUriName="Api" requestType="_v2Oa0K8EEe69VMNtufkAdQ" responseType="_hq6nIK8OEe69VMNtufkAdQ" requestMethod="POST">
+    <authMethods>Token</authMethods>
+  </endpoints>
+  <types xsi:type="Class" xmi:id="_v2Oa0K8EEe69VMNtufkAdQ" name="FraudCheckRequest" public="false" isRequest="true">
+    <fields xmi:id="_U6q2gK8IEe69VMNtufkAdQ" name="type" json="type" testValue="&quot;phone&quot;" type="_f3oTUK8IEe69VMNtufkAdQ" stringValue="phone">
+      <doc xmi:id="_hDIT8K9GEe6OavstuclIFg" returnDesc="The request type as a string." description="Accepted value is &#x201c;phone&#x201d; when a phone number is provided."/>
+    </fields>
+    <fields xmi:id="_3-c3cK8KEe69VMNtufkAdQ" name="phone" json="phone" testValue="&quot;447009000000&quot;" type="_f3oTUK8IEe69VMNtufkAdQ" stringValue="447009000000">
+      <doc xmi:id="_axU-EK-bEe6OavstuclIFg" returnDesc="The phone number in E.164 format." description="A single phone number that you need insight about in the E.164 format. Don't use a leading + or 00."/>
+    </fields>
+    <fields xmi:id="_26-WUK8MEe69VMNtufkAdQ" name="insights" json="insights" testValue="EnumSet.of(Insight.FRAUD_SCORE, Insight.SIM_SWAP)" type="_35EWQK8MEe69VMNtufkAdQ" stringValue="[\&quot;fraud_score\&quot;, \&quot;sim_swap\&quot;]">
+      <doc xmi:id="_s5Qz0K-bEe6OavstuclIFg" returnDesc="The requested insights." description="The required insights. Must provide at least one."/>
+    </fields>
+  </types>
+  <types xsi:type="Class" xmi:id="_c-DdIK8TEe69VMNtufkAdQ" name="SimSwap">
+    <fields xmi:id="_ewCYIK8TEe69VMNtufkAdQ" name="status" json="status" testValue="SimSwapStatus.COMPLETED" type="_aNJbwK8TEe69VMNtufkAdQ" stringValue="completed">
+      <doc xmi:id="_ehF-8K-cEe6OavstuclIFg" returnDesc="The insight status as an enum." description="Status of the sim swap call."/>
+    </fields>
+    <fields xmi:id="_UaVHwK9DEe69VMNtufkAdQ" name="swapped" json="swapped" testValue="true" type="_rpcUgK8IEe69VMNtufkAdQ" stringValue="true">
+      <doc xmi:id="_EfVbUK-eEe6OavstuclIFg" returnDesc="{@code true} if the sim was swapped in the last 7 days, or {@code null} if the check failed." description="Whether the sim was swapped within the past week. Returned only if the sim swap check succeeds."/>
+    </fields>
+    <fields xmi:id="_9mFrkK-dEe6OavstuclIFg" name="reason" json="reason" testValue="Mobile Network Operator Not Supported" type="_f3oTUK8IEe69VMNtufkAdQ" stringValue="Mobile Network Operator Not Supported">
+      <doc xmi:id="_RBi-sK-eEe6OavstuclIFg" returnDesc="The error response description, or {@code null} if the call succeeded." description="Reason for a sim swap error response. Returned only if the sim swap check fails."/>
+    </fields>
+    <doc xmi:id="_ba3i8K-eEe6OavstuclIFg" description="Represents the sim swap insight results in {@link FraudCheckResponse#getSimSwap()}."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_difmIK9DEe69VMNtufkAdQ" name="FraudScore">
+    <fields xmi:id="_i3ps8K9DEe69VMNtufkAdQ" name="riskScore" json="risk_score" testValue="21" type="_SAfDsK8QEe69VMNtufkAdQ" stringValue="21">
+      <doc xmi:id="_GLBEkK-fEe6OavstuclIFg" returnDesc="The risk score as an Integer between 0 and 100." description="Score derived from evaluating fraud-related data associated with the phone number. This ranges from 0-100, with 0 meaning least risk and 100 meaning highest risk."/>
+    </fields>
+    <fields xmi:id="_qmOiMK9DEe69VMNtufkAdQ" name="riskRecommendation" json="risk_recommendation" testValue="RiskRecommendation.ALLOW" type="_TWB6UK8QEe69VMNtufkAdQ" stringValue="allow">
+      <doc xmi:id="_WzT3EK-gEe6OavstuclIFg" returnDesc="The recommendation as an enum." description="Recommended action based on the risk score."/>
+    </fields>
+    <fields xmi:id="_yHetIK9DEe69VMNtufkAdQ" name="label" json="label" testValue="RiskLabel.LOW" type="_sCBS8K8QEe69VMNtufkAdQ" stringValue="low">
+      <doc xmi:id="_cjRqkK-gEe6OavstuclIFg" returnDesc="The risk label as an enum." description="Mapping of risk score to a verbose description."/>
+    </fields>
+    <fields xmi:id="_6ek68K9DEe69VMNtufkAdQ" name="status" json="status" testValue="FraudScoreStatus.COMPLETED" type="_-9FOwK8QEe69VMNtufkAdQ" stringValue="completed">
+      <doc xmi:id="_fzzAIK-gEe6OavstuclIFg" returnDesc="The insight status as an enum." description="Status of the fraud score API call."/>
+    </fields>
+    <doc xmi:id="_8KPjMK-eEe6OavstuclIFg" description="Represents the fraud score insight results in {@link FraudCheckResponse#getFraudScore()}."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_hq6nIK8OEe69VMNtufkAdQ" name="FraudCheckResponse" isResponse="true">
+    <fields xmi:id="_mZkHkK8OEe69VMNtufkAdQ" name="requestId" json="request_id" testValue="UUID.fromString(&quot;3f92ed75-e624-4503-abbd-a93d6b442571&quot;)" type="_lPfI0K8IEe69VMNtufkAdQ" stringValue="3f92ed75-e624-4503-abbd-a93d6b442571">
+      <doc xmi:id="_rsJuMK-gEe6OavstuclIFg" returnDesc="The request reference UUID." description="Unique ID for this request for reference."/>
+    </fields>
+    <fields xmi:id="_FfJFYK9EEe69VMNtufkAdQ" name="phone" json="phone" type="_DGm60K8PEe69VMNtufkAdQ">
+      <doc xmi:id="_5_pB8K-gEe6OavstuclIFg" returnDesc="Information about the phone number." description="An object containing at least the phone number that was used in the fraud check. If {@linkplain Insight#FRAUD_SCORE} was also requested and successful, other phone information (carrier and type) will be returned."/>
+    </fields>
+    <fields xmi:id="_ItAIgK9EEe69VMNtufkAdQ" name="fraudScore" json="fraud_score" type="_difmIK9DEe69VMNtufkAdQ">
+      <doc xmi:id="_GlNbUK-hEe6OavstuclIFg" returnDesc="The fraud score details, or {@code null} if not applicable." description="Result of the fraud score insight operation. Only returned if {@linkplain Insight#FRAUD_SCORE} was requested."/>
+    </fields>
+    <fields xmi:id="_NGWuYK9EEe69VMNtufkAdQ" name="simSwap" json="sim_swap" type="_c-DdIK8TEe69VMNtufkAdQ">
+      <doc xmi:id="_XKgZoK-hEe6OavstuclIFg" returnDesc="The SIM swap details, or {@code null} if not applicable." description="Result of the SIM swap insight operation. Only returned if {@linkplain Insight#SIM_SWAP} was requested."/>
+    </fields>
+  </types>
+  <types xsi:type="Class" xmi:id="_DGm60K8PEe69VMNtufkAdQ" name="Phone">
+    <fields xmi:id="_F6W00K8PEe69VMNtufkAdQ" name="phone" json="phone" testValue="&quot;16197363066&quot;" type="_f3oTUK8IEe69VMNtufkAdQ" stringValue="16197363066">
+      <doc xmi:id="_kmNw0K-hEe6OavstuclIFg" returnDesc="The phone number in E.164 format." description="Phone number used in the fraud check operation(s)."/>
+    </fields>
+    <fields xmi:id="_L6iOkK8PEe69VMNtufkAdQ" name="carrier" json="carrier" testValue="&quot;Google (Grand Central) - SVR&quot;" type="_f3oTUK8IEe69VMNtufkAdQ" stringValue="Google (Grand Central) - SVR">
+      <doc xmi:id="_38XGIK-hEe6OavstuclIFg" returnDesc="The network carrier name, or {@code null} if not applicable." description="Name of the network carrier, if {@linkplain Insight#FRAUD_SCORE} was requested."/>
+    </fields>
+    <fields xmi:id="_fWPZUK8PEe69VMNtufkAdQ" name="type" json="type" testValue="PhoneType.PREPAID" type="_S-_IwK8PEe69VMNtufkAdQ" stringValue="PrePaid">
+      <doc xmi:id="_F5qugK-iEe6OavstuclIFg" returnDesc="The phone type as an enum, or {@code null} if not applicable." description="Type of phone, if {@linkplain Insight#FRAUD_SCORE} was requested."/>
+    </fields>
+    <doc xmi:id="_gHlz8K-iEe6OavstuclIFg" description="Represents details of the phone number in {@link FraudCheckResponse#getPhone()}."/>
+  </types>
+  <types xmi:id="_35EWQK8MEe69VMNtufkAdQ" name="Set&lt;Insight>"/>
+  <types xmi:id="_f3oTUK8IEe69VMNtufkAdQ" name="String"/>
+  <types xmi:id="_gpGMgK8IEe69VMNtufkAdQ" name="Void"/>
+  <types xmi:id="_lPfI0K8IEe69VMNtufkAdQ" name="UUID"/>
+  <types xmi:id="_rpcUgK8IEe69VMNtufkAdQ" name="Boolean"/>
+  <types xmi:id="_SAfDsK8QEe69VMNtufkAdQ" name="Integer"/>
+  <types xsi:type="Enum" xmi:id="_HUO5MK8MEe69VMNtufkAdQ" name="Insight" doc="Represents the type of insights used for a fraud check request.">
+    <values>FRAUD_SCORE</values>
+    <values>SIM_SWAP</values>
+  </types>
+  <types xsi:type="Enum" xmi:id="_S-_IwK8PEe69VMNtufkAdQ" name="PhoneType" doc="Represents the phone type in {@link Phone#getType()}.">
+    <values>MOBILE</values>
+    <values>LANDLINE</values>
+    <values>VOIP</values>
+    <values>PREPAID</values>
+    <values>PERSONAL</values>
+    <values>TOLL_FREE</values>
+    <values>UNMAPPED</values>
+  </types>
+  <types xsi:type="Enum" xmi:id="_TWB6UK8QEe69VMNtufkAdQ" name="RiskRecommendation" doc="Represents the risk recommendation in {@link FraudScore#getRiskRecommendation()}.">
+    <values>ALLOW</values>
+    <values>FLAG</values>
+    <values>BLOCK</values>
+  </types>
+  <types xsi:type="Enum" xmi:id="_sCBS8K8QEe69VMNtufkAdQ" name="RiskLabel" doc="Represents the risk score values in {@link FraudScore#getLabel()}.">
+    <values>LOW</values>
+    <values>MEDIUM</values>
+    <values>HIGH</values>
+  </types>
+  <types xsi:type="Enum" xmi:id="_-9FOwK8QEe69VMNtufkAdQ" name="FraudScoreStatus" doc="Represents the status in {@link FraudScore#getStatus()}.">
+    <values>COMPLETED</values>
+  </types>
+  <types xsi:type="Enum" xmi:id="_aNJbwK8TEe69VMNtufkAdQ" name="SimSwapStatus" doc="Represents the status in {@link SimSwap#getStatus()}.">
+    <values>COMPLETED</values>
+    <values>FAILED</values>
+  </types>
+</Api>

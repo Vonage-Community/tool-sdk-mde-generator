@@ -53,6 +53,10 @@ operation Endpoint requestTypePretty() : String {
 	return self.isVoidRequestType() ? "Void" : self.requestType.name;
 }
 
+operation Endpoint requestTypeParamDeclaration() : String {
+	return self.isVoidRequestType() ? "" : self.requestType.name + " request";
+}
+
 operation Endpoint hasRequestType() : Boolean {
 	return self.requestType.isDefined() and not isVoidType(self.requestType.name);
 }

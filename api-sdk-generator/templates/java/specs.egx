@@ -130,7 +130,7 @@ operation Enum getEnumParams() : Map {
 
 operation getClientParams() : Map {
 	var p = Map {
-		"name" = api.name.ftuc(),
+		"name" = clientClass,
 		"clientClass" = clientClass,
 		"endpoints" = Endpoint.allInstances(),
 		"exception" = exceptionClass
@@ -151,6 +151,12 @@ rule Exception {
 	parameters: getExceptionParams()
 	template: "exception.egl"
 	target: outDir + exceptionClass + extension
+}
+
+rule Package {
+	parameters: params
+	template: "package.egl"
+	target: outDir + "package-info" + extension
 }
 
 rule Client {

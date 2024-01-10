@@ -43,7 +43,7 @@ public class [%=name%] {
 	}
 
 [% for (endpoint in endpoints) {%]
-	public [%=endpoint.returnTypePretty()%] [%=endpoint.variableName()%]([%=endpoint.requestTypePretty()%]) {
+	public [%=endpoint.returnTypePretty()%] [%=endpoint.variableName()%]([%=endpoint.requestTypeParamDeclaration()%]) {
 		[%=endpoint.isVoidReturnType() ? "" : "return "%][%=endpoint.variableName()%].execute([%=endpoint.requestParameterUsage()%]);
 	}
 
