@@ -1,10 +1,9 @@
-@namespace(uri="https://developer.vonage.com/metamodel", prefix="vonage")
 package vonage_api;
 
 class Api {
 	!ordered val Endpoint[+] endpoints;
 	attr String[1] name;
-	val Type[*] types;
+	!ordered val AbstractType[*] types;
 	attr String ~package;
 	attr String baseEndpointPath;
 }
@@ -13,8 +12,8 @@ class Endpoint {
 	attr String[1] name;
 	attr String[1] baseUriName;
 	attr AuthMethod[+] authMethods;
-	ref Type requestType;
-	ref Type responseType;
+	ref AbstractType requestType;
+	ref AbstractType responseType;
 	!unique attr String[1] path;
 	attr RequestMethod[1] requestMethod;
 }
@@ -23,7 +22,7 @@ class Field {
 	attr String name;
 	attr String json;
 	attr String testValue;
-	ref Type[1] type;
+	ref AbstractType[1] type;
 	val Documentation doc;
 	attr boolean[1] nullable = true;
 	attr String stringValue;
@@ -39,7 +38,7 @@ enum AuthMethod {
 class Class extends Type {
 	val Field[*] fields;
 	val Documentation doc;
-	ref Class ~extends;
+	ref AbstractType ~extends;
 	attr String[*] implements;
 	attr boolean[1] public = true;
 	attr boolean[1] isRequest = false;
@@ -67,6 +66,9 @@ enum RequestMethod {
 	POST = 3;
 	DELETE = 4;
 	PATCH = 5;
+	CONNECT = 6;
+	OPTIONS = 7;
+	TRACE = 8;
 }
 
 class Enum extends Type {
@@ -74,7 +76,46 @@ class Enum extends Type {
 	attr String doc;
 }
 
-class Type {
+class Type extends AbstractType {
 	attr String name;
+}
+
+class String extends AbstractType {
+}
+
+abstract class AbstractType {
+}
+
+class UUID extends AbstractType {
+}
+
+class URI extends AbstractType {
+}
+
+class Boolean extends AbstractType {
+}
+
+class Integer extends AbstractType {
+}
+
+class Long extends AbstractType {
+}
+
+class Double extends AbstractType {
+}
+
+class Void extends AbstractType {
+}
+
+class Instant extends AbstractType {
+}
+
+class ListString extends AbstractType {
+}
+
+class MapStringObject extends AbstractType {
+}
+
+class JsonableBaseObject extends AbstractType {
 }
 

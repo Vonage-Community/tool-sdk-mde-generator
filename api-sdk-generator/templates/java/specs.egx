@@ -1,14 +1,14 @@
 pre {
 	var requestTypes = Class.all.select(c | c.isRequestOnly() and not c.isQueryParams);
 	var queryParamsRequestTypes = Class.all.select(c | c.isRequestOnly()).excluding(requestTypes);
+	queryParamsRequestTypes.forEach(c => c.implements?.including("QueryParamsRequest"));
 	var responseTypes = Class.all.select(c | c.isResponseOnly());
 	var halTypes = Class.all.select(c | c.isHal);
 	var dualTypes = Class.all.select(c | c.isRequestAndResponse());
-	var pojos = Type.all
+	var pojos = Class.all
 		.excludingAll(requestTypes)
 		.excludingAll(responseTypes)
-		.excludingAll(dualTypes)
-		.reject(t | t.fields.isUndefined() or t.fields.isEmpty());
+		.excludingAll(dualTypes);
 	
 	var publicPojos = pojos.select(p | p.public);
 	var privatePojos = pojos.reject(p | p.public);
@@ -69,8 +69,6 @@ operation Endpoint getEndpointParams() : Map {
 		"requestMethod" = self.requestMethod.literal,
 		"requestType" = self.requestType,
 		"responseType" = self.responseType,
-		"requestTypeName" = self.requestType.isDefined() ? self.requestType.name : "Void",
-		"responseTypeName" = self.responseType.isDefined() ? self.responseType.name : "Void",
 		"isHalResponse" = self.isHalResponse(),
 		"halResponseEmbeddedType" = self.isHalResponse() ? self.responseType.fields.first : null,
 		"testSpecName" = endpointTestSpecClass
@@ -84,22 +82,24 @@ operation Class getRequestParams() : Map {
 }
 
 operation Class getResponseParams() : Map {
-	return self.getPojoParams();
+	var p = self.getPojoParams();
+	if (self.`extends`.isUndefined()) {
+		p.put("extends", JsonableBaseObject);
+	}
+	return p;
 }
 
 operation Class getRequestResponseParams() : Map {
 	var p = Map {
 		"requestFields" = self.fields.reject(f | f.excludeRequest)
 	};
-	p.putAll(self.getPojoParams());
+	p.putAll(self.getResponseParams());
 	return p;
 }
 
 operation Class getHalParams() : Map {
-	var embeddedType = self.fields.first;
 	var p = Map {
-		"embeddedTypeName" = embeddedType.type.name,
-		"embeddedPropertyName" = embeddedType.name
+		"embeddedType" = self.fields.first
 	};
 	p.putAll(self.getResponseParams());
 	return p;
@@ -107,12 +107,9 @@ operation Class getHalParams() : Map {
 
 operation Class getPojoParams() : Map {
 	var p = Map {
+		"class" = self,
 		"name" = self.name,
-		"fields" = self.fields,
-		"javadoc" = self.doc,
-		"extends" = self.`extends`,
-		"implements" = self.implements,
-		"public" = self.public
+		"fields" = self.fields
 	};
 	p.putAll(params);
 	return p;
@@ -133,7 +130,8 @@ operation getClientParams() : Map {
 		"name" = clientClass,
 		"clientClass" = clientClass,
 		"endpoints" = Endpoint.allInstances(),
-		"exception" = exceptionClass
+		"exception" = exceptionClass,
+		"testSpec" = endpointTestSpecClass
 	};
 	p.putAll(params);
 	return p;
@@ -241,16 +239,4 @@ rule RequestResponseTest transform reqres in: dualTypes {
 	parameters: reqres.getRequestResponseParams()
 	template: "request_response_test.egl"
 	target: reqres.getTestOutputPath()
-}
-
-rule Endpoint transform endpoint : Endpoint {
-	parameters: endpoint.getEndpointParams()
-	template: "endpoint.egl"
-	target: outDir + endpoint.getClassName() + extension
-}
-
-rule EndpointTest transform endpoint : Endpoint {
-	parameters: endpoint.getEndpointParams()
-	template: "endpoint_test.egl"
-	target: testDir + endpoint.getClassName() + testClassSuffix + extension
 }

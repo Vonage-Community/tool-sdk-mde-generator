@@ -3,9 +3,9 @@ import "./helper_functions.egl";
 %]
 [%=packageAndCopyright()%]
 
-[%=classDeclaration(name, extends, implements, false)%]
+[%=class.declaration()%]
 [% for (field in fields) {%]
-	final [%=field.type.name%] [%=field.name%];
+	final [%=field.typeAndName()%];
 [%}%]
 
 [%=simpleConstructor("", name, fields)%]

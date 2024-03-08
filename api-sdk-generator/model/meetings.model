@@ -54,9 +54,9 @@
   <endpoints xmi:id="_-FCH8GweEe6kfo4AUNta2A" name="ListSessions" baseUriName="ApiEu" requestType="_1nQwwGwmEe6kfo4AUNta2A" responseType="_Ny4ZgGwiEe6kfo4AUNta2A" path="/v1/meetings/sessions" requestMethod="GET">
     <authMethods>JWT</authMethods>
   </endpoints>
-  <types xmi:id="_2MXtcJZVEe2qi6YXzFhSdw" name="List&lt;Theme>"/>
-  <types xmi:id="_YVmHcJZUEe2qi6YXzFhSdw" name="List&lt;MeetingRoom>"/>
-  <types xmi:id="_GJyTwJZTEe2qi6YXzFhSdw" name="List&lt;LogoUploadsUrlResponse>"/>
+  <types xsi:type="Type" xmi:id="_2MXtcJZVEe2qi6YXzFhSdw" name="List&lt;Theme>"/>
+  <types xsi:type="Type" xmi:id="_YVmHcJZUEe2qi6YXzFhSdw" name="List&lt;MeetingRoom>"/>
+  <types xsi:type="Type" xmi:id="_GJyTwJZTEe2qi6YXzFhSdw" name="List&lt;LogoUploadsUrlResponse>"/>
   <types xsi:type="Class" xmi:id="_PYWyoJWDEe2qi6YXzFhSdw" name="CallbackUrls" isRequest="true" isResponse="true">
     <fields xmi:id="_H7jGAJWHEe2qi6YXzFhSdw" name="roomsCallbackUrl" json="rooms_callback_url" type="_QHaJoJWGEe2qi6YXzFhSdw">
       <doc xmi:id="_3pM8EJWKEe2qi6YXzFhSdw" returnDesc="The rooms callback URL." description="Callback url for rooms events, overrides application level rooms callback url."/>
@@ -82,11 +82,11 @@
     <values>OFF</values>
     <values>DEFAULT</values>
   </types>
-  <types xmi:id="_oo_7AJWEEe2qi6YXzFhSdw" name="boolean"/>
-  <types xmi:id="_qDwo0JWEEe2qi6YXzFhSdw" name="String"/>
-  <types xmi:id="_t_5uQJWEEe2qi6YXzFhSdw" name="UUID"/>
-  <types xmi:id="_v_bWAJWEEe2qi6YXzFhSdw" name="Boolean"/>
-  <types xmi:id="_QHaJoJWGEe2qi6YXzFhSdw" name="URI"/>
+  <types xsi:type="Type" xmi:id="_oo_7AJWEEe2qi6YXzFhSdw" name="boolean"/>
+  <types xsi:type="String" xmi:id="_qDwo0JWEEe2qi6YXzFhSdw"/>
+  <types xsi:type="UUID" xmi:id="_t_5uQJWEEe2qi6YXzFhSdw"/>
+  <types xsi:type="Boolean" xmi:id="_v_bWAJWEEe2qi6YXzFhSdw"/>
+  <types xsi:type="URI" xmi:id="_QHaJoJWGEe2qi6YXzFhSdw"/>
   <types xsi:type="Class" xmi:id="_DLXUgJWHEe2qi6YXzFhSdw" name="AvailableFeatures" isRequest="true">
     <fields xmi:id="_op7q8JWLEe2qi6YXzFhSdw" name="isRecordingAvailable" json="is_recording_available" testValue="true" type="_v_bWAJWEEe2qi6YXzFhSdw" stringValue="">
       <doc xmi:id="_0RlDgJWLEe2qi6YXzFhSdw" returnDesc="{@code true} if the feature is available." description="Determine if recording feature is available in the UI."/>
@@ -167,7 +167,7 @@
       <doc xmi:id="_kn1PQJd_Ee2qi6YXzFhSdw" returnDesc="The UI settings object." description="Settings for the user interface of this meeting."/>
     </fields>
   </types>
-  <types xmi:id="_rHhqkJWSEe2qi6YXzFhSdw" name="Void"/>
+  <types xsi:type="Void" xmi:id="_rHhqkJWSEe2qi6YXzFhSdw"/>
   <types xsi:type="Class" xmi:id="_KLPzwJWzEe2qi6YXzFhSdw" name="UpdateRoomRequest" isRequest="true">
     <fields xmi:id="_KLPzyZWzEe2qi6YXzFhSdw" name="expireAfterUse" json="expire_after_use" testValue="false" type="_v_bWAJWEEe2qi6YXzFhSdw">
       <doc xmi:id="_KLPzypWzEe2qi6YXzFhSdw" returnDesc="{@code true} if the room will close after end of session, or {@code null} if unknown / not applicable." description="Close the room after a session ends. Only relevant for long_term rooms."/>
@@ -220,7 +220,7 @@
     <values>PAUSED</values>
     <values>UPLOADED</values>
   </types>
-  <types xmi:id="_iakoQJXkEe2qi6YXzFhSdw" name="List&lt;Recording>"/>
+  <types xsi:type="Type" xmi:id="_iakoQJXkEe2qi6YXzFhSdw" name="List&lt;Recording>"/>
   <types xsi:type="Class" xmi:id="_3OpUIJXkEe2qi6YXzFhSdw" name="DialInNumber">
     <fields xmi:id="_JEzdYJXlEe2qi6YXzFhSdw" name="number" json="number" testValue="&quot;17323338801&quot;" type="_qDwo0JWEEe2qi6YXzFhSdw">
       <doc xmi:id="_Nm_PIJXlEe2qi6YXzFhSdw" returnDesc="The number in E164 format." description="The dial-in number."/>
@@ -232,8 +232,8 @@
       <doc xmi:id="_IG08wZXmEe2qi6YXzFhSdw" returnDesc="The country's name." description="The country name of the locale."/>
     </fields>
   </types>
-  <types xmi:id="__y3X8JXkEe2qi6YXzFhSdw" name="Locale"/>
-  <types xmi:id="_j9KVAJXnEe2qi6YXzFhSdw" name="List&lt;DialNumbers>"/>
+  <types xsi:type="Type" xmi:id="__y3X8JXkEe2qi6YXzFhSdw" name="Locale"/>
+  <types xsi:type="Type" xmi:id="_j9KVAJXnEe2qi6YXzFhSdw" name="List&lt;DialNumbers>"/>
   <types xsi:type="Class" xmi:id="_FKKscJXoEe2qi6YXzFhSdw" name="MeetingApplication" isResponse="true">
     <fields xmi:id="_O1SG4JXoEe2qi6YXzFhSdw" name="applicationId" json="application_id" testValue="" type="_t_5uQJWEEe2qi6YXzFhSdw">
       <doc xmi:id="_UT2BUJXoEe2qi6YXzFhSdw" returnDesc="The application ID." description="ID of the application."/>
@@ -250,7 +250,7 @@
       <doc xmi:id="_y_pnUZXoEe2qi6YXzFhSdw" returnDesc="" description="The theme ID to set as application default theme."/>
     </fields>
   </types>
-  <types xmi:id="_ByP48JXpEe2qi6YXzFhSdw" name="List&lt;String>"/>
+  <types xsi:type="Type" name="List&lt;String>" xmi:id="_ByP48JXpEe2qi6YXzFhSdw"/>
   <types xsi:type="Class" xmi:id="_C1G0wJZEEe2qi6YXzFhSdw" name="Theme" isRequest="true" isResponse="true">
     <fields xmi:id="_RGt5MJZEEe2qi6YXzFhSdw" name="themeId" json="theme_id" type="_t_5uQJWEEe2qi6YXzFhSdw" excludeRequest="true">
       <doc xmi:id="_eggk0JZEEe2qi6YXzFhSdw" returnDesc="The theme ID." description=""/>
@@ -344,7 +344,7 @@
       <doc xmi:id="_xA-T0JdLEe2qi6YXzFhSdw" returnDesc="The navigation links object." description="Links to other pages."/>
     </fields>
   </types>
-  <types xmi:id="_4fRZoJZUEe2qi6YXzFhSdw" name="Integer"/>
+  <types xsi:type="Integer" xmi:id="_4fRZoJZUEe2qi6YXzFhSdw"/>
   <types xsi:type="Class" xmi:id="_HRu-wJcNEe2qi6YXzFhSdw" name="ListRoomsRequest" public="false">
     <fields xmi:id="_MSI9kJcNEe2qi6YXzFhSdw" name="startId" type="_qDwo0JWEEe2qi6YXzFhSdw"/>
     <fields xmi:id="_OfzH8JcNEe2qi6YXzFhSdw" name="endId" type="_qDwo0JWEEe2qi6YXzFhSdw"/>
@@ -395,11 +395,11 @@
       <doc xmi:id="_IixegJd-Ee2qi6YXzFhSdw" returnDesc="The language, as a string." description="Language setting."/>
     </fields>
   </types>
-  <types xmi:id="_w2g7kJfgEe2qi6YXzFhSdw" name="ZonedDateTime"/>
+  <types xsi:type="Type" xmi:id="_w2g7kJfgEe2qi6YXzFhSdw" name="ZonedDateTime"/>
   <types xsi:type="Class" xmi:id="_Ny4ZgGwiEe6kfo4AUNta2A" name="ListSessionsResponse" isResponse="true" isHal="true">
     <fields xmi:id="_1vuFAGwtEe6kfo4AUNta2A" name="sessions" type="_6c_scGwtEe6kfo4AUNta2A"/>
   </types>
-  <types xmi:id="_ItrS4GwlEe6kfo4AUNta2A" name="Instant"/>
+  <types xsi:type="Instant" xmi:id="_ItrS4GwlEe6kfo4AUNta2A"/>
   <types xsi:type="Class" xmi:id="_1nQwwGwmEe6kfo4AUNta2A" name="ListSessionsRequest" isRequest="true" isQueryParams="true">
     <fields xmi:id="_c-jY0GwqEe6kfo4AUNta2A" name="from" json="from" testValue="Instant.parse(&quot;2023-06-06T07:15:13.974Z&quot;)" type="_ItrS4GwlEe6kfo4AUNta2A" stringValue="2023-06-06T07:15:13.974Z">
       <doc xmi:id="_c-jY0WwqEe6kfo4AUNta2A" returnDesc="Start timestamp for the results, or {@code null} if absent." description="Earliest date to return results from, in ISO-8601 format."/>
@@ -446,5 +446,5 @@
       <doc xmi:id="_cJUWwWwmEe6kfo4AUNta2A" returnDesc="The total number of minutes this meeting was recorded for, or {@code null} if not applicable." description="Aggregated recording time of the session in minutes."/>
     </fields>
   </types>
-  <types xmi:id="_6c_scGwtEe6kfo4AUNta2A" name="List&lt;Session>"/>
+  <types xsi:type="Type" xmi:id="_6c_scGwtEe6kfo4AUNta2A" name="List&lt;Session>"/>
 </Api>

@@ -4,13 +4,11 @@ import "./helper_functions.egl";
 [%=packageAndCopyright()%]
 
 import com.vonage.client.Jsonable;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.*;
 
-@JsonInclude(value = JsonInclude.Include.NON_NULL)
-[%=classDeclaration(name, extends, implements.including("Jsonable"), true)%]
+[%=class.declaration()%]
 [% for (field in fields) {%]
-	private final [%=field.type.name%] [%=field.name%];
+	private final [%=field.typeAndName()%];
 [%}%]
 
 	[%=name%](Builder builder) {

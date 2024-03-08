@@ -16,7 +16,7 @@ abstract class [%=testSpecName%]<T, R> extends DynamicEndpointTestSpec<T, R> {
 
 	@Override
 	protected Class<? extends VonageApiResponseException> expectedResponseExceptionType() {
-		return [%=api%]ResponseException.class;
+		return [%=exception%].class;
 	}
 
 	@Override

@@ -3,38 +3,39 @@ import "./helper_functions.egl";
 %]
 [%=packageAndCopyright()%]
 
-import com.vonage.client.HttpWrapper;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import com.vonage.client.*;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
 public class [%=name + testClassSuffix%] {
 	
 	@Test
 	public void testFromJsonAllFields() {
 	[% for (field in fields) {%]
-		[%=field.type.name%] [%=field.name%] = [%=field.testValue%];
+		[%=field.typeAndName()%] = [%=field.testValue%];
 	[%}%]
 	
-		[%=name%] response = [%=name%].fromJson("{\n" +
+		var response = [%=name%].fromJson("{\n" +
 		[% var fieldsIter = fields.iterator();
 		while (fieldsIter.hasNext()) {
 			var field = fieldsIter.next(); %]
 				"\"[%=field.json.isDefined() ? field.json : field.name%]\":\""+[%=field.name%]+"\"[%=fieldsIter.hasNext() ? "," : ""%]\n" +
 		[%}%]		"}");
 		
+		TestUtils.testJsonableBaseObject(response);
 	[% for (field in fields) {%]
 		assertEquals([%=field.name%], response.get[%=field.name.ftuc()%]());
 	[%}%]
 	}
 	
-	@Test(expected = VonageUnexpectedException.class)
+	@Test
 	public void testFromJsonInvalid() {
-		[%=name%].fromJson("{malformed]");
+		assertThrows(VonageResponseParseException.class, () -> [%=name%].fromJson("{malformed]"));
 	}
 
 	@Test
 	public void testFromJsonEmpty() {
-		[%=name%] response = [%=name%].fromJson("{}");
+		var response = [%=name%].fromJson("{}");
 	[% for (field in fields) {%]
 		assertNull(response.get[%=field.name.ftuc()%]());
 	[%}%]

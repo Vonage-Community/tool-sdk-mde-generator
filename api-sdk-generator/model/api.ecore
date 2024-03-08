@@ -5,8 +5,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="endpoints" ordered="false"
         lowerBound="1" upperBound="-1" eType="#//Endpoint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
-        eType="#//Type" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="types" ordered="false"
+        upperBound="-1" eType="#//AbstractType" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="package" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseEndpointPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -16,8 +16,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="authMethods" lowerBound="1"
         upperBound="-1" eType="#//AuthMethod"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="requestType" eType="#//Type"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="responseType" eType="#//Type"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requestType" eType="#//AbstractType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responseType" eType="#//AbstractType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" unique="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestMethod" lowerBound="1"
@@ -27,7 +27,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="json" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="testValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//AbstractType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="doc" eType="#//Documentation"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nullable" lowerBound="1"
@@ -46,7 +46,7 @@
         eType="#//Field" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="doc" eType="#//Documentation"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="extends" eType="#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extends" eType="#//AbstractType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implements" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="public" lowerBound="1"
@@ -59,7 +59,6 @@
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isQueryParams" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="foo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Documentation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="returnDesc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -89,7 +88,21 @@
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="doc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Type">
+  <eClassifiers xsi:type="ecore:EClass" name="Type" eSuperTypes="#//AbstractType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Void" eSuperTypes="#//AbstractType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="String" eSuperTypes="#//AbstractType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractType" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UUID" eSuperTypes="#//AbstractType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="URI" eSuperTypes="#//AbstractType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Path" eSuperTypes="#//AbstractType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean" eSuperTypes="#//AbstractType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer" eSuperTypes="#//AbstractType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Long" eSuperTypes="#//AbstractType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Double" eSuperTypes="#//AbstractType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BigDecimal" eSuperTypes="#//AbstractType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="byte[]" eSuperTypes="#//AbstractType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Instant" eSuperTypes="#//AbstractType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JsonableBaseObject" eSuperTypes="#//AbstractType"/>
 </ecore:EPackage>

@@ -7,9 +7,9 @@ import com.vonage.client.QueryParamsRequest;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-[%=classDeclaration(name, extends, implements.including("QueryParamsRequest"), true)%]
+[%=class.declaration()%]
 [% for (field in fields) {%]
-	private final [%=field.type.name%] [%=field.name%];
+	private final [%=field.typeAndName()%];
 [%}%]
 
 	[%=name%](Builder builder) {
@@ -20,7 +20,7 @@ import java.util.Map;
 	
 	@Override
 	public Map<String, String> makeParams() {
-		Map<String, String> params = new LinkedHashMap<>();
+		Map<String, String> params = [%=class.extends.isDefined() ? "super.makeParams" : "new LinkedHashMap<>"%]();
 	[% for (field in fields) {%]
 		if ([%=field.name%] != null) {
             params.put("[%=field.json%]", [%=field.queryParamValue()%]);

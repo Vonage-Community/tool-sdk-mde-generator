@@ -17,9 +17,9 @@ public enum [%=name%] {
 %]
 
 	@JsonCreator
-	public static [%=name%] fromString(String value) {
+	public static [%=name%] fromString(String name) {
 		try {
-			return valueOf(value.toUpperCase());
+			return valueOf(name.toUpperCase());
 		}
 		catch (NullPointerException | IllegalArgumentException ex) {
 			return null;

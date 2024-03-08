@@ -17,8 +17,16 @@ operation authMethodClasses(authMethods : Collection) : String {
 	return authClasses;
 }
 
+operation Field typeName() : String {
+	return self?.type?.getTypeName() ?: "Void";
+}
+
+operation Field typeAndName() : String {
+	return self.typeName()+" "+self.name;
+}
+
 operation Field queryParamValue() : String {
-	return self.type.name == "String" ? self.name : self.name + ".toString()";
+	return self.typeName() == "String" ? self.name : self.name + ".toString()";
 }
 
 operation Field getDescriptionDoc() : String {
@@ -46,61 +54,75 @@ operation Endpoint isVoidReturnType() : Boolean {
 }
 
 operation Endpoint returnTypePretty() : String {
-	return self.isVoidReturnType() ? "void" : self.responseType.name;
+	return self.isVoidReturnType() ? "void" : self.responseTypeName();
 }
 
 operation Endpoint requestTypePretty() : String {
-	return self.isVoidRequestType() ? "Void" : self.requestType.name;
+	return self.requestTypeName();
 }
 
 operation Endpoint requestTypeParamDeclaration() : String {
-	return self.isVoidRequestType() ? "" : self.requestType.name + " request";
+	return self.isVoidRequestType() ? "" : self.requestTypeName() + " request";
 }
 
 operation Endpoint hasRequestType() : Boolean {
-	return self.requestType.isDefined() and not isVoidType(self.requestType.name);
+	return self.requestType.isDefined() and not self.requestType.isVoid();
 }
 
 operation Endpoint requestTypePretty() : String {
-	return self.hasRequestType() ? self.requestType.name+" request" else "";
+	return self.hasRequestType() ? self.requestTypeName()+" request" else "";
 }
 
 operation Endpoint requestParameterUsage() : String {
 	return self.hasRequestType() ? "request" : "null";
 }
 
-operation Endpoint typeParams() : String {
-	var req = self.requestType?.name ?: "Void";
-	var res = self.responseType?.name ?: "Void";
-	return req + ", " + res;
+operation Endpoint requestTypeName() : String {
+	return self.requestType?.getTypeName() ?: "Void";
 }
 
-operation Type isVoid() : Boolean {
-	return isVoidType(self.name);
+operation Endpoint responseTypeName() : String {
+	return self.responseType?.getTypeName() ?: "Void";
+}
+
+operation Endpoint typeParams() : String {
+	return self.requestTypeName() + ", " + self.responseTypeName();
+}
+
+operation AbstractType isVoid() : Boolean {
+	return self.isKindOf(Void) or (self.name.isDefined() and isVoidType(self.name));
 }
 
 operation isVoidType(typeName : String) : Boolean {
 	return typeName.isUndefined() or typeName.equalsIgnoreCase("Void");
 }
 
-operation Type isCustomType() : Boolean {
+operation AbstractType isCustomType() : Boolean {
 	return self.isKindOf(Class);
 }
 
-operation Type isQueryParams() : Boolean {
+operation AbstractType isQueryParams() : Boolean {
 	return self.isCustomType() and self.isQueryParams;
 }
 
-operation Type hasFields() {
+operation AbstractType hasFields() : Boolean {
 	return self.isCustomType() and self.fields.isDefined() and not self.fields.isEmpty();
+}
+
+operation AbstractType getTypeName() : String {
+	return self.isKindOf(Type) ? (self.name ?: "Void") : self.type().name;
 }
 
 operation String isRequestWrapper() : Boolean {
 	return self.endsWith("RequestWrapper");
 }
 
-operation endpointRequestParameter(requestTypeName : String) {
+operation endpointRequestParameter(requestTypeName : String) : String {
 	return requestTypeName + " " + (requestTypeName.isRequestWrapper() ? "wrapper" : "request");
+}
+
+operation Class isJsonable() {
+	return self.isResponse or self.extends?.getTypeName() == "JsonableBaseObject" or self.implements?.includes("Jsonable");
 }
 
 @template
@@ -113,7 +135,7 @@ operation simpleConstructor(visibility : String, name : String, fields : Collect
 	var fieldsIter = fields.iterator();
 	while (fieldsIter.hasNext()) {
 		var field = fieldsIter.next();
-		out.print(field.type.name+" "+field.name);
+		out.print(field.typeAndName());
 		if (fieldsIter.hasNext()) {
 			out.print(", ");
 		}
@@ -127,30 +149,30 @@ operation simpleConstructor(visibility : String, name : String, fields : Collect
 }
 
 @template
-operation classDeclaration(name : String, extends : Type, implements : Collection(String), public : Boolean) {%]
-[%=(public ? "public " : "")%]class [%=name%][% 
-	if (extends.isDefined()) {
-%] extends [%=extends.name%][%	
+operation Class declaration() {
+	if (self.doc.isDefined()) {%]
+/**
+ * [%=self.doc.description%]
+ */
+[%}
+	if (self.isJsonable()) {%]
+@JsonInclude(value = JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown = true)
+[%	} %]
+[%=(self.public ? "public " : "")%]class [%=self.name%][%
+	if (self.extends.isDefined()) {
+%] extends [%=self.extends.getTypeName()%][%	
 	}
-	if (implements.isDefined() and not implements.isEmpty()) {
+	if (self.implements.isDefined() and not self.implements.isEmpty()) {
 %] implements[%
-		for (intf in implements) {
+		for (intf in self.implements) {
 			out.print(" "+intf);
-			if (loopCount < implements.size()) {
+			if (loopCount < self.implements.size()) {
 				out.print(",");
 			}
 		}
 	}
 %] {[%
-}
-
-@template
-operation classJavadoc(doc : String) {
-	if (doc.isDefined()) {%]
-/**
- * [%=doc%]
- */
-[%}
 }
 
 @template
@@ -185,7 +207,7 @@ operation Field fieldJavadoc() {
 
 @template
 operation fieldGetter(field : Field) {%]
-public [%=field.type.name%] get[%=field.name.ftuc()%]() {
+public [%=field.typeName()%] get[%=field.name.ftuc()%]() {
 	return [%=field.name%];
 }
 [%}
@@ -220,17 +242,12 @@ operation fromJson(name : String) {%]
 	 * @return An instance of this class with the fields populated, if present.
 	 */
 	public static [%=name%] fromJson(String json) {
-		return Jsonable.fromJson(json, [%=name%].class);
+		return Jsonable.fromJson(json);
 	}
 [%}
 
 @template
 operation builder(fields : Collection(Field)) {%]
-
-	@Override
-	public String toString() {
-		return getClass().getSimpleName()+' '+toJson();
-	}
 
 	/**
 	 * Entry point for constructing an instance of this class.
@@ -243,7 +260,7 @@ operation builder(fields : Collection(Field)) {%]
 	
 	public static class Builder {
 	[% for (field in fields) {%]
-		private [%=field.type.name%] [%=field.name%];
+		private [%=field.typeAndName()%];
 	[%}%]
 	
 		Builder() {}
@@ -256,7 +273,7 @@ operation builder(fields : Collection(Field)) {%]
 		 *
 		 * @return This builder.
 		 */
-		public Builder [%=field.name%]([%=field.type.name%] [%=field.name%]) {
+		public Builder [%=field.name%]([%=field.typeAndName()%]) {
 			this.[%=field.name%] = [%=field.name%];
 			return this;
 		}

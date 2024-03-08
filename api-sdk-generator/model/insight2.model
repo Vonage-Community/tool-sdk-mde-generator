@@ -67,12 +67,12 @@
     </fields>
     <doc xmi:id="_gHlz8K-iEe6OavstuclIFg" description="Represents details of the phone number in {@link FraudCheckResponse#getPhone()}."/>
   </types>
-  <types xmi:id="_35EWQK8MEe69VMNtufkAdQ" name="Set&lt;Insight>"/>
-  <types xmi:id="_f3oTUK8IEe69VMNtufkAdQ" name="String"/>
-  <types xmi:id="_gpGMgK8IEe69VMNtufkAdQ" name="Void"/>
-  <types xmi:id="_lPfI0K8IEe69VMNtufkAdQ" name="UUID"/>
-  <types xmi:id="_rpcUgK8IEe69VMNtufkAdQ" name="Boolean"/>
-  <types xmi:id="_SAfDsK8QEe69VMNtufkAdQ" name="Integer"/>
+  <types xsi:type="Type" xmi:id="_35EWQK8MEe69VMNtufkAdQ" name="Set&lt;Insight>"/>
+  <types xsi:type="String" xmi:id="_f3oTUK8IEe69VMNtufkAdQ"/>
+  <types xsi:type="Void" xmi:id="_gpGMgK8IEe69VMNtufkAdQ"/>
+  <types xsi:type="UUID" xmi:id="_lPfI0K8IEe69VMNtufkAdQ"/>
+  <types xsi:type="Boolean" xmi:id="_rpcUgK8IEe69VMNtufkAdQ"/>
+  <types xsi:type="Boolean" xmi:id="_SAfDsK8QEe69VMNtufkAdQ"/>
   <types xsi:type="Enum" xmi:id="_HUO5MK8MEe69VMNtufkAdQ" name="Insight" doc="Represents the type of insights used for a fraud check request.">
     <values>FRAUD_SCORE</values>
     <values>SIM_SWAP</values>

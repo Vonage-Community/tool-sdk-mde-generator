@@ -3,17 +3,18 @@ import "./helper_functions.egl";
 %]
 [%=packageAndCopyright()%]
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import com.vonage.client.*;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
 public class [%=name + testClassSuffix%] {
 	
 	@Test
 	public void testSerializeValid() {
 	[% for (field in fields) {%]
-		[%=field.type.name%] [%=field.name%] = [%=field.testValue%];
+		[%=field.typeAndName()%] = [%=field.testValue%];
 	[%}%]
-		[%=name%] request = [%=name%].builder()
+		var request = [%=name%].builder()
 [%		for (field in fields) {%]
 			.[%=field.name%]([%=field.name%])
 		[%}%]

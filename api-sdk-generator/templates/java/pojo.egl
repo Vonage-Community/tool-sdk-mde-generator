@@ -3,11 +3,14 @@ import "./helper_functions.egl";
 %]
 [%=packageAndCopyright()%]
 
-[%=classDeclaration(name, extends, implements, public)%]
+[%=class.declaration()%]
 [% for (field in fields) {%]
-	private [%=field.type.name%] [%=field.name%];
+	private [%=field.typeAndName()%];
 [%}%]
 
+	protected [%=name%]() {}
+
 [%=simpleConstructor("protected", name, fields)%]
+
 [%=fieldGetters(fields)%]
 }

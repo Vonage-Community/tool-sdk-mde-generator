@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Api xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="vonage_api" xmi:id="_CsArMMs3Ee6WBpP2QQYukA" name="conversations" package="com.vonage.client.conversations" baseEndpointPath="https://api.nexmo.com/v1/conversations">
+  <endpoints xmi:id="_ukGhEMxPEe63RvWw7V1xWQ" name="ListConversations" baseUriName="Api" requestType="_ukHIIcxPEe63RvWw7V1xWQ" responseType="_cVb6MMvsEe63RvWw7V1xWQ" path="/v1/conversations" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_ukGhEcxPEe63RvWw7V1xWQ" name="CreateConversation" baseUriName="Api" requestType="_0Nk5cMs7Ee6WBpP2QQYukA" responseType="_0Nk5cMs7Ee6WBpP2QQYukA" path="/v1/conversations" requestMethod="POST">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_ukGhEsxPEe63RvWw7V1xWQ" name="GetConversation" baseUriName="Api" requestType="_MoO1AMs9Ee63RvWw7V1xWQ" responseType="_0Nk5cMs7Ee6WBpP2QQYukA" path="/v1/conversations/%s" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_ukGhE8xPEe63RvWw7V1xWQ" name="UpdateConversation" baseUriName="Api" requestType="_0Nk5cMs7Ee6WBpP2QQYukA" responseType="_0Nk5cMs7Ee6WBpP2QQYukA" path="/v1/conversations/%s" requestMethod="PUT">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_ukHIIMxPEe63RvWw7V1xWQ" name="DeleteConversation" baseUriName="Api" requestType="_MoO1AMs9Ee63RvWw7V1xWQ" responseType="_O3KKsMs9Ee63RvWw7V1xWQ" path="/v1/conversations/%s" requestMethod="DELETE">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_Yhe20MzxEe63RvWw7V1xWQ" name="ListUserConversations" baseUriName="Api" requestType="_kdeHsMzxEe63RvWw7V1xWQ" responseType="_gtT04NI4Ee6AWvmjcVqkVA" path="/v1/users/%s/conversations" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_45m0sMzxEe63RvWw7V1xWQ" name="ListUserSessions" baseUriName="Api" requestType="_D75cEMyzEe63RvWw7V1xWQ" responseType="_0kwWIMy2Ee63RvWw7V1xWQ" path="/v1/users/%s/sessions" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_TOhdgMzzEe63RvWw7V1xWQ" name="ListMembers" baseUriName="Api" requestType="_Cap3sMzzEe63RvWw7V1xWQ" responseType="_f4nnAMzyEe63RvWw7V1xWQ" path="/v1/conversations/%s/members" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_DvFekMz0Ee63RvWw7V1xWQ" name="GetMember" baseUriName="Api" requestType="_GFJ-EMz0Ee63RvWw7V1xWQ" responseType="_0nk6cMzTEe63RvWw7V1xWQ" path="/v1/conversations/%s/members/%s" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_ktrmkMz0Ee63RvWw7V1xWQ" name="CreateMember" baseUriName="Api" requestType="_0nk6cMzTEe63RvWw7V1xWQ" responseType="_0nk6cMzTEe63RvWw7V1xWQ" path="/v1/conversations/%s/members" requestMethod="POST">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_AWPeAMz1Ee63RvWw7V1xWQ" name="UpdateMember" baseUriName="Api" requestType="_wfWd0Mz0Ee63RvWw7V1xWQ" responseType="_0nk6cMzTEe63RvWw7V1xWQ" path="/v1/conversations/%s/members/%s" requestMethod="PATCH">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_whz0MM8eEe6AWvmjcVqkVA" name="DeleteEvent" baseUriName="Api" requestType="_GFJ-EMz0Ee63RvWw7V1xWQ" responseType="_O3KKsMs9Ee63RvWw7V1xWQ" path="/v1/conversations/%s/events/%s" requestMethod="DELETE">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_CYe60M8fEe6AWvmjcVqkVA" name="GetEvent" baseUriName="Api" requestType="_GFJ-EMz0Ee63RvWw7V1xWQ" responseType="_79B6UM8eEe6AWvmjcVqkVA" path="/v1/conversations/%s/events/%s" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_nCngcM8fEe6AWvmjcVqkVA" name="ListEvents" baseUriName="Api" requestType="_LLEKwM8fEe6AWvmjcVqkVA" responseType="_fvAv8M8fEe6AWvmjcVqkVA" path="/v1/conversations/%s/events" requestMethod="GET">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <endpoints xmi:id="_wc_JIM8fEe6AWvmjcVqkVA" name="CreateEvent" baseUriName="Api" requestType="_79B6UM8eEe6AWvmjcVqkVA" responseType="_79B6UM8eEe6AWvmjcVqkVA" path="/v1/conversations/%s/events" requestMethod="POST">
+    <authMethods>JWT</authMethods>
+  </endpoints>
+  <types xsi:type="Boolean" xmi:id="_imJkAM2REe6y0LRMSm1lvw"/>
+  <types xsi:type="String" xmi:id="_MoO1AMs9Ee63RvWw7V1xWQ"/>
+  <types xsi:type="URI" xmi:id="_OXIm0Ms9Ee63RvWw7V1xWQ"/>
+  <types xsi:type="Void" xmi:id="_O3KKsMs9Ee63RvWw7V1xWQ"/>
+  <types xsi:type="Integer" xmi:id="_RUWl4Ms9Ee63RvWw7V1xWQ"/>
+  <types xsi:type="Instant" xmi:id="_aHTpQMs9Ee63RvWw7V1xWQ"/>
+  <types xsi:type="Type" xmi:id="_iAleYMtYEe63RvWw7V1xWQ" name="Map&lt;String, Object>"/>
+  <types xsi:type="JsonableBaseObject" xmi:id="_jAeOEMtYEe63RvWw7V1xWQ"/>
+  <types xsi:type="UUID" xmi:id="_250wIMvyEe63RvWw7V1xWQ"/>
+  <types xsi:type="Type" xmi:id="_hymHoMwGEe63RvWw7V1xWQ" name="List&lt;Channel>"/>
+  <types xsi:type="Enum" xmi:id="_X0SmEMvzEe63RvWw7V1xWQ" name="CallbackHttpMethod" doc="Repersents the possible HTTP methods for {@link Callback#getMethod()}.">
+    <values>POST</values>
+    <values>GET</values>
+  </types>
+  <types xsi:type="Enum" xmi:id="_gX464MtbEe63RvWw7V1xWQ" name="ConversationStatus" doc="Represents the status of a {@linkplain Conversation}.">
+    <values>ACTIVE</values>
+    <values>INACTIVE</values>
+    <values>DELETED</values>
+  </types>
+  <types xsi:type="Class" xmi:id="_0Nk5cMs7Ee6WBpP2QQYukA" name="Conversation" extends="_53KU0NGhEe6AWvmjcVqkVA" isRequest="true" isResponse="true">
+    <fields xmi:id="_c4fJ4MtdEe63RvWw7V1xWQ" name="state" json="state" testValue="ConversationStatus.INACTIVE" type="_gX464MtbEe63RvWw7V1xWQ" stringValue="&quot;INACTIVE&quot;" excludeRequest="true">
+      <doc xmi:id="_ugcfEMtdEe63RvWw7V1xWQ" returnDesc="The conversation state as an enum, or {@code null} if unknown." description="The state the conversation is in."/>
+    </fields>
+    <fields xmi:id="_zdm8oMtdEe63RvWw7V1xWQ" name="sequenceNumber" json="sequence_number" testValue="123" type="_RUWl4Ms9Ee63RvWw7V1xWQ" stringValue="123" excludeRequest="true">
+      <doc xmi:id="_BTMMYMteEe63RvWw7V1xWQ" returnDesc="The last event ID as an integer, or {@code null} if unknown." description="The last Event ID in this conversation. This ID can be used to retrieve a specific event."/>
+    </fields>
+    <fields xmi:id="_xKSZsMteEe63RvWw7V1xWQ" name="properties" json="properties" type="_mNdfwMteEe63RvWw7V1xWQ">
+      <doc xmi:id="_Ro9KYMvhEe63RvWw7V1xWQ" returnDesc="The conversation properties object, or {@code null} if not applicable." description="Properties for this conversation."/>
+    </fields>
+    <fields xmi:id="_j7kmUMwGEe63RvWw7V1xWQ" name="numbers" json="numbers" type="_hymHoMwGEe63RvWw7V1xWQ" stringValue="">
+      <doc xmi:id="_6Z8Q0MwGEe63RvWw7V1xWQ" returnDesc="The list of channels associated with this conversation, or {@code null} if unspecified." description="Channels containing the contact numbers for this conversation."/>
+    </fields>
+    <fields xmi:id="_SBWB8MvxEe63RvWw7V1xWQ" name="callback" json="callback" type="_AaxM0MvxEe63RvWw7V1xWQ">
+      <doc xmi:id="_cAekkMvxEe63RvWw7V1xWQ" returnDesc="The callback properties, or {@code null} if unspecified." description="Specifies callback parameters for webhooks."/>
+    </fields>
+  </types>
+  <types xsi:type="Class" xmi:id="_mNdfwMteEe63RvWw7V1xWQ" name="ConversationProperties" extends="_jAeOEMtYEe63RvWw7V1xWQ" isRequest="true">
+    <fields xmi:id="_baqDEMvjEe63RvWw7V1xWQ" name="ttl" json="ttl" testValue="60" type="_RUWl4Ms9Ee63RvWw7V1xWQ" stringValue="60">
+      <doc xmi:id="_n61mIMvjEe63RvWw7V1xWQ" returnDesc="The empty time-to-live in seconds, or {@code null} if unspecified." description="Number of seconds after which an empty conversation is deleted."/>
+    </fields>
+    <fields xmi:id="_17grkMvjEe63RvWw7V1xWQ" name="type" json="type" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="">
+      <doc xmi:id="_LeJGkMvkEe63RvWw7V1xWQ" returnDesc="The conversation type as a string, or {@code null} if unknown." description="Conversation type."/>
+    </fields>
+    <fields xmi:id="_M3ASwMvrEe63RvWw7V1xWQ" name="customSortKey" json="custom_sort_key" testValue="&quot;CSK_1&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="CSK_1">
+      <doc xmi:id="_M3ASwcvrEe63RvWw7V1xWQ" returnDesc="The custom sort key as a string, or {@code null} if unspecified." description="Custom sort key."/>
+    </fields>
+    <fields xmi:id="_ZbyB8MvrEe63RvWw7V1xWQ" name="customData" json="custom_data" testValue="Map.of(&quot;property1&quot;, &quot;value1&quot;, &quot;prop2&quot;, &quot;Val 2&quot;)" type="_iAleYMtYEe63RvWw7V1xWQ" stringValue="{\&quot;property1\&quot;:\&quot;value1\&quot;,\&quot;prop2\&quot;:\&quot;Val 2\&quot;}">
+      <doc xmi:id="_sDjOUMvrEe63RvWw7V1xWQ" returnDesc="The custom properties as a Map, or {@code null} if unspecified." description="Custom key-value pairs to be included with conversation data."/>
+    </fields>
+    <doc xmi:id="_s9C9MMteEe63RvWw7V1xWQ" description="Additional properties for a {@linkplain Conversation}."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_rNi9MMtYEe63RvWw7V1xWQ" name="ConversationTimestamp" extends="_jAeOEMtYEe63RvWw7V1xWQ">
+    <fields xmi:id="_ymVIoMtYEe63RvWw7V1xWQ" name="created" json="created" testValue="Instant.parse(&quot;2019-08-10T11:29:24.997Z&quot;)" type="_aHTpQMs9Ee63RvWw7V1xWQ" stringValue="2019-08-10T11:29:24.997Z">
+      <doc xmi:id="_2F0uUMtYEe63RvWw7V1xWQ" returnDesc="The conversation creation time as an Instant, or {@code null} if unknown." description="Time that the conversation was created."/>
+    </fields>
+    <fields xmi:id="__cFTEMtYEe63RvWw7V1xWQ" name="updated" json="updated" testValue="Instant.parse(&quot;2019-09-03T18:40:24.324Z&quot;)" type="_aHTpQMs9Ee63RvWw7V1xWQ" stringValue="2019-09-03T18:40:24.324Z">
+      <doc xmi:id="__cFTEctYEe63RvWw7V1xWQ" returnDesc="The conversation update time as an Instant, or {@code null} if unknown." description="Time that the conversation was update."/>
+    </fields>
+    <fields xmi:id="_iYSh0MtaEe63RvWw7V1xWQ" name="destroyed" json="destroyed" testValue="Instant.parse(&quot;2022-02-03T04:58:59.601Z&quot;)" type="_aHTpQMs9Ee63RvWw7V1xWQ" stringValue="2022-02-03T04:58:59.601Z">
+      <doc xmi:id="_iYSh0ctaEe63RvWw7V1xWQ" returnDesc="The conversation deletion time as an Instant, or {@code null} if unknown." description="Time that the conversation was destroyed."/>
+    </fields>
+    <doc xmi:id="_CIlqsMtbEe63RvWw7V1xWQ" description="Represents the timestamps in {@link BaseConversation#getTimestamp()}."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_AaxM0MvxEe63RvWw7V1xWQ" name="Callback" extends="_jAeOEMtYEe63RvWw7V1xWQ" isRequest="true">
+    <fields xmi:id="_NS-OUMvxEe63RvWw7V1xWQ" name="url" json="url" testValue="URI.create(&quot;http://example.com/callback&quot;)" type="_OXIm0Ms9Ee63RvWw7V1xWQ" stringValue="http://example.com/callback">
+      <doc xmi:id="_3-oRgMvxEe63RvWw7V1xWQ" returnDesc="The callback URL, or {@code null} if unspecified." description="Event URL for the callback."/>
+    </fields>
+    <fields xmi:id="_yw1W8MvxEe63RvWw7V1xWQ" name="eventMask" json="event_mask" testValue="&quot;Test value&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="Test value"/>
+    <fields xmi:id="_FiYxcMvyEe63RvWw7V1xWQ" name="params" json="params" type="_OBZlIMvyEe63RvWw7V1xWQ">
+      <doc xmi:id="_I0LSUMvyEe63RvWw7V1xWQ" returnDesc="The callback parameters, or {@code null} if unspecified." description="Additional parameters."/>
+    </fields>
+    <fields xmi:id="_hHKfoMvzEe63RvWw7V1xWQ" name="method" json="method" testValue="CallbackHttpMethod.POST" type="_X0SmEMvzEe63RvWw7V1xWQ" stringValue="POST">
+      <doc xmi:id="_mZzd8MvzEe63RvWw7V1xWQ" returnDesc="The HTTP method as an enum, or {@code null} if unspecified." description="HTTP method to use for the callback."/>
+    </fields>
+    <doc xmi:id="_ITTPUMvxEe63RvWw7V1xWQ" description="Callback properties for a {@link Conversation}."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_OBZlIMvyEe63RvWw7V1xWQ" name="CallbackParams" extends="_jAeOEMtYEe63RvWw7V1xWQ" isRequest="true">
+    <fields xmi:id="_iletMMvyEe63RvWw7V1xWQ" name="applicationId" json="applicationId" testValue="UUID.fromString(&quot;fa185f5e-2a5a-492c-9e0a-ba3ab6844441&quot;)" type="_250wIMvyEe63RvWw7V1xWQ" stringValue="fa185f5e-2a5a-492c-9e0a-ba3ab6844441">
+      <doc xmi:id="_9pE2YMvyEe63RvWw7V1xWQ" returnDesc="The application ID, or {@code null} if unspecified." description="Vonage Application ID."/>
+    </fields>
+    <fields xmi:id="_D-DbcMvzEe63RvWw7V1xWQ" name="nccoUrl" json="ncco_url" testValue="URI.create(&quot;http://example.com/ncco&quot;)" type="_OXIm0Ms9Ee63RvWw7V1xWQ" stringValue="http://example.com/ncco">
+      <doc xmi:id="_KAdCwMvzEe63RvWw7V1xWQ" returnDesc="The NCCO URL, or {@code null} if unspecified." description="Call Control Object URL to use for the callback."/>
+    </fields>
+    <doc xmi:id="_dUxBgMvyEe63RvWw7V1xWQ" description="Parameters for {@link Callback#getParams()}."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_cVb6MMvsEe63RvWw7V1xWQ" name="ListConversationsResponse" isResponse="true" isHal="true">
+    <fields xmi:id="_0LxUMMxPEe63RvWw7V1xWQ" name="conversations" json="conversations" type="_SVcBkNGiEe6AWvmjcVqkVA">
+      <doc xmi:id="_3841YMxPEe63RvWw7V1xWQ" returnDesc="The Conversation objects as a List." description="List of conversations."/>
+    </fields>
+    <doc xmi:id="_7hOyYMvtEe63RvWw7V1xWQ" description="HAL response for {@link ConversationsClient#listConversations()}."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_ukHIIcxPEe63RvWw7V1xWQ" name="ListConversationsRequest" extends="_63FQ0MyrEe63RvWw7V1xWQ" isRequest="true" isQueryParams="true">
+    <fields xmi:id="_IF_rwNDWEe6AWvmjcVqkVA" name="startDate" json="date_start" type="_aHTpQMs9Ee63RvWw7V1xWQ" stringValue="2018-01-01 10:00:08">
+      <doc xmi:id="_S0nxoNDWEe6AWvmjcVqkVA" returnDesc="The start timestamp for results, or {@code null} if unspecified." description="Filter records that occurred after this point in time."/>
+    </fields>
+    <fields xmi:id="_cngA8NDWEe6AWvmjcVqkVA" name="endDate" json="date_end" type="_aHTpQMs9Ee63RvWw7V1xWQ" stringValue="2018-01-03 12:00:00">
+      <doc xmi:id="_cngA8dDWEe6AWvmjcVqkVA" returnDesc="The end timestamp for results, or {@code null} if unspecified." description="Filter records that occurred before this point in time."/>
+    </fields>
+    <doc xmi:id="_ukHIIsxPEe63RvWw7V1xWQ" description="Filters results for {@link ConversationsClient#listConversations(ListConversationsRequest)}."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_D75cEMyzEe63RvWw7V1xWQ" name="ListUserSessionsRequest" extends="_63FQ0MyrEe63RvWw7V1xWQ" isRequest="true" isQueryParams="true">
+    <fields xmi:id="_SlbRQMyzEe63RvWw7V1xWQ" name="userId" json="user_id" testValue="&quot;USR-82e028d9-5201-4f1e-8188-604b2d3471ec&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" nullable="false" stringValue="USR-82e028d9-5201-4f1e-8188-604b2d3471ec" excludeRequest="true"/>
+    <doc xmi:id="_D75cEcyzEe63RvWw7V1xWQ" description="Filters results for {@link ConversationsClient#listUserSessions(ListUserSessionsRequest)}."/>
+  </types>
+  <types xsi:type="Type" xmi:id="_yBKd0MxPEe63RvWw7V1xWQ" name="List&lt;Conversation>"/>
+  <types xsi:type="Type" xmi:id="_63FQ0MyrEe63RvWw7V1xWQ" name="HalFilterRequest"/>
+  <types xsi:type="Class" xmi:id="_ZRQvwMy2Ee63RvWw7V1xWQ" name="UserSession" extends="_jAeOEMtYEe63RvWw7V1xWQ" isResponse="true">
+    <fields xmi:id="_cjRTEMy2Ee63RvWw7V1xWQ" name="sessionId" json="id" testValue="&quot;SES-63f61863-4a51-4f6b-86e1-46edebio0391&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="SES-63f61863-4a51-4f6b-86e1-46edebio0391">
+      <doc xmi:id="_kLQ_MMy2Ee63RvWw7V1xWQ" returnDesc="The session ID." description="Unique session identifier."/>
+    </fields>
+    <fields xmi:id="_4Akl0MzvEe63RvWw7V1xWQ" name="apiKey" json="_embedded.api_key" testValue="&quot;a1b2c3d4&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="a1b2c3d4">
+      <doc xmi:id="_4Akl0czvEe63RvWw7V1xWQ" returnDesc="The API key, or {@code null} if unknown / not applicable." description="API key."/>
+    </fields>
+    <fields xmi:id="_NPFyAMzwEe63RvWw7V1xWQ" name="ttl" json="properties.ttl" testValue="1.6" type="_l6Z1MMzwEe63RvWw7V1xWQ" stringValue="1.6">
+      <doc xmi:id="_NPFyAczwEe63RvWw7V1xWQ" returnDesc="The session TTL in minutes, or {@code null} if unknown / unspecified." description="Session time-to-live in minutes."/>
+    </fields>
+    <fields xmi:id="_If1wMNJ4Ee6AWvmjcVqkVA" name="user" json="_embedded.user" type="_GPL8MNJ4Ee6AWvmjcVqkVA">
+      <doc xmi:id="_NZMEwNJ4Ee6AWvmjcVqkVA" returnDesc="The embedded user object, or {@code null} if absent." description="Basic user metadata. Only name and ID will be present."/>
+    </fields>
+  </types>
+  <types xsi:type="Type" xmi:id="_xOioQMy2Ee63RvWw7V1xWQ" name="List&lt;UserSession>"/>
+  <types xsi:type="Class" xmi:id="_0kwWIMy2Ee63RvWw7V1xWQ" name="ListUserSessionsResponse" isResponse="true" isHal="true">
+    <fields xmi:id="_0kwWIcy2Ee63RvWw7V1xWQ" name="sessions" json="sessions" type="_xOioQMy2Ee63RvWw7V1xWQ">
+      <doc xmi:id="_0kwWIsy2Ee63RvWw7V1xWQ" returnDesc="The Conversation objects as a List." description="List of conversations."/>
+    </fields>
+    <doc xmi:id="_0kwWI8y2Ee63RvWw7V1xWQ" description="HAL response for {@link ConversationsClient#listConversations()}."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_CiJfQMzREe63RvWw7V1xWQ" name="UserConversation" extends="_0Nk5cMs7Ee6WBpP2QQYukA">
+    <fields xmi:id="_Sv7zIMzqEe63RvWw7V1xWQ" name="member" json="_embedded" type="_QMOpoMzREe63RvWw7V1xWQ">
+      <doc xmi:id="_ga8xoMzqEe63RvWw7V1xWQ" returnDesc="The embedded member response, or {@code null} if absent." description="Basic metadata about the conversation membership."/>
+    </fields>
+    <doc xmi:id="_qQQC0MzqEe63RvWw7V1xWQ" description="Response object when querying a user's conversations."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_QMOpoMzREe63RvWw7V1xWQ" name="BaseMember" extends="_jAeOEMtYEe63RvWw7V1xWQ">
+    <fields xmi:id="_U33SUMzREe63RvWw7V1xWQ" name="id" json="id" testValue="&quot;MEM-63f61863-4a51-4f6b-86e1-46edebio0391&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="MEM-63f61863-4a51-4f6b-86e1-46edebio0391">
+      <doc xmi:id="_QFZW8MzTEe63RvWw7V1xWQ" returnDesc="The member ID, or {@code null} if unknown." description="Unique member identifier."/>
+    </fields>
+    <fields xmi:id="_Xw1YoMzTEe63RvWw7V1xWQ" name="state" json="state" testValue="MemberState.LEFT" type="_Y4ztUMzTEe63RvWw7V1xWQ" stringValue="LEFT">
+      <doc xmi:id="_noqM8MzTEe63RvWw7V1xWQ" returnDesc="The member state as an enum." description="The state that the member is in."/>
+    </fields>
+    <doc xmi:id="_T4Ug4MzREe63RvWw7V1xWQ" description="Represents the basic conversation member attributes."/>
+  </types>
+  <types xsi:type="Enum" xmi:id="_Y4ztUMzTEe63RvWw7V1xWQ" name="MemberState" doc="Represents the state of a conversation member.">
+    <values>INVITED</values>
+    <values>JOINED</values>
+    <values>LEFT</values>
+    <values>UNKNOWN</values>
+  </types>
+  <types xsi:type="Class" xmi:id="_0nk6cMzTEe63RvWw7V1xWQ" name="Member" extends="_QMOpoMzREe63RvWw7V1xWQ" isRequest="true" isResponse="true">
+    <fields xmi:id="__hFbgNDBEe6AWvmjcVqkVA" name="conversationId" json="conversation_id" testValue="&quot;CON-d66d47de-5bcb-4300-94f0-0c9d4b948e9a&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="CON-d66d47de-5bcb-4300-94f0-0c9d4b948e9a" excludeRequest="true">
+      <doc xmi:id="_FQB7UNDCEe6AWvmjcVqkVA" returnDesc="The conversation ID, or {@code null} if unknown." description="Unique identifier for this member's conversation."/>
+    </fields>
+    <fields xmi:id="_ClfScNS5Ee6mLsejDbXspg" name="channel" json="channel" type="_FdKDINS5Ee6mLsejDbXspg">
+      <doc xmi:id="_LE11oNS_Ee6mLsejDbXspg" returnDesc="The channel, or {@code null} if unspecified." description="Channel details for this membership."/>
+    </fields>
+    <fields xmi:id="_sIJGMNS5Ee6mLsejDbXspg" name="media" json="media" type="_nKdrQNS5Ee6mLsejDbXspg">
+      <doc xmi:id="_G_OrINS_Ee6mLsejDbXspg" returnDesc="The media settings object, or {@code null} if unspecified." description="Media settings for this member."/>
+    </fields>
+    <fields xmi:id="_Q4QQoNS9Ee6mLsejDbXspg" name="knockingId" json="knocking_id" testValue="UUID.fromString(&quot;a972836a-450f-35fa-156c-52a2ab5b7d25&quot;)" type="_250wIMvyEe63RvWw7V1xWQ" stringValue="a972836a-450f-35fa-156c-52a2ab5b7d25">
+      <doc xmi:id="_0Ba9UNS-Ee6mLsejDbXspg" returnDesc="The knocking ID, or {@code null} if unspecified." description="Unique knocking identifier."/>
+    </fields>
+    <fields xmi:id="_XmXucNS9Ee6mLsejDbXspg" name="memberIdInviting" json="member_id_inviting" testValue="MEM-63f61863-4a51-4f6b-86e1-46edebio0391" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="MEM-63f61863-4a51-4f6b-86e1-46edebio0391">
+      <doc xmi:id="_9AyFANS-Ee6mLsejDbXspg" returnDesc="The inviting member ID, or {@code null} if unspecified." description="Unique member ID to invite."/>
+    </fields>
+    <fields xmi:id="_d661sNS9Ee6mLsejDbXspg" name="from" json="from" testValue="" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="">
+      <doc xmi:id="_R-fOANS_Ee6mLsejDbXspg" returnDesc="The from, or {@code null} if unspecified." description="From (??)"/>
+    </fields>
+    <fields xmi:id="_ULaRMNTCEe6mLsejDbXspg" name="invitedBy" json="invited_by" testValue="MEM-63f61863-4a51-4f6b-86e1-46edebio0391" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="MEM-63f61863-4a51-4f6b-86e1-46edebio0391" excludeRequest="true">
+      <doc xmi:id="_ULaRMdTCEe6mLsejDbXspg" returnDesc="The inviting member ID, or {@code null} if unknown / not applicable." description="Unique member ID this member was invited by."/>
+    </fields>
+    <fields xmi:id="_V3h_UNTDEe6mLsejDbXspg" name="initiator" json="initiator" type="_MZ_t4NTDEe6mLsejDbXspg">
+      <doc xmi:id="_ZH5j4NTDEe6mLsejDbXspg" returnDesc="The initiator details, or {@code null} if unspecified." description="Describes how this member was initiated."/>
+    </fields>
+    <fields xmi:id="__T7dANVmEe6mLsejDbXspg" name="timestamp" json="timestamp" type="_ky7gANVlEe6mLsejDbXspg" excludeRequest="true">
+      <doc xmi:id="_CTLcYNVnEe6mLsejDbXspg" returnDesc="The timestamps object, or {@code null} if unknown." description="Timestamps for this member."/>
+    </fields>
+    <doc xmi:id="_2YL8cMzTEe63RvWw7V1xWQ" description="Represents a conversation membership."/>
+  </types>
+  <types xsi:type="Double" xmi:id="_l6Z1MMzwEe63RvWw7V1xWQ"/>
+  <types xsi:type="Class" xmi:id="_kdeHsMzxEe63RvWw7V1xWQ" name="ListUserConversationsRequest" extends="_63FQ0MyrEe63RvWw7V1xWQ" isQueryParams="true">
+    <fields xmi:id="_4hiSsM2QEe6y0LRMSm1lvw" name="userId" json="user_id" testValue="&quot;USR-82e028d9-5201-4f1e-8188-604b2d3471ec&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" nullable="false" stringValue="USR-82e028d9-5201-4f1e-8188-604b2d3471ec" excludeRequest="true"/>
+    <fields xmi:id="_XC2VYM2QEe6y0LRMSm1lvw" name="state" json="state" testValue="MemberState.INVITED" type="_Y4ztUMzTEe63RvWw7V1xWQ" stringValue="INVITED">
+      <doc xmi:id="_OMTkYNSUEe6mLsejDbXspg" returnDesc="The state to filter by, or {@code null} if not specified." description="Only include conversations with this member state."/>
+    </fields>
+    <fields xmi:id="_NA4rwM2REe6y0LRMSm1lvw" name="orderBy" json="order_by" testValue="OrderBy.CUSTOM_SORT_KEY" type="__l34IM2QEe6y0LRMSm1lvw" stringValue="custom_sort_key">
+      <doc xmi:id="_jzAAANSUEe6mLsejDbXspg" returnDesc="The result ordering strategy, or {@code null} if not specified." description="Determines how the results should be compared and ordered."/>
+    </fields>
+    <fields xmi:id="_Z7T60M2REe6y0LRMSm1lvw" name="includeCustomData" json="include_custom_data" testValue="true" type="_imJkAM2REe6y0LRMSm1lvw" stringValue="true">
+      <doc xmi:id="_shxuANSUEe6mLsejDbXspg" returnDesc="{@code true} if custom data should be included, or {@code null} if not specified." description="Whether to include custom data in the responses."/>
+    </fields>
+    <fields xmi:id="_nc7swM2REe6y0LRMSm1lvw" name="startDate" json="date_start" testValue="" type="_aHTpQMs9Ee63RvWw7V1xWQ" stringValue="2017-12-30 10:08:59"/>
+    <doc xmi:id="_pC6BwMzxEe63RvWw7V1xWQ" description="Represents filter options for {@link ConversationsClient#listUserConversations(ListUserConversationsRequest)}."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_f4nnAMzyEe63RvWw7V1xWQ" name="ListMembersResponse" isHal="true">
+    <fields xmi:id="_p2HK4MzyEe63RvWw7V1xWQ" name="members" json="members" type="_oAqsMMzyEe63RvWw7V1xWQ">
+      <doc xmi:id="_tEsmwMzyEe63RvWw7V1xWQ" returnDesc="The Member objects as a List." description="List of members."/>
+    </fields>
+    <doc xmi:id="_6hT84MzyEe63RvWw7V1xWQ" description="HAL response for {@link ConversationsClient#listMembers(ListMembersRequest)}."/>
+  </types>
+  <types xsi:type="Type" xmi:id="_oAqsMMzyEe63RvWw7V1xWQ" name="List&lt;BaseMember>"/>
+  <types xsi:type="Class" xmi:id="_Cap3sMzzEe63RvWw7V1xWQ" name="ListMembersRequest" extends="_63FQ0MyrEe63RvWw7V1xWQ" isQueryParams="true">
+    <fields xmi:id="_Cap3sczzEe63RvWw7V1xWQ" name="conversationId" json="conversation_id" testValue="&quot;CON-d66d47de-5bcb-4300-94f0-0c9d4b948e9a&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="CON-d66d47de-5bcb-4300-94f0-0c9d4b948e9a" excludeRequest="true"/>
+    <doc xmi:id="_Cap3sszzEe63RvWw7V1xWQ" description="Represents filter options for {@link ConversationsClient#listMembers(ListMembersRequest)}."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_GFJ-EMz0Ee63RvWw7V1xWQ" name="ConversationResourceRequestWrapper" public="false" isQueryParams="true">
+    <fields xmi:id="_JP-7UMz0Ee63RvWw7V1xWQ" name="conversationId" json="" testValue="&quot;CON-d66d47de-5bcb-4300-94f0-0c9d4b948e9a&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="CON-d66d47de-5bcb-4300-94f0-0c9d4b948e9a"/>
+    <fields xmi:id="_RG83kMz0Ee63RvWw7V1xWQ" name="resourceId" json="" testValue="&quot;MEM-63f61863-4a51-4f6b-86e1-46edebio0391&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="MEM-63f61863-4a51-4f6b-86e1-46edebio0391"/>
+  </types>
+  <types xsi:type="Class" xmi:id="_wfWd0Mz0Ee63RvWw7V1xWQ" name="UpdateMemberRequest" extends="_GFJ-EMz0Ee63RvWw7V1xWQ" isRequest="true">
+    <fields xmi:id="___OpoM8MEe6y0LRMSm1lvw" name="state" json="state" testValue="MemberState.JOINED" type="_Y4ztUMzTEe63RvWw7V1xWQ" stringValue="joined"/>
+    <fields xmi:id="_H6poEM8NEe6y0LRMSm1lvw" name="from" json="from" type="_MoO1AMs9Ee63RvWw7V1xWQ"/>
+    <doc xmi:id="_2tVDAMz0Ee63RvWw7V1xWQ" description="Options for updating a membership using {@link ConversationsClient#updateMember(UpdateMemberRequest)}."/>
+    <implements>Jsonable</implements>
+  </types>
+  <types xsi:type="Enum" xmi:id="__l34IM2QEe6y0LRMSm1lvw" name="OrderBy" doc="Result ordering options for {@link ListUserConversationsRequest}.">
+    <values>CREATED</values>
+    <values>CUSTOM_SORT_KEY</values>
+  </types>
+  <types xsi:type="Class" xmi:id="_79B6UM8eEe6AWvmjcVqkVA" name="Event" isRequest="true" isResponse="true">
+    <fields xmi:id="_pLBVYM81Ee6AWvmjcVqkVA" name="id" json="id" testValue="5" type="_RUWl4Ms9Ee63RvWw7V1xWQ" stringValue="5">
+      <doc xmi:id="_IFK5YM82Ee6AWvmjcVqkVA" returnDesc="The event ID as an integer, or {@code null} if unknown." description="&#xA;Event id. This is a progressive integer."/>
+    </fields>
+    <fields xmi:id="_muX-4M9YEe6AWvmjcVqkVA" name="type" json="type" type="_oYdiIM9YEe6AWvmjcVqkVA">
+      <doc xmi:id="_IC3MAM_VEe6AWvmjcVqkVA" returnDesc="The event type as an enum." description="Type of event."/>
+    </fields>
+    <fields xmi:id="_h1eg0M9ZEe6AWvmjcVqkVA" name="from" json="from" testValue="&quot;MEM-63f61863-4a51-4f6b-86e1-46edebio0391&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="MEM-63f61863-4a51-4f6b-86e1-46edebio0391">
+      <doc xmi:id="_2X9QgM_UEe6AWvmjcVqkVA" returnDesc="The member ID, or {@code null} if unspecified." description="Member ID this event was sent from."/>
+    </fields>
+    <fields xmi:id="__ihtMM_VEe6AWvmjcVqkVA" name="timestamp" json="timestamp" testValue="Instant.parse(&quot;2020-01-01T14:00:00.02Z&quot;)" type="_aHTpQMs9Ee63RvWw7V1xWQ" stringValue="2020-01-01T14:00:00.02Z">
+      <doc xmi:id="_NtORUM_WEe6AWvmjcVqkVA" returnDesc="The event timestamp, or {@code null} if unknown." description="Time of creation."/>
+    </fields>
+    <fields xmi:id="_XgeJgM_VEe6AWvmjcVqkVA" name="fromUser" json="_embedded.from_user" type="_eEaXoM_VEe6AWvmjcVqkVA">
+      <doc xmi:id="_iWKgsM_VEe6AWvmjcVqkVA" returnDesc="The embedded {@code from_user} object, or {@code null} if absent." description="Details about the user that initiated the event."/>
+    </fields>
+    <fields xmi:id="_u3y1QM_VEe6AWvmjcVqkVA" name="fromMember" json="_embedded.from_member" type="_QMOpoMzREe63RvWw7V1xWQ">
+      <doc xmi:id="_u3y1Qc_VEe6AWvmjcVqkVA" returnDesc="The embedded {@code from_member} object, or {@code null} if absent." description="Member that initiated the event. Only the {@code id} field will be present."/>
+    </fields>
+    <fields xmi:id="_gNz60M_aEe6AWvmjcVqkVA" name="body" json="body" type="_ctaWMM_aEe6AWvmjcVqkVA">
+      <doc xmi:id="_iHwfAM_aEe6AWvmjcVqkVA" returnDesc="The event body object, or {@code null} if absent" description="Event-specific data."/>
+    </fields>
+    <doc xmi:id="_5sBUcM8zEe6AWvmjcVqkVA" description="Events are actions that occur within a conversation."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_LLEKwM8fEe6AWvmjcVqkVA" name="ListEventsRequest" extends="_63FQ0MyrEe63RvWw7V1xWQ" isRequest="true" isQueryParams="true">
+    <fields xmi:id="_9I8dYM8qEe6AWvmjcVqkVA" name="excludeDeletedEvents" json="exclude_deleted_events" testValue="false" type="_imJkAM2REe6y0LRMSm1lvw" stringValue="false">
+      <doc xmi:id="_5FZOwM8yEe6AWvmjcVqkVA" returnDesc="{@code true} to exclude deleted events, or {@code null} if unspecified." description="Whether to exclude deleted events from the results."/>
+    </fields>
+    <fields xmi:id="_IowvoM8rEe6AWvmjcVqkVA" name="startId" json="start_id" type="_MoO1AMs9Ee63RvWw7V1xWQ">
+      <doc xmi:id="_HU3CUM8sEe6AWvmjcVqkVA" returnDesc="The start ID, or {@code null} if unspecified." description="The ID to start returning events at."/>
+    </fields>
+    <fields xmi:id="_p0EogM8sEe6AWvmjcVqkVA" name="endId" json="end_id" type="_MoO1AMs9Ee63RvWw7V1xWQ">
+      <doc xmi:id="_p0Eogc8sEe6AWvmjcVqkVA" returnDesc="The end ID, or {@code null} if unspecified." description="The ID to stop returning events at."/>
+    </fields>
+    <fields xmi:id="_BfEeMM8tEe6AWvmjcVqkVA" name="eventType" json="event_type" type="_oYdiIM9YEe6AWvmjcVqkVA">
+      <doc xmi:id="_GJPuUM8tEe6AWvmjcVqkVA" returnDesc="The event type to search for, or {@code null} if unspecified." description="The type of event to search for. Does not currently support custom events."/>
+    </fields>
+    <doc xmi:id="_LLEKwc8fEe6AWvmjcVqkVA" description="Filters results for {@link ConversationsClient#listEvents(ListEventsRequest)}."/>
+  </types>
+  <types xsi:type="Type" xmi:id="_dDgL8M8fEe6AWvmjcVqkVA" name="List&lt;Event>"/>
+  <types xsi:type="Class" xmi:id="_fvAv8M8fEe6AWvmjcVqkVA" name="ListEventsResponse" isResponse="true" isHal="true">
+    <fields xmi:id="_fvAv8c8fEe6AWvmjcVqkVA" name="events" json="events" type="_dDgL8M8fEe6AWvmjcVqkVA">
+      <doc xmi:id="_fvAv8s8fEe6AWvmjcVqkVA" returnDesc="The Conversation objects as a List." description="List of conversations."/>
+    </fields>
+    <doc xmi:id="_fvAv888fEe6AWvmjcVqkVA" description="HAL response for {@link ConversationsClient#listEvents()}."/>
+  </types>
+  <types xsi:type="Enum" xmi:id="_oYdiIM9YEe6AWvmjcVqkVA" name="EventType" doc="Represents the possible types of events in {@link Event#getType()}.">
+    <values>CUSTOM</values>
+  </types>
+  <types xsi:type="Type" xmi:id="_eEaXoM_VEe6AWvmjcVqkVA" name="User"/>
+  <types xsi:type="Class" xmi:id="_ctaWMM_aEe6AWvmjcVqkVA" name="AbstractEventBody">
+    <doc xmi:id="_9V6t4M_kEe6AWvmjcVqkVA" description="Base class for body responses in {@link Event#getBody()}."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_g_wdsM_xEe6AWvmjcVqkVA" name="MessageEventBody" extends="_ctaWMM_aEe6AWvmjcVqkVA">
+    <fields xmi:id="_vy9ZANABEe6AWvmjcVqkVA" name="eventId" json="event_id" type="_MoO1AMs9Ee63RvWw7V1xWQ">
+      <doc xmi:id="_yOCUUNABEe6AWvmjcVqkVA" returnDesc="The event ID as a string, or {@code null} if unknown." description="Event identifier."/>
+    </fields>
+    <doc xmi:id="_rezPcM_xEe6AWvmjcVqkVA" description="Basic response body for 'message:' events."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_NQjU4NABEe6AWvmjcVqkVA" name="AudioModerationEventBody" extends="_ctaWMM_aEe6AWvmjcVqkVA">
+    <fields xmi:id="_hvpPQNABEe6AWvmjcVqkVA" name="rtcId" json="rtc_id" type="_MoO1AMs9Ee63RvWw7V1xWQ">
+      <doc xmi:id="_nZelkNABEe6AWvmjcVqkVA" returnDesc="The RTC ID as a string, or {@code null} if unknown." description="RTC identifier."/>
+    </fields>
+    <doc xmi:id="_NQjU4dABEe6AWvmjcVqkVA" description="Basic response body for 'audio:' moderation events."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_53KU0NGhEe6AWvmjcVqkVA" name="BaseConversation" extends="_jAeOEMtYEe63RvWw7V1xWQ" isResponse="true">
+    <fields xmi:id="_Ftx9gNGiEe6AWvmjcVqkVA" name="id" json="id" testValue="&quot;CON-d66d47de-5bcb-4300-94f0-0c9d4b948e9a&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="CON-d66d47de-5bcb-4300-94f0-0c9d4b948e9a">
+      <doc xmi:id="_Ftx9gdGiEe6AWvmjcVqkVA" returnDesc="The conversation ID as a string." description="Unique identifier for this conversation."/>
+    </fields>
+    <fields xmi:id="_Ftx9gtGiEe6AWvmjcVqkVA" name="name" json="name" testValue="&quot;customer_chat&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="customer_chat">
+      <doc xmi:id="_Ftx9g9GiEe6AWvmjcVqkVA" returnDesc="The conversation name, or {@code null} if unespecified." description="Internal conversation name. Must be unique."/>
+    </fields>
+    <fields xmi:id="_Ftx9hNGiEe6AWvmjcVqkVA" name="displayName" json="display_name" testValue="&quot;Chat with Customer&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="Chat with Customer">
+      <doc xmi:id="_Ftx9hdGiEe6AWvmjcVqkVA" returnDesc="The display name, or {@code null} if unespecified." description="The public facing name of the conversation."/>
+    </fields>
+    <fields xmi:id="_Ftx9htGiEe6AWvmjcVqkVA" name="imageUrl" json="image_url" testValue="URI.create(&quot;https://example.com/image.png&quot;)" type="_OXIm0Ms9Ee63RvWw7V1xWQ" stringValue="https://example.com/image.png">
+      <doc xmi:id="_Ftx9h9GiEe6AWvmjcVqkVA" returnDesc="The image URL, or {@code null} if unspecified." description="An image URL that you associate with the conversation."/>
+    </fields>
+    <fields xmi:id="_Ftx9iNGiEe6AWvmjcVqkVA" name="timestamp" json="timestamp" type="_rNi9MMtYEe63RvWw7V1xWQ" excludeRequest="true">
+      <doc xmi:id="_Ftx9idGiEe6AWvmjcVqkVA" returnDesc="The timestamps object, or {@code null} if unknown." description="Timestamps for this conversation."/>
+    </fields>
+    <doc xmi:id="_-7rXkNGhEe6AWvmjcVqkVA" description="Represents the main attributes of a conversation."/>
+  </types>
+  <types xsi:type="Type" xmi:id="_SVcBkNGiEe6AWvmjcVqkVA" name="List&lt;BaseConversation>"/>
+  <types xsi:type="Type" xmi:id="_YVvF8NI4Ee6AWvmjcVqkVA" name="List&lt;UserConversation>"/>
+  <types xsi:type="Class" xmi:id="_gtT04NI4Ee6AWvmjcVqkVA" name="ListUserConversationsResponse" isResponse="true" isHal="true">
+    <fields xmi:id="_gtT04dI4Ee6AWvmjcVqkVA" name="conversations" json="conversations" type="_YVvF8NI4Ee6AWvmjcVqkVA">
+      <doc xmi:id="_gtT04tI4Ee6AWvmjcVqkVA" returnDesc="The Conversation objects as a List." description="List of the user's conversations."/>
+    </fields>
+    <doc xmi:id="_gtT049I4Ee6AWvmjcVqkVA" description="HAL response for {@link ConversationsClient#listUserConversations(String)}."/>
+  </types>
+  <types xsi:type="Type" xmi:id="_GPL8MNJ4Ee6AWvmjcVqkVA" name="BaseUser"/>
+  <types xsi:type="Class" xmi:id="_FdKDINS5Ee6mLsejDbXspg" name="MemberChannel" extends="_jAeOEMtYEe63RvWw7V1xWQ" isResponse="true">
+    <fields xmi:id="_lMamANTAEe6mLsejDbXspg" name="type" json="type" testValue="ChannelType.APP" type="_Ywl-gNTAEe6mLsejDbXspg" stringValue="app">
+      <doc xmi:id="_rHp1YNTAEe6mLsejDbXspg" returnDesc="The channel type as an enum, or {@code null} if unspecified." description="Channel type."/>
+    </fields>
+    <fields xmi:id="_zjYrkNTAEe6mLsejDbXspg" name="from" json="from">
+      <doc xmi:id="_mbX3ANTBEe6mLsejDbXspg" returnDesc="The from channel, or {@code null} if unspecified." description="Sender channel."/>
+    </fields>
+    <fields xmi:id="_tvlEcNTBEe6mLsejDbXspg" name="to" json="to">
+      <doc xmi:id="_tvlEcdTBEe6mLsejDbXspg" returnDesc="The to channel, or {@code null} if unspecified." description="Receiver channel."/>
+    </fields>
+    <doc xmi:id="_VE1ioNS5Ee6mLsejDbXspg" description="Contains the channel properties for {@link Member#getChannel()}."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_nKdrQNS5Ee6mLsejDbXspg" name="MemberMedia" extends="_jAeOEMtYEe63RvWw7V1xWQ" isResponse="true">
+    <fields xmi:id="_R7dfoNT1Ee6mLsejDbXspg" name="audio" json="audio" testValue="true" type="_imJkAM2REe6y0LRMSm1lvw" stringValue="true">
+      <doc xmi:id="_VpZJ8NT1Ee6mLsejDbXspg" returnDesc="{@code true} if audio is present, or {@code null} if unspecified." description="Whether the media has audio."/>
+    </fields>
+    <fields xmi:id="_fHEv4NT2Ee6mLsejDbXspg" name="audioSettings" json="audio_settings" type="_CXzE0NTyEe6mLsejDbXspg">
+      <doc xmi:id="_kfbUoNT2Ee6mLsejDbXspg" returnDesc="The audio settings object, or {@code null} if not applicable." description="Audio-related properties."/>
+    </fields>
+    <doc xmi:id="_nKdrQdS5Ee6mLsejDbXspg" description="Contains the media properties for {@link Member#getMedia()}."/>
+  </types>
+  <types xsi:type="Enum" xmi:id="_Ywl-gNTAEe6mLsejDbXspg" name="ChannelType" doc="Represents the type in {@link MemberChannel#getType()}.">
+    <values>APP</values>
+    <values>PHONE</values>
+    <values>SMS</values>
+    <values>MMS</values>
+    <values>WHATSAPP</values>
+    <values>VIBER</values>
+    <values>MESSENGER</values>
+  </types>
+  <types xsi:type="Class" xmi:id="_MZ_t4NTDEe6mLsejDbXspg" name="MemberInitiator" extends="_jAeOEMtYEe63RvWw7V1xWQ"/>
+  <types xsi:type="Class" xmi:id="_CXzE0NTyEe6mLsejDbXspg" name="MediaAudioSettings" extends="_jAeOEMtYEe63RvWw7V1xWQ">
+    <fields xmi:id="_4MwXsNTyEe6mLsejDbXspg" name="enabled" json="enabled" testValue="true" type="_imJkAM2REe6y0LRMSm1lvw" stringValue="true">
+      <doc xmi:id="_ApRRANTzEe6mLsejDbXspg" returnDesc="{@code true} if enabled, or {@code null} if unspecified." description="Whether audio is enabled."/>
+    </fields>
+    <fields xmi:id="_HrkPENTzEe6mLsejDbXspg" name="earmuffed" json="earmuffed" testValue="true" type="_imJkAM2REe6y0LRMSm1lvw" stringValue="true">
+      <doc xmi:id="_HrkPEdTzEe6mLsejDbXspg" returnDesc="{@code true} if earmuffed, or {@code null} if unspecified." description="Whether hearing audio is disabled."/>
+    </fields>
+    <fields xmi:id="_ibUPMNTzEe6mLsejDbXspg" name="muted" json="muted" testValue="true" type="_imJkAM2REe6y0LRMSm1lvw" stringValue="true">
+      <doc xmi:id="_ibUPMdTzEe6mLsejDbXspg" returnDesc="{@code true} if muted, or {@code null} if unspecified." description="Whether producing audio is disabled."/>
+    </fields>
+    <doc xmi:id="_xJrWgNTyEe6mLsejDbXspg" description="Represents the audio options in {@link MemberMedia#getAudioSettings}."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_ky7gANVlEe6mLsejDbXspg" name="MemberTimestamp" extends="_jAeOEMtYEe63RvWw7V1xWQ">
+    <fields xmi:id="_ky7gAdVlEe6mLsejDbXspg" name="invited" json="invited" testValue="Instant.parse(&quot;2019-07-03T18:52:24.301Z&quot;)" type="_aHTpQMs9Ee63RvWw7V1xWQ" stringValue="2019-07-03T18:52:24.301Z">
+      <doc xmi:id="_ky7gAtVlEe6mLsejDbXspg" returnDesc="The member invitation time as an Instant, or {@code null} if unknown." description="Time that the member was invited."/>
+    </fields>
+    <fields xmi:id="_ky7gA9VlEe6mLsejDbXspg" name="joined" json="joined" testValue="Instant.parse(&quot;2019-09-03T17:02:01.342Z&quot;)" type="_aHTpQMs9Ee63RvWw7V1xWQ" stringValue="2019-09-03T17:02:01.342Z">
+      <doc xmi:id="_ky7gBNVlEe6mLsejDbXspg" returnDesc="The member join time as an Instant, or {@code null} if unknown." description="Time that the member joined."/>
+    </fields>
+    <fields xmi:id="_ky7gBdVlEe6mLsejDbXspg" name="left" json="left" testValue="Instant.parse(&quot;2020-10-30T04:59:57.106Z&quot;)" type="_aHTpQMs9Ee63RvWw7V1xWQ" stringValue="2020-10-30T04:59:57.106Z">
+      <doc xmi:id="_ky7gBtVlEe6mLsejDbXspg" returnDesc="The member leave time as an Instant, or {@code null} if unknown." description="Time that the member left."/>
+    </fields>
+    <doc xmi:id="_ky7gB9VlEe6mLsejDbXspg" description="Represents the timestamps in {@link Member#getTimestamp()}."/>
+  </types>
+  <types xsi:type="Class" xmi:id="_EkvogNbqEe6mLsejDbXspg" name="Channel" extends="_jAeOEMtYEe63RvWw7V1xWQ">
+    <fields xmi:id="_HfHu8NbqEe6mLsejDbXspg" name="number" json="number" testValue="&quot;447900000001&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="447900000001">
+      <doc xmi:id="_-mN_INbqEe6mLsejDbXspg" returnDesc="The phone number, or {@code null} if not applicable." description="Phone number for this channel, if applicable."/>
+    </fields>
+    <fields xmi:id="_UqYPUNbqEe6mLsejDbXspg" name="id" json="id" testValue="&quot;test_user&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="test_user">
+      <doc xmi:id="_EkZNwNbrEe6mLsejDbXspg" returnDesc="The user identifier unique to the channel, or {@code null} if not applicable." description="User name or ID for this channel, if applicable."/>
+    </fields>
+    <fields xmi:id="_ZIn8QNbqEe6mLsejDbXspg" name="user" json="user" testValue="&quot;test_user&quot;" type="_MoO1AMs9Ee63RvWw7V1xWQ" stringValue="test_user">
+      <doc xmi:id="_SOm7ANbrEe6mLsejDbXspg" returnDesc="The user name, or {@code null} if not applicable." description="User name or ID for this channel, if applicable. "/>
+    </fields>
+    <fields xmi:id="_cQ1qYNbqEe6mLsejDbXspg" name="type" json="type" testValue="ChannelType.PHONE" type="_Ywl-gNTAEe6mLsejDbXspg" stringValue="phone">
+      <doc xmi:id="_hZ7rINbqEe6mLsejDbXspg" returnDesc="The channel type as an enum." description="Type of this communication channel."/>
+    </fields>
+    <doc xmi:id="_nPfJQNbqEe6mLsejDbXspg" description="Represents a communication channel."/>
+  </types>
+</Api>
